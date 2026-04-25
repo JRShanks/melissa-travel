@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Jason's Travel Schedule</title>
+<style>
+  :root {
+    --bg:#faf7f2; --card:#ffffff; --ink:#1a202c; --muted:#6b7280;
+    --accent:#1a365d; --accent-soft:#e6effb; --rule:#e5e7eb;
+    --soon:#dc2626; --soon-soft:#fee2e2;
+    --upcoming:#1a365d; --upcoming-soft:#e6effb;
+    --current:#047857; --current-soft:#d1fae5;
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--ink); line-height:1.45;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+  header.page { text-align:center; margin-bottom: 24px; }
+  header.page h1 { margin:0; font-size: 28px; letter-spacing:-0.01em; color: var(--accent); }
+  header.page .sub { color: var(--muted); font-size: 14px; margin-top: 6px; }
+  .next-up {
+    background: var(--accent); color: #fff; border-radius: 16px;
+    padding: 18px 20px; margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(26,54,93,.18);
+  }
+  .next-up .next-label { font-size: 14px; opacity:.9; }
+  .next-up .next-city { font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .next-up .next-when { font-size: 14px; opacity:.85; margin-top: 2px; }
+  .summary { color: var(--muted); font-size: 13px; text-align:center; margin-bottom: 16px; }
+  .trip {
+    background: var(--card); border:1px solid var(--rule); border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .trip-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom: 8px; }
+  .dates .date-range { font-weight: 600; font-size: 15px; color: var(--ink); }
+  .dates .nights { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .badge { flex-shrink:0; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; }
+  .badge-soon     { background: var(--soon-soft); color: var(--soon); }
+  .badge-upcoming { background: var(--upcoming-soft); color: var(--upcoming); }
+  .badge-current  { background: var(--current-soft); color: var(--current); }
+  .city { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+  .purpose { font-size: 14px; color: var(--ink); }
+  .notes { font-size: 12px; color: var(--muted); margin-top: 6px; font-style: italic; }
+  footer { text-align:center; color: var(--muted); font-size: 12px; margin-top: 28px; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#1a1a1a; --card:#262626; --ink:#f5f5f5; --muted:#a3a3a3;
+      --accent:#7aa3d8; --accent-soft:#1e2a3d; --rule:#3a3a3a;
+      --soon:#fca5a5; --soon-soft:#3a1818;
+      --upcoming:#a8c5ec; --upcoming-soft:#1e2a3d;
+      --current:#86efac; --current-soft:#0f2418;
+    }
+    .next-up { background: linear-gradient(135deg, #1e2a3d, #2d4262); }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="page">
+      <h1>Jason's Travel Schedule</h1>
+      <div class="sub">Next 12 months</div>
+    </header>
+
+    
+        <div class="next-up">
+          <div class="next-label">Jason's next trip is in <b>19 days</b></div>
+          <div class="next-city">Seattle, WA</div>
+          <div class="next-when">Thu, May 14 – Sun, May 17, 2026</div>
+        </div>
+
+    <div class="summary">11 upcoming trips • Last updated April 25, 2026 at 3:26 AM</div>
+
+    
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Thu, May 14 – Sun, May 17, 2026</div>
+              <div class="nights">3 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 19 days</span>
+          </header>
+          <div class="city">Seattle, WA</div>
+          <div class="purpose">Travel (purpose not noted on calendar)</div>
+          <div class="notes">FWA → DFW → SEA on May 14; SEA → CLT → FWA on May 17.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Fri, May 22 – Wed, May 27, 2026</div>
+              <div class="nights">5 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 27 days</span>
+          </header>
+          <div class="city">St. Augustine, FL</div>
+          <div class="purpose">Pilgrimage kick-off</div>
+          <div class="notes">FWA → ORD → JAX on May 23; JAX → CLT → FWA on May 25.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Sun, Jun 7 – Mon, Jun 8, 2026</div>
+              <div class="nights">1 night</div>
+            </div>
+            <span class="badge badge-upcoming">In 43 days</span>
+          </header>
+          <div class="city">Arlington</div>
+          <div class="purpose">Corpus Christi Arlington event (Melissa also listed)</div>
+          
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Wed, Jun 10 – Fri, Jun 12, 2026</div>
+              <div class="nights">2 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 46 days</span>
+          </header>
+          <div class="city">Philadelphia, PA</div>
+          <div class="purpose">Becket Fund meeting &amp; Gala</div>
+          <div class="notes">Kimpton Monaco (Jun 10 12pm) → Union League Club (Jun 11 12pm); Gala Jun 11.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Fri, Jul 3 – Tue, Jul 7, 2026</div>
+              <div class="nights">4 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 69 days</span>
+          </header>
+          <div class="city">Philadelphia, PA</div>
+          <div class="purpose">Out-of-town block (purpose not noted on calendar)</div>
+          <div class="notes">Spans the July 4th holiday.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Wed, Jul 22 – Tue, Jul 28, 2026</div>
+              <div class="nights">6 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 88 days</span>
+          </header>
+          <div class="city">Napa, CA</div>
+          <div class="purpose">15th Annual Napa Institute Summer Conference</div>
+          <div class="notes">The Meritage Resort and Spa, Napa, CA.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Mon, Aug 31 – Fri, Sep 4, 2026</div>
+              <div class="nights">4 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 128 days</span>
+          </header>
+          <div class="city">St. Louis, MO</div>
+          <div class="purpose">NEC staff strategy meetings at the Augustine Institute</div>
+          <div class="notes">Driving from Fort Wayne on Aug 31.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Thu, Sep 17 – Sun, Sep 20, 2026</div>
+              <div class="nights">3 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 145 days</span>
+          </header>
+          <div class="city">TBD</div>
+          <div class="purpose">Catholic Institute for Art and Architecture Conference</div>
+          <div class="notes">Location not noted on calendar event.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Wed, Sep 23 – Sat, Sep 26, 2026</div>
+              <div class="nights">3 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 151 days</span>
+          </header>
+          <div class="city">Raleigh, NC</div>
+          <div class="purpose">Speaking at Legatus Raleigh (&quot;Strength in Surrender: Humility In The Eucharist&quot;)</div>
+          <div class="notes">FWA → CLT → RDU on Sep 24; RDU → CLT → FWA on Sep 25.</div>
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Sat, Oct 3 – Sun, Oct 4, 2026</div>
+              <div class="nights">1 night</div>
+            </div>
+            <span class="badge badge-upcoming">In 161 days</span>
+          </header>
+          <div class="city">Dallas, TX</div>
+          <div class="purpose">Speaking engagement</div>
+          
+        </article>
+        <article class="trip upcoming">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">Wed, Nov 11 – Sun, Nov 15, 2026</div>
+              <div class="nights">4 nights</div>
+            </div>
+            <span class="badge badge-upcoming">In 200 days</span>
+          </header>
+          <div class="city">Guadalupe, Mexico</div>
+          <div class="purpose">Pilgrimage</div>
+          
+        </article>
+
+    <footer>
+      Auto-updated monthly from Jason's work calendar (jshanks@eucharisticcongress.org).<br>
+      Local Indianapolis events (Legatus chapters, NEC office days, Marian University events) are excluded.
+    </footer>
+  </div>
+</body>
+</html>
