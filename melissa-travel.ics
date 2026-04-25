@@ -1,0 +1,148 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel Feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jason's Travel
+X-WR-CALDESC:Out-of-town trips for Jason Shanks (auto-updated monthly).
+X-WR-TIMEZONE:America/Indiana/Indianapolis
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:melissa-travel-1c5eee69ae23@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260518
+SUMMARY:Jason: Seattle\, WA
+DESCRIPTION:Travel (purpose not noted on calendar)\n\nFWA -> DFW -> SEA o
+ n May 14\; SEA -> CLT -> FWA on May 17.\n\nView live: https://jstravelsc
+ hedule.netlify.app
+LOCATION:Seattle\, WA
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-031d72072ba1@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260528
+SUMMARY:Jason: St. Augustine\, FL
+DESCRIPTION:Pilgrimage kick-off\n\nFWA -> ORD -> JAX on May 23\; JAX -> C
+ LT -> FWA on May 25.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:St. Augustine\, FL
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-5a8cce9897a1@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260607
+DTEND;VALUE=DATE:20260609
+SUMMARY:Jason: Arlington
+DESCRIPTION:Corpus Christi Arlington event (Melissa also listed)\n\nView 
+ live: https://jstravelschedule.netlify.app
+LOCATION:Arlington
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-ee62e17b57ac@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260613
+SUMMARY:Jason: Philadelphia\, PA
+DESCRIPTION:Becket Fund meeting & Gala\n\nKimpton Monaco (Jun 10 12pm) ->
+  Union League Club (Jun 11 12pm)\; Gala Jun 11.\n\nView live: https://js
+ travelschedule.netlify.app
+LOCATION:Philadelphia\, PA
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-6e3f4ae969d9@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260703
+DTEND;VALUE=DATE:20260708
+SUMMARY:Jason: Philadelphia\, PA
+DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nSpans th
+ e July 4th holiday.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:Philadelphia\, PA
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-ba53c410ea71@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260722
+DTEND;VALUE=DATE:20260729
+SUMMARY:Jason: Napa\, CA
+DESCRIPTION:15th Annual Napa Institute Summer Conference\n\nThe Meritage 
+ Resort and Spa\, Napa\, CA.\n\nView live: https://jstravelschedule.netli
+ fy.app
+LOCATION:Napa\, CA
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-92dad5c738f6@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260905
+SUMMARY:Jason: St. Louis\, MO
+DESCRIPTION:NEC staff strategy meetings at the Augustine Institute\n\nDri
+ ving from Fort Wayne on Aug 31.\n\nView live: https://jstravelschedule.n
+ etlify.app
+LOCATION:St. Louis\, MO
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-fa993537c7c5@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260921
+SUMMARY:Jason: TBD
+DESCRIPTION:Catholic Institute for Art and Architecture Conference\n\nLoc
+ ation not noted on calendar event.\n\nView live: https://jstravelschedul
+ e.netlify.app
+LOCATION:TBD
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-fb8963c8c0ff@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260927
+SUMMARY:Jason: Raleigh\, NC
+DESCRIPTION:Speaking at Legatus Raleigh ("Strength in Surrender: Humility
+  In The Eucharist")\n\nFWA -> CLT -> RDU on Sep 24\; RDU -> CLT -> FWA o
+ n Sep 25.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:Raleigh\, NC
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-2c74a456b9cc@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261005
+SUMMARY:Jason: Dallas\, TX
+DESCRIPTION:Speaking engagement\n\nView live: https://jstravelschedule.ne
+ tlify.app
+LOCATION:Dallas\, TX
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-9ec953449022@jstravelschedule.netlify.app
+DTSTAMP:20260425T034432Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261116
+SUMMARY:Jason: Guadalupe\, Mexico
+DESCRIPTION:Pilgrimage\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:Guadalupe\, Mexico
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
