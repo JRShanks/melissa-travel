@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melissa-travel-ee62e17b57ac@jstravelschedule.netlify.app
+DTSTAMP:20260425T034436Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260613
+SUMMARY:Jason: Philadelphia\, PA
+DESCRIPTION:Becket Fund meeting & Gala\n\nKimpton Monaco (Jun 10 12pm) ->
+  Union League Club (Jun 11 12pm)\; Gala Jun 11.\n\nView live: https://js
+ travelschedule.netlify.app
+LOCATION:Philadelphia\, PA
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
