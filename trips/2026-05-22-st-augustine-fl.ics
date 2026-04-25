@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melissa-travel-031d72072ba1@jstravelschedule.netlify.app
+DTSTAMP:20260425T034435Z
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260528
+SUMMARY:Jason: St. Augustine\, FL
+DESCRIPTION:Pilgrimage kick-off\n\nFWA -> ORD -> JAX on May 23\; JAX -> C
+ LT -> FWA on May 25.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:St. Augustine\, FL
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
