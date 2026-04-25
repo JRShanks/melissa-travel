@@ -27,12 +27,33 @@
   header.page .sub { color: var(--muted); font-size: 14px; margin-top: 6px; }
   .next-up {
     background: var(--accent); color: #fff; border-radius: 16px;
-    padding: 18px 20px; margin-bottom: 24px;
+    padding: 18px 20px; margin-bottom: 16px;
     box-shadow: 0 4px 16px rgba(26,54,93,.18);
   }
   .next-up .next-label { font-size: 14px; opacity:.9; }
   .next-up .next-city { font-size: 22px; font-weight: 700; margin-top: 4px; }
   .next-up .next-when { font-size: 14px; opacity:.85; margin-top: 2px; }
+
+  .subscribe {
+    background: var(--card); border:1px solid var(--rule); border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 20px;
+  }
+  .subscribe h2 { font-size: 14px; margin: 0 0 4px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+  .subscribe p { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .sub-buttons { display:flex; flex-wrap:wrap; gap:8px; }
+  .sub-buttons a, .sub-buttons button {
+    flex:1 1 auto; min-width: 140px; text-align:center;
+    background: var(--accent); color:#fff; text-decoration:none;
+    padding: 10px 14px; border-radius: 10px; font-size: 14px; font-weight: 600;
+    border:0; cursor:pointer; font-family: inherit;
+  }
+  .sub-buttons a.ghost, .sub-buttons button.ghost {
+    background: transparent; color: var(--accent); border:1px solid var(--accent);
+  }
+  .sub-buttons a:active, .sub-buttons button:active { opacity: .8; }
+  .feed-url { display:block; margin-top:10px; font-size: 11px; color: var(--muted); word-break: break-all;
+    background: var(--bg); padding:8px 10px; border-radius:8px; }
+
   .summary { color: var(--muted); font-size: 13px; text-align:center; margin-bottom: 16px; }
   .trip {
     background: var(--card); border:1px solid var(--rule); border-radius: 14px;
@@ -49,7 +70,18 @@
   .city { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
   .purpose { font-size: 14px; color: var(--ink); }
   .notes { font-size: 12px; color: var(--muted); margin-top: 6px; font-style: italic; }
+  .add-row { display:flex; gap:8px; margin-top: 12px; flex-wrap:wrap; }
+  .add-btn {
+    flex:1 1 auto; text-align:center; text-decoration:none;
+    background: var(--accent-soft); color: var(--accent);
+    padding: 8px 10px; border-radius: 8px; font-size: 13px; font-weight: 600;
+    border:1px solid transparent;
+  }
+  .add-btn.ghost { background: transparent; border-color: var(--rule); color: var(--muted); }
+  .add-btn:active { opacity:.8; }
+
   footer { text-align:center; color: var(--muted); font-size: 12px; margin-top: 28px; }
+
   @media (prefers-color-scheme: dark) {
     :root {
       --bg:#1a1a1a; --card:#262626; --ink:#f5f5f5; --muted:#a3a3a3;
@@ -76,7 +108,18 @@
           <div class="next-when">Thu, May 14 – Sun, May 17, 2026</div>
         </div>
 
-    <div class="summary">11 upcoming trips • Last updated April 25, 2026 at 3:26 AM</div>
+    <section class="subscribe">
+      <h2>Subscribe to this calendar</h2>
+      <p>Set it once and trips appear automatically — updates every month.</p>
+      <div class="sub-buttons">
+        <a href="webcal://jstravelschedule.netlify.app/melissa-travel.ics">Apple Calendar</a>
+        <a class="ghost" href="https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics" target="_blank" rel="noopener">Google Calendar</a>
+        <button class="ghost" type="button" onclick="navigator.clipboard.writeText('https://jstravelschedule.netlify.app/melissa-travel.ics'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy feed URL',1500)">Copy feed URL</button>
+      </div>
+      <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>
+    </section>
+
+    <div class="summary">11 upcoming trips • Last updated April 25, 2026 at 3:44 AM</div>
 
     
         <article class="trip upcoming">
@@ -89,7 +132,11 @@
           </header>
           <div class="city">Seattle, WA</div>
           <div class="purpose">Travel (purpose not noted on calendar)</div>
-          <div class="notes">FWA → DFW → SEA on May 14; SEA → CLT → FWA on May 17.</div>
+          <div class="notes">FWA -&gt; DFW -&gt; SEA on May 14; SEA -&gt; CLT -&gt; FWA on May 17.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-05-14-seattle-wa.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Seattle%2C%20WA&amp;dates=20260514%2F20260518&amp;details=Travel%20%28purpose%20not%20noted%20on%20calendar%29%0A%0AFWA%20-%3E%20DFW%20-%3E%20SEA%20on%20May%2014%3B%20SEA%20-%3E%20CLT%20-%3E%20FWA%20on%20May%2017.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Seattle%2C%20WA" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -101,7 +148,11 @@
           </header>
           <div class="city">St. Augustine, FL</div>
           <div class="purpose">Pilgrimage kick-off</div>
-          <div class="notes">FWA → ORD → JAX on May 23; JAX → CLT → FWA on May 25.</div>
+          <div class="notes">FWA -&gt; ORD -&gt; JAX on May 23; JAX -&gt; CLT -&gt; FWA on May 25.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-05-22-st-augustine-fl.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20St.%20Augustine%2C%20FL&amp;dates=20260522%2F20260528&amp;details=Pilgrimage%20kick-off%0A%0AFWA%20-%3E%20ORD%20-%3E%20JAX%20on%20May%2023%3B%20JAX%20-%3E%20CLT%20-%3E%20FWA%20on%20May%2025.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=St.%20Augustine%2C%20FL" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -114,6 +165,10 @@
           <div class="city">Arlington</div>
           <div class="purpose">Corpus Christi Arlington event (Melissa also listed)</div>
           
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-06-07-arlington.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Arlington&amp;dates=20260607%2F20260609&amp;details=Corpus%20Christi%20Arlington%20event%20%28Melissa%20also%20listed%29%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Arlington" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -125,7 +180,11 @@
           </header>
           <div class="city">Philadelphia, PA</div>
           <div class="purpose">Becket Fund meeting &amp; Gala</div>
-          <div class="notes">Kimpton Monaco (Jun 10 12pm) → Union League Club (Jun 11 12pm); Gala Jun 11.</div>
+          <div class="notes">Kimpton Monaco (Jun 10 12pm) -&gt; Union League Club (Jun 11 12pm); Gala Jun 11.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-06-10-philadelphia-pa.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Philadelphia%2C%20PA&amp;dates=20260610%2F20260613&amp;details=Becket%20Fund%20meeting%20%26%20Gala%0A%0AKimpton%20Monaco%20%28Jun%2010%2012pm%29%20-%3E%20Union%20League%20Club%20%28Jun%2011%2012pm%29%3B%20Gala%20Jun%2011.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Philadelphia%2C%20PA" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -138,6 +197,10 @@
           <div class="city">Philadelphia, PA</div>
           <div class="purpose">Out-of-town block (purpose not noted on calendar)</div>
           <div class="notes">Spans the July 4th holiday.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-07-03-philadelphia-pa.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Philadelphia%2C%20PA&amp;dates=20260703%2F20260708&amp;details=Out-of-town%20block%20%28purpose%20not%20noted%20on%20calendar%29%0A%0ASpans%20the%20July%204th%20holiday.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Philadelphia%2C%20PA" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -150,6 +213,10 @@
           <div class="city">Napa, CA</div>
           <div class="purpose">15th Annual Napa Institute Summer Conference</div>
           <div class="notes">The Meritage Resort and Spa, Napa, CA.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-07-22-napa-ca.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Napa%2C%20CA&amp;dates=20260722%2F20260729&amp;details=15th%20Annual%20Napa%20Institute%20Summer%20Conference%0A%0AThe%20Meritage%20Resort%20and%20Spa%2C%20Napa%2C%20CA.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Napa%2C%20CA" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -162,6 +229,10 @@
           <div class="city">St. Louis, MO</div>
           <div class="purpose">NEC staff strategy meetings at the Augustine Institute</div>
           <div class="notes">Driving from Fort Wayne on Aug 31.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-08-31-st-louis-mo.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20St.%20Louis%2C%20MO&amp;dates=20260831%2F20260905&amp;details=NEC%20staff%20strategy%20meetings%20at%20the%20Augustine%20Institute%0A%0ADriving%20from%20Fort%20Wayne%20on%20Aug%2031.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=St.%20Louis%2C%20MO" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -174,6 +245,10 @@
           <div class="city">TBD</div>
           <div class="purpose">Catholic Institute for Art and Architecture Conference</div>
           <div class="notes">Location not noted on calendar event.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-09-17-tbd.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20TBD&amp;dates=20260917%2F20260921&amp;details=Catholic%20Institute%20for%20Art%20and%20Architecture%20Conference%0A%0ALocation%20not%20noted%20on%20calendar%20event.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=TBD" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -185,7 +260,11 @@
           </header>
           <div class="city">Raleigh, NC</div>
           <div class="purpose">Speaking at Legatus Raleigh (&quot;Strength in Surrender: Humility In The Eucharist&quot;)</div>
-          <div class="notes">FWA → CLT → RDU on Sep 24; RDU → CLT → FWA on Sep 25.</div>
+          <div class="notes">FWA -&gt; CLT -&gt; RDU on Sep 24; RDU -&gt; CLT -&gt; FWA on Sep 25.</div>
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-09-23-raleigh-nc.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Raleigh%2C%20NC&amp;dates=20260923%2F20260927&amp;details=Speaking%20at%20Legatus%20Raleigh%20%28%22Strength%20in%20Surrender%3A%20Humility%20In%20The%20Eucharist%22%29%0A%0AFWA%20-%3E%20CLT%20-%3E%20RDU%20on%20Sep%2024%3B%20RDU%20-%3E%20CLT%20-%3E%20FWA%20on%20Sep%2025.%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Raleigh%2C%20NC" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -198,6 +277,10 @@
           <div class="city">Dallas, TX</div>
           <div class="purpose">Speaking engagement</div>
           
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-10-03-dallas-tx.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Dallas%2C%20TX&amp;dates=20261003%2F20261005&amp;details=Speaking%20engagement%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Dallas%2C%20TX" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -210,6 +293,10 @@
           <div class="city">Guadalupe, Mexico</div>
           <div class="purpose">Pilgrimage</div>
           
+          <div class="add-row">
+            <a class="add-btn" href="/trips/2026-11-11-guadalupe-mexico.ics" download>📅 Add to Calendar (.ics)</a>
+            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A%20Guadalupe%2C%20Mexico&amp;dates=20261111%2F20261116&amp;details=Pilgrimage%0A%0AView%20live%3A%20https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Guadalupe%2C%20Mexico" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
         </article>
 
     <footer>
