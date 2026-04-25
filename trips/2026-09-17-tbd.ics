@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melissa-travel-fa993537c7c5@jstravelschedule.netlify.app
+DTSTAMP:20260425T034439Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260921
+SUMMARY:Jason: TBD
+DESCRIPTION:Catholic Institute for Art and Architecture Conference\n\nLoc
+ ation not noted on calendar event.\n\nView live: https://jstravelschedul
+ e.netlify.app
+LOCATION:TBD
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
