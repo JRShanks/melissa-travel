@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melissa-travel-fb8963c8c0ff@jstravelschedule.netlify.app
+DTSTAMP:20260425T034440Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260927
+SUMMARY:Jason: Raleigh\, NC
+DESCRIPTION:Speaking at Legatus Raleigh ("Strength in Surrender: Humility
+  In The Eucharist")\n\nFWA -> CLT -> RDU on Sep 24\; RDU -> CLT -> FWA o
+ n Sep 25.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:Raleigh\, NC
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
