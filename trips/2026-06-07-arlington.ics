@@ -4,13 +4,13 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-5a8cce9897a1@jstravelschedule.netlify.app
-DTSTAMP:20260425T034435Z
+UID:melissa-travel-4d5ae8b982e3@jstravelschedule.netlify.app
+DTSTAMP:20260505T032651Z
 DTSTART;VALUE=DATE:20260607
 DTEND;VALUE=DATE:20260609
 SUMMARY:Jason: Arlington
-DESCRIPTION:Corpus Christi Arlington event (Melissa also listed)\n\nView 
- live: https://jstravelschedule.netlify.app
+DESCRIPTION:Corpus Christi Arlington event (Melissa also listed)\n\n\n\nVie
+ w live: https://jstravelschedule.netlify.app
 LOCATION:Arlington
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

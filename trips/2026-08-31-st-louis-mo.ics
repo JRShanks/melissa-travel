@@ -4,14 +4,15 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-92dad5c738f6@jstravelschedule.netlify.app
-DTSTAMP:20260425T034438Z
+UID:melissa-travel-f5694ecd993f@jstravelschedule.netlify.app
+DTSTAMP:20260505T032651Z
 DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260908
 SUMMARY:Jason: St. Louis\, MO
-DESCRIPTION:NEC staff strategy meetings at the Augustine Institute\n\nDri
- ving from Fort Wayne on Aug 31.\n\nView live: https://jstravelschedule.n
- etlify.app
+DESCRIPTION:NEC staff strategy meetings at the Augustine Institute / Jubile
+ e 2033\n\nDriving Fort Wayne to St. Louis (Staff Strategy Meetings) on Aug 
+ 31.\nMerged overlapping St. Louis blocks from Staff Strategy Meetings and J
+ ubilee 2033.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:St. Louis\, MO
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

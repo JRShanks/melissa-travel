@@ -5,13 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:melissa-travel-ee62e17b57ac@jstravelschedule.netlify.app
-DTSTAMP:20260425T034436Z
+DTSTAMP:20260505T032651Z
 DTSTART;VALUE=DATE:20260610
-DTEND;VALUE=DATE:20260613
+DTEND;VALUE=DATE:20260612
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Becket Fund meeting & Gala\n\nKimpton Monaco (Jun 10 12pm) ->
-  Union League Club (Jun 11 12pm)\; Gala Jun 11.\n\nView live: https://js
- travelschedule.netlify.app
+DESCRIPTION:Becket Fund meeting & Gala\n\n\n\nView live: https://jstravelsc
+ hedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
