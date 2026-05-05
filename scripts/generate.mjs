@@ -9,6 +9,8 @@ const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID || 'jshanks@eucharisticcongre
 const TOKEN_PATH = process.env.GOOGLE_TOKEN_PATH || `${process.env.HOME}/.openclaw/secrets/daily-briefing-google-token.json`;
 const TZ = 'America/Indiana/Indianapolis';
 const todayArg = process.argv.find(a => a.startsWith('--today='))?.split('=')[1];
+const reviewOnly = process.argv.includes('--review-only');
+const allowReviewFlags = process.argv.includes('--allow-review-flags');
 const today = parseYmd(todayArg || new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date()));
 const scanEnd = addDays(today, 365);
 
@@ -147,7 +149,7 @@ function buildTrips(events) {
   const candidates = events.filter(isCandidate).map(e => {
     const {start, endExclusive} = eventDates(e);
     const city = inferCity(e) || 'TBD';
-    return { start, endExclusive, city, purpose: purposeFor(e, city), sources:[e.summary || ''], notes: [] };
+    return { start, endExclusive, city, purpose: purposeFor(e, city), sources:[e.summary || ''], notes: [], sourceEvents: [summarizeEvent(e)] };
   }).filter(t => t.endExclusive >= today);
 
   candidates.sort((a,b) => a.start - b.start || a.endExclusive - b.endExclusive);
@@ -159,6 +161,7 @@ function buildTrips(events) {
     if (c.endExclusive > prior.endExclusive) prior.endExclusive = c.endExclusive;
     prior.purpose = uniq([prior.purpose, c.purpose]).join(' / ');
     prior.sources.push(...c.sources);
+    prior.sourceEvents.push(...c.sourceEvents);
   }
   for (const t of trips) {
     t.purpose = t.purpose.replace(/\/ Jason in .+?(?=\/|$)/gi,'').replace(/^Jason in .+?\/\s*/i,'').trim();
@@ -172,8 +175,63 @@ function buildTrips(events) {
     t.notes = uniq(notes);
     t.slug = `${ymd(t.start)}-${slugify(t.city)}`;
     t.uid = `melissa-travel-${sha(`${ymd(t.start)}|${ymd(t.endExclusive)}|${t.city}`)}@jstravelschedule.netlify.app`;
+    t.reviewFlags = reviewFlags(t);
   }
   return trips.sort((a,b) => a.start - b.start);
+}
+
+function summarizeEvent(e) {
+  const { start, endExclusive } = eventDates(e);
+  return {
+    summary: e.summary || '',
+    location: e.location || '',
+    start: ymd(start),
+    endExclusive: ymd(endExclusive),
+  };
+}
+
+function reviewFlags(t) {
+  const flags = [];
+  if (t.city === 'TBD') flags.push('city-tbd');
+  if (!/,/.test(t.city) && !/Mexico/i.test(t.city)) flags.push('city-only');
+  if (/purpose not noted/i.test(t.purpose)) flags.push('missing-purpose');
+  if (/\//.test(t.purpose)) flags.push('merged-purpose-review');
+  if (/Merged overlapping/i.test(t.notes.join(' '))) flags.push('merged-overlapping-blocks');
+  return flags;
+}
+
+function buildReport(events, trips) {
+  const reviewTrips = trips.filter(t => t.reviewFlags.length);
+  const next = trips[0] || null;
+  return {
+    generatedAt: new Date().toISOString(),
+    today: ymd(today),
+    scanEnd: ymd(scanEnd),
+    sourceCalendar: CALENDAR_ID,
+    eventCount: events.length,
+    tripCount: trips.length,
+    nextTrip: next ? { city: next.city, start: ymd(next.start), endExclusive: ymd(next.endExclusive), purpose: next.purpose } : null,
+    reviewRequired: reviewTrips.length > 0,
+    reviewFlags: reviewTrips.map(t => ({
+      slug: t.slug,
+      city: t.city,
+      start: ymd(t.start),
+      endExclusive: ymd(t.endExclusive),
+      purpose: t.purpose,
+      flags: t.reviewFlags,
+      sources: t.sourceEvents,
+    })),
+    generatedFiles: [
+      'index.html',
+      'melissa-travel.ics',
+      ...trips.map(t => `trips/${t.slug}.ics`),
+    ],
+    costGuardrails: [
+      'Batch all generated files into one commit/push per refresh.',
+      'Keep Netlify no-build static publish from repo root.',
+      'Refresh monthly or on demand, not per-file or hourly.',
+    ],
+  };
 }
 
 function fmtRange(start, endExclusive) {
@@ -295,10 +353,23 @@ function renderIcs(trips, single) {
 
 const events = await fetchEvents();
 const trips = buildTrips(events);
-fs.writeFileSync('index.html', renderHtml(trips));
-fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false));
-fs.mkdirSync('trips', { recursive:true });
-for (const f of fs.readdirSync('trips')) if (f.endsWith('.ics')) fs.rmSync(path.join('trips', f));
-for (const t of trips) fs.writeFileSync(path.join('trips', `${t.slug}.ics`), renderIcs([t], true));
-console.log(`Generated ${trips.length} trips from ${events.length} events`);
-for (const t of trips) console.log(`${ymd(t.start)} -> ${ymd(t.endExclusive)} ${t.city} :: ${t.purpose}${t.notes.length ? ' :: '+t.notes.join(' ') : ''}`);
+const report = buildReport(events, trips);
+
+fs.writeFileSync('RUN_REPORT.json', JSON.stringify(report, null, 2) + '\n');
+
+if (report.reviewRequired && !allowReviewFlags) {
+  console.error(`Review required for ${report.reviewFlags.length} trip(s). See RUN_REPORT.json. Re-run with --allow-review-flags after human review if acceptable.`);
+  for (const item of report.reviewFlags) console.error(`- ${item.start} ${item.city}: ${item.flags.join(', ')}`);
+  if (!reviewOnly) process.exit(4);
+}
+
+if (!reviewOnly) {
+  fs.writeFileSync('index.html', renderHtml(trips));
+  fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false));
+  fs.mkdirSync('trips', { recursive:true });
+  for (const f of fs.readdirSync('trips')) if (f.endsWith('.ics')) fs.rmSync(path.join('trips', f));
+  for (const t of trips) fs.writeFileSync(path.join('trips', `${t.slug}.ics`), renderIcs([t], true));
+}
+
+console.log(`${reviewOnly ? 'Reviewed' : 'Generated'} ${trips.length} trips from ${events.length} events`);
+for (const t of trips) console.log(`${ymd(t.start)} -> ${ymd(t.endExclusive)} ${t.city} :: ${t.purpose}${t.notes.length ? ' :: '+t.notes.join(' ') : ''}${t.reviewFlags.length ? ' :: REVIEW '+t.reviewFlags.join(',') : ''}`);

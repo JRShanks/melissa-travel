@@ -1,0 +1,165 @@
+{
+  "generatedAt": "2026-05-05T03:48:01.654Z",
+  "today": "2026-05-04",
+  "scanEnd": "2027-05-04",
+  "sourceCalendar": "jshanks@eucharisticcongress.org",
+  "eventCount": 999,
+  "tripCount": 11,
+  "nextTrip": {
+    "city": "Seattle, WA",
+    "start": "2026-05-14",
+    "endExclusive": "2026-05-18",
+    "purpose": "Travel (purpose not noted on calendar)"
+  },
+  "reviewRequired": true,
+  "reviewFlags": [
+    {
+      "slug": "2026-05-14-seattle-wa",
+      "city": "Seattle, WA",
+      "start": "2026-05-14",
+      "endExclusive": "2026-05-18",
+      "purpose": "Travel (purpose not noted on calendar)",
+      "flags": [
+        "missing-purpose"
+      ],
+      "sources": [
+        {
+          "summary": "Flight: AA 717 from DFW to SEA NEC",
+          "location": "Dallas/Fort Worth International Airport\n2400 Aviation Drive, Dallas, TX 75261, United States",
+          "start": "2026-05-14",
+          "endExclusive": "2026-05-15"
+        },
+        {
+          "summary": "Jason in Seattle May 14th starting at 6am to Sunday May 17th to (Clone)",
+          "location": "",
+          "start": "2026-05-14",
+          "endExclusive": "2026-05-18"
+        },
+        {
+          "summary": "Flight: AA 381 from SEA to CLT NEC",
+          "location": "Seattle-Tacoma International Airport\n17801 International Blvd, Seattle, WA  98158-1201, United States",
+          "start": "2026-05-17",
+          "endExclusive": "2026-05-18"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-07-arlington",
+      "city": "Arlington",
+      "start": "2026-06-07",
+      "endExclusive": "2026-06-09",
+      "purpose": "Corpus Christi Arlington event (Melissa also listed)",
+      "flags": [
+        "city-only"
+      ],
+      "sources": [
+        {
+          "summary": "Corpus Chrsti Arlington Event NEC",
+          "location": "Arlington\r\nUnited States",
+          "start": "2026-06-07",
+          "endExclusive": "2026-06-09"
+        },
+        {
+          "summary": "Corpus Chrsti Arlington Event (Clone)",
+          "location": "",
+          "start": "2026-06-07",
+          "endExclusive": "2026-06-09"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-03-philadelphia-pa",
+      "city": "Philadelphia, PA",
+      "start": "2026-07-03",
+      "endExclusive": "2026-07-08",
+      "purpose": "Out-of-town block (purpose not noted on calendar)",
+      "flags": [
+        "missing-purpose"
+      ],
+      "sources": [
+        {
+          "summary": "Jason in Philadelphia",
+          "location": "Philadelphia, PA",
+          "start": "2026-07-03",
+          "endExclusive": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "slug": "2026-08-31-st-louis-mo",
+      "city": "St. Louis, MO",
+      "start": "2026-08-31",
+      "endExclusive": "2026-09-08",
+      "purpose": "NEC staff strategy meetings at the Augustine Institute / Jubilee 2033",
+      "flags": [
+        "merged-purpose-review",
+        "merged-overlapping-blocks"
+      ],
+      "sources": [
+        {
+          "summary": "Drive: Fort Wayne to St. Louis (Staff Strategy Meetings)",
+          "location": "",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-01"
+        },
+        {
+          "summary": "St. Louis - Staff Strategy Meetings",
+          "location": "Augustine Institute, St. Louis, MO",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-05"
+        },
+        {
+          "summary": "Jason In St. Louis (Clone)",
+          "location": "",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-05"
+        },
+        {
+          "summary": "Jubilee 2033",
+          "location": "Augustine Institute, St. Louis, MO",
+          "start": "2026-09-03",
+          "endExclusive": "2026-09-08"
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-17-tbd",
+      "city": "TBD",
+      "start": "2026-09-17",
+      "endExclusive": "2026-09-21",
+      "purpose": "Catholic Institute for Art and Architecture Conference",
+      "flags": [
+        "city-tbd",
+        "city-only"
+      ],
+      "sources": [
+        {
+          "summary": "Catholic Institute for Art and Archecture Conference (Clone)",
+          "location": "",
+          "start": "2026-09-17",
+          "endExclusive": "2026-09-21"
+        }
+      ]
+    }
+  ],
+  "generatedFiles": [
+    "index.html",
+    "melissa-travel.ics",
+    "trips/2026-05-14-seattle-wa.ics",
+    "trips/2026-05-22-st-augustine-fl.ics",
+    "trips/2026-06-07-arlington.ics",
+    "trips/2026-06-10-philadelphia-pa.ics",
+    "trips/2026-07-03-philadelphia-pa.ics",
+    "trips/2026-07-22-napa-ca.ics",
+    "trips/2026-08-31-st-louis-mo.ics",
+    "trips/2026-09-17-tbd.ics",
+    "trips/2026-09-23-raleigh-nc.ics",
+    "trips/2026-10-03-dallas-tx.ics",
+    "trips/2026-11-11-guadalupe-mexico.ics"
+  ],
+  "costGuardrails": [
+    "Batch all generated files into one commit/push per refresh.",
+    "Keep Netlify no-build static publish from repo root.",
+    "Refresh monthly or on demand, not per-file or hourly."
+  ]
+}
