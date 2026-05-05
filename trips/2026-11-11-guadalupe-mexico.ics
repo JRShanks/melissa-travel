@@ -4,12 +4,13 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-9ec953449022@jstravelschedule.netlify.app
-DTSTAMP:20260425T034441Z
+UID:melissa-travel-02f5c7757dea@jstravelschedule.netlify.app
+DTSTAMP:20260505T032651Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
-DESCRIPTION:Pilgrimage\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Pilgrimage\n\n\n\nView live: https://jstravelschedule.netlify.a
+ pp
 LOCATION:Guadalupe\, Mexico
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

@@ -4,13 +4,14 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-031d72072ba1@jstravelschedule.netlify.app
-DTSTAMP:20260425T034435Z
+UID:melissa-travel-f650e7883910@jstravelschedule.netlify.app
+DTSTAMP:20260505T032651Z
 DTSTART;VALUE=DATE:20260522
 DTEND;VALUE=DATE:20260528
 SUMMARY:Jason: St. Augustine\, FL
-DESCRIPTION:Pilgrimage kick-off\n\nFWA -> ORD -> JAX on May 23\; JAX -> C
- LT -> FWA on May 25.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Pilgrimage kick-off\n\nFWA -> CLT -> JAX on May 22\; FWA -> ORD
+  -> JAX on May 23\; JAX -> CLT -> FWA on May 25.\n\nView live: https://jstr
+ avelschedule.netlify.app
 LOCATION:St. Augustine\, FL
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

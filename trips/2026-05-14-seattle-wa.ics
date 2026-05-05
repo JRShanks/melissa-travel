@@ -4,14 +4,14 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-1c5eee69ae23@jstravelschedule.netlify.app
-DTSTAMP:20260425T034434Z
+UID:melissa-travel-48f59a9f603b@jstravelschedule.netlify.app
+DTSTAMP:20260505T032651Z
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260518
 SUMMARY:Jason: Seattle\, WA
-DESCRIPTION:Travel (purpose not noted on calendar)\n\nFWA -> DFW -> SEA o
- n May 14\; SEA -> CLT -> FWA on May 17.\n\nView live: https://jstravelsc
- hedule.netlify.app
+DESCRIPTION:Travel (purpose not noted on calendar)\n\nFWA -> DFW -> SEA on 
+ May 14\; SEA -> CLT -> FWA on May 17.\n\nView live: https://jstravelschedul
+ e.netlify.app
 LOCATION:Seattle\, WA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
