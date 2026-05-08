@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T11:23:28.745Z",
+  "generatedAt": "2026-05-08T12:16:57.058Z",
   "today": "2026-05-08",
   "scanEnd": "2027-05-08",
   "sourceCalendar": "jshanks@eucharisticcongress.org",
@@ -163,6 +163,9 @@
   "generatedFiles": [
     "index.html",
     "melissa-travel.ics",
+    "meetings/2026-05-12-nec-board-of-directors-meeting.ics",
+    "meetings/2026-08-18-nec-board-of-directors-meeting.ics",
+    "meetings/2026-11-16-nec-board-and-member-dinner.ics",
     "trips/2026-05-14-seattle-wa.ics",
     "trips/2026-05-22-st-augustine-fl.ics",
     "trips/2026-06-07-arlington.ics",

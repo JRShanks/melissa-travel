@@ -235,6 +235,7 @@ function buildImportantMeetings(events) {
       startRaw, endRaw, startDay,
       location: meetingLocation(e),
       notes: /subject to change/i.test(`${e.summary || ''} ${stripHtml(e.description || '')}`) ? ['Subject to change.'] : [],
+      slug: `${localYmd(startRaw)}-${slugify(meetingTitle(e))}`,
       uid: `melissa-important-${sha(`${startRaw}|${meetingTitle(e)}`)}@jstravelschedule.netlify.app`,
       sourceSummary: e.summary || '',
     };
@@ -295,6 +296,7 @@ function buildReport(events, trips, meetings) {
     generatedFiles: [
       'index.html',
       'melissa-travel.ics',
+      ...meetings.map(m => `meetings/${m.slug}.ics`),
       ...trips.map(t => `trips/${t.slug}.ics`),
     ],
     costGuardrails: [
@@ -382,6 +384,7 @@ function renderMeeting(m) {
           ${m.location ? `<div class="purpose">${html(m.location)}</div>` : ''}
           ${m.notes.length ? `<div class="notes">${html(m.notes.join(' '))}</div>` : ''}
           <div class="add-row">
+            <a class="add-btn" href="/meetings/${html(m.slug)}.ics" download>📅 Add to Calendar (.ics)</a>
             <a class="add-btn ghost" href="${html(googleMeetingUrl(m))}" target="_blank" rel="noopener">Google Calendar</a>
           </div>
         </article>`;
@@ -492,6 +495,9 @@ if (report.reviewRequired && !allowReviewFlags) {
 if (!reviewOnly) {
   fs.writeFileSync('index.html', renderHtml(trips, meetings));
   fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false, meetings));
+  fs.mkdirSync('meetings', { recursive:true });
+  for (const f of fs.readdirSync('meetings')) if (f.endsWith('.ics')) fs.rmSync(path.join('meetings', f));
+  for (const m of meetings) fs.writeFileSync(path.join('meetings', `${m.slug}.ics`), renderIcs([], true, [m]));
   fs.mkdirSync('trips', { recursive:true });
   for (const f of fs.readdirSync('trips')) if (f.endsWith('.ics')) fs.rmSync(path.join('trips', f));
   for (const t of trips) fs.writeFileSync(path.join('trips', `${t.slug}.ics`), renderIcs([t], true));

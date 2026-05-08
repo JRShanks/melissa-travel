@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melissa-important-8e7460015100@jstravelschedule.netlify.app
+DTSTAMP:20260508T121657Z
+DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
+DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
+SUMMARY:Jason: NEC Board & Member Dinner
+DESCRIPTION:NEC Board & Member Dinner\n\nSubject to change.\n\nView live: h
+ ttps://jstravelschedule.netlify.app
+LOCATION:Baltimore Marriott Waterfront
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

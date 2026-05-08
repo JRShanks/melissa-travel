@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jason Shanks//Melissa Travel//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:melissa-important-e9dc0d54607a@jstravelschedule.netlify.app
+DTSTAMP:20260508T121657Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
+DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
+SUMMARY:Jason: NEC Board of Directors Meeting
+DESCRIPTION:NEC Board of Directors Meeting\n\n\n\nView live: https://jstrav
+ elschedule.netlify.app
+LOCATION:Online
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

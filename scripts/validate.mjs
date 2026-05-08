@@ -5,6 +5,7 @@ import path from 'node:path';
 const html = fs.readFileSync('index.html', 'utf8');
 const feed = fs.readFileSync('melissa-travel.ics', 'utf8');
 const tripFiles = fs.readdirSync('trips').filter(f => f.endsWith('.ics')).sort();
+const meetingFiles = fs.existsSync('meetings') ? fs.readdirSync('meetings').filter(f => f.endsWith('.ics')).sort() : [];
 const report = fs.existsSync('RUN_REPORT.json') ? JSON.parse(fs.readFileSync('RUN_REPORT.json', 'utf8')) : null;
 
 const failures = [];
@@ -21,9 +22,10 @@ assert(feed.includes('METHOD:PUBLISH'), 'feed missing METHOD:PUBLISH');
 assert(feed.includes('REFRESH-INTERVAL;VALUE=DURATION:PT12H'), 'feed missing refresh interval');
 assert(feed.includes('TRANSP:TRANSPARENT'), 'feed missing transparent events');
 assert(html.includes('Important meetings'), 'index.html missing important meetings section');
+if (report) assert(meetingFiles.length === (report.importantMeetingCount || 0), `meeting file count ${meetingFiles.length} does not match RUN_REPORT importantMeetingCount ${report.importantMeetingCount || 0}`);
 assert(vevents === expectedFeedEvents, `feed VEVENT count ${vevents} does not match expected events ${expectedFeedEvents}`);
 
-for (const file of ['melissa-travel.ics', ...tripFiles.map(f => path.join('trips', f))]) {
+for (const file of ['melissa-travel.ics', ...meetingFiles.map(f => path.join('meetings', f)), ...tripFiles.map(f => path.join('trips', f))]) {
   const text = fs.readFileSync(file, 'utf8');
   assert(text.includes('BEGIN:VCALENDAR'), `${file} missing BEGIN:VCALENDAR`);
   assert(text.includes('END:VCALENDAR'), `${file} missing END:VCALENDAR`);
