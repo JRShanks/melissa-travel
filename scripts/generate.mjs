@@ -25,6 +25,27 @@ function slugify(s) { return s.toLowerCase().replace(/&/g,' and ').replace(/[^a-
 function sha(s) { return crypto.createHash('sha1').update(s).digest('hex').slice(0,12); }
 function uniq(a) { return [...new Set(a.filter(Boolean))]; }
 function titleCaseState(city) { return city.replace(/\bFlorida\b/i,'FL').replace(/\bCalifornia\b/i,'CA').replace(/\bMissouri\b/i,'MO').replace(/\bNorth Carolina\b/i,'NC').replace(/\bTexas\b/i,'TX').replace(/\bPennsylvania\b/i,'PA').replace(/\bWashington\b/i,'WA'); }
+function pad(n) { return String(n).padStart(2,'0'); }
+function localDateTimeParts(value) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: TZ, year:'numeric', month:'2-digit', day:'2-digit',
+    hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false,
+  }).formatToParts(new Date(value));
+  const p = Object.fromEntries(parts.filter(x => x.type !== 'literal').map(x => [x.type, x.value]));
+  return { year:p.year, month:p.month, day:p.day, hour:p.hour === '24' ? '00' : p.hour, minute:p.minute, second:p.second };
+}
+function localCompactDateTime(value) {
+  const p = localDateTimeParts(value);
+  return `${p.year}${p.month}${p.day}T${p.hour}${p.minute}${p.second}`;
+}
+function localYmd(value) {
+  const p = localDateTimeParts(value);
+  return `${p.year}-${p.month}-${p.day}`;
+}
+function fmtTimeRange(startValue, endValue) {
+  const fmt = new Intl.DateTimeFormat('en-US', { hour:'numeric', minute:'2-digit', timeZone:TZ });
+  return `${fmt.format(new Date(startValue))}–${fmt.format(new Date(endValue))}`;
+}
 
 async function accessToken() {
   const auth = JSON.parse(fs.readFileSync(TOKEN_PATH, 'utf8'));
@@ -65,6 +86,12 @@ function eventDates(e) {
   // entered/read as inclusive end dates. Timed events are widened to all-day envelopes.
   endExclusive = addDays(endExclusive, 1);
   return { start, endExclusive };
+}
+
+function eventDateTimes(e) {
+  const startRaw = e.start?.dateTime || `${e.start?.date}T00:00:00`;
+  const endRaw = e.end?.dateTime || `${e.end?.date}T00:00:00`;
+  return { startRaw, endRaw, startDay: parseYmd(localYmd(startRaw)) };
 }
 
 const EXCLUDE = /\b(SEAS|school|birthday|baptism|name day|payday|pay day|holiday|no school|field day|VBS|Luke|Nora|Xavier|Lila|Forum Meeting|Board Meeting|Chapter Meeting|Bluffton|1:1|weekly|bi-weekly|monthly|zoom|teams|podcast|radio|Rosary across America|staff call|Executive Team)\b/i;
@@ -180,6 +207,48 @@ function buildTrips(events) {
   return trips.sort((a,b) => a.start - b.start);
 }
 
+function isImportantMeetingCandidate(e) {
+  const text = `${e.summary || ''} ${e.location || ''} ${stripHtml(e.description || '')}`;
+  if (/\b(Melissa|Legatus)\b/i.test(text)) return false;
+  return /\bNEC Board\b/i.test(text) || /\bJason Board Meeting\b/i.test(text);
+}
+
+function meetingTitle(e) {
+  const s = (e.summary || 'Board meeting').replace(/\s+NEC$/i,'').replace(/\s*\(Clone\)$/i,'').trim();
+  if (/Board\s*&\s*Member Dinner/i.test(s)) return 'NEC Board & Member Dinner';
+  if (/Board of Directors/i.test(s) || /Jason Board Meeting/i.test(s)) return 'NEC Board of Directors Meeting';
+  return s;
+}
+
+function meetingLocation(e) {
+  const loc = e.location || '';
+  if (/zoom\.us/i.test(loc)) return 'Zoom';
+  if (/Online Meeting/i.test(loc)) return 'Online';
+  return loc || '';
+}
+
+function buildImportantMeetings(events) {
+  const candidates = events.filter(isImportantMeetingCandidate).map(e => {
+    const { startRaw, endRaw, startDay } = eventDateTimes(e);
+    return {
+      title: meetingTitle(e),
+      startRaw, endRaw, startDay,
+      location: meetingLocation(e),
+      notes: /subject to change/i.test(`${e.summary || ''} ${stripHtml(e.description || '')}`) ? ['Subject to change.'] : [],
+      uid: `melissa-important-${sha(`${startRaw}|${meetingTitle(e)}`)}@jstravelschedule.netlify.app`,
+      sourceSummary: e.summary || '',
+    };
+  }).filter(m => m.endRaw && new Date(m.endRaw) >= today);
+
+  const byKey = new Map();
+  for (const m of candidates) {
+    const key = `${localCompactDateTime(m.startRaw)}|${m.title}`;
+    const prior = byKey.get(key);
+    if (!prior || (/NEC/i.test(m.sourceSummary) && !/NEC/i.test(prior.sourceSummary))) byKey.set(key, m);
+  }
+  return [...byKey.values()].sort((a,b) => new Date(a.startRaw) - new Date(b.startRaw));
+}
+
 function summarizeEvent(e) {
   const { start, endExclusive } = eventDates(e);
   return {
@@ -200,7 +269,7 @@ function reviewFlags(t) {
   return flags;
 }
 
-function buildReport(events, trips) {
+function buildReport(events, trips, meetings) {
   const reviewTrips = trips.filter(t => t.reviewFlags.length);
   const next = trips[0] || null;
   return {
@@ -210,7 +279,9 @@ function buildReport(events, trips) {
     sourceCalendar: CALENDAR_ID,
     eventCount: events.length,
     tripCount: trips.length,
+    importantMeetingCount: meetings.length,
     nextTrip: next ? { city: next.city, start: ymd(next.start), endExclusive: ymd(next.endExclusive), purpose: next.purpose } : null,
+    importantMeetings: meetings.map(m => ({ title: m.title, start: new Date(m.startRaw).toISOString(), location: m.location })),
     reviewRequired: reviewTrips.length > 0,
     reviewFlags: reviewTrips.map(t => ({
       slug: t.slug,
@@ -278,7 +349,44 @@ function renderTrip(t) {
           </div>
         </article>`;
 }
-function renderHtml(trips) {
+function fmtMeetingDate(m) {
+  const d = new Intl.DateTimeFormat('en-US', { weekday:'short', month:'short', day:'numeric', year:'numeric', timeZone:TZ }).format(new Date(m.startRaw));
+  return `${d} • ${fmtTimeRange(m.startRaw, m.endRaw)}`;
+}
+function meetingStatus(m) {
+  const delta = daysBetween(today, m.startDay);
+  if (delta === 0) return { text:'Today', cls:'soon' };
+  if (delta === 1) return { text:'Tomorrow', cls:'soon' };
+  return { text:`In ${delta} days`, cls: delta <= 7 ? 'soon' : 'upcoming' };
+}
+function googleMeetingUrl(m) {
+  const details = `${m.title}\n\n${m.notes.join('\n')}\n\nView live: ${SITE_URL}`;
+  const u = new URL('https://calendar.google.com/calendar/render');
+  u.searchParams.set('action','TEMPLATE'); u.searchParams.set('text',`Jason: ${m.title}`);
+  u.searchParams.set('dates',`${localCompactDateTime(m.startRaw)}/${localCompactDateTime(m.endRaw)}`);
+  u.searchParams.set('details', details); if (m.location) u.searchParams.set('location', m.location);
+  return u.toString();
+}
+function renderMeeting(m) {
+  const st = meetingStatus(m);
+  return `
+        <article class="trip important-meeting">
+          <header class="trip-head">
+            <div class="dates">
+              <div class="date-range">${html(fmtMeetingDate(m))}</div>
+              <div class="nights">Important meeting</div>
+            </div>
+            <span class="badge badge-${st.cls}">${html(st.text)}</span>
+          </header>
+          <div class="city">${html(m.title)}</div>
+          ${m.location ? `<div class="purpose">${html(m.location)}</div>` : ''}
+          ${m.notes.length ? `<div class="notes">${html(m.notes.join(' '))}</div>` : ''}
+          <div class="add-row">
+            <a class="add-btn ghost" href="${html(googleMeetingUrl(m))}" target="_blank" rel="noopener">Google Calendar</a>
+          </div>
+        </article>`;
+}
+function renderHtml(trips, meetings) {
   const old = fs.readFileSync('index.html','utf8');
   const style = old.match(/<style>[\s\S]*?<\/style>/)?.[0] || '';
   const next = trips[0];
@@ -317,9 +425,19 @@ ${style}
       <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>
     </section>
 
-    <div class="summary">${trips.length} upcoming ${trips.length===1?'trip':'trips'} • Last updated ${html(updatedLine())}</div>
+    <div class="summary">${trips.length} upcoming ${trips.length===1?'trip':'trips'} • ${meetings.length} important ${meetings.length===1?'meeting':'meetings'} • Last updated ${html(updatedLine())}</div>
 
-    ${trips.map(renderTrip).join('')}
+    <section class="section-block important-meetings">
+      <h2>Important meetings</h2>
+      <p>Board meetings Jason wants Melissa to be able to plan around.</p>
+      ${meetings.length ? meetings.map(renderMeeting).join('') : '<div class="empty">No upcoming important meetings found.</div>'}
+    </section>
+
+    <section class="section-block travel-list">
+      <h2>Travel</h2>
+
+      ${trips.map(renderTrip).join('')}
+    </section>
 
     <footer>Generated from Jason's Google Calendar. Indianapolis-area, family, school, holiday, payday, and cloned non-trip entries are excluded.</footer>
   </div>
@@ -344,16 +462,24 @@ function vevent(t, stamp) {
     `SUMMARY:${icsEscape(`Jason: ${t.city}`)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(t.city)}`, 'TRANSP:TRANSPARENT', 'STATUS:CONFIRMED', 'END:VEVENT'
   ].map(foldLine).join('\r\n');
 }
-function renderIcs(trips, single) {
+function meetingVevent(m, stamp) {
+  const desc = `${m.title}\n\n${m.notes.join('\n')}\n\nView live: ${SITE_URL}`;
+  return [
+    'BEGIN:VEVENT', `UID:${m.uid}`, `DTSTAMP:${stamp}`, `DTSTART;TZID=${TZ}:${localCompactDateTime(m.startRaw)}`, `DTEND;TZID=${TZ}:${localCompactDateTime(m.endRaw)}`,
+    `SUMMARY:${icsEscape(`Jason: ${m.title}`)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(m.location)}`, 'TRANSP:OPAQUE', 'STATUS:CONFIRMED', 'END:VEVENT'
+  ].map(foldLine).join('\r\n');
+}
+function renderIcs(trips, single, meetings = []) {
   const stamp = new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
   const head = ['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Jason Shanks//Melissa Travel${single?'':' Feed'}//EN`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
   if (!single) head.push("X-WR-CALNAME:Jason's Travel", 'X-WR-CALDESC:Out-of-town trips for Jason Shanks (auto-updated monthly).', 'X-WR-TIMEZONE:America/Indiana/Indianapolis', 'REFRESH-INTERVAL;VALUE=DURATION:PT12H', 'X-PUBLISHED-TTL:PT12H');
-  return [...head, ...trips.map(t => vevent(t, stamp)), 'END:VCALENDAR'].join('\r\n') + '\r\n';
+  return [...head, ...meetings.map(m => meetingVevent(m, stamp)), ...trips.map(t => vevent(t, stamp)), 'END:VCALENDAR'].join('\r\n') + '\r\n';
 }
 
 const events = await fetchEvents();
 const trips = buildTrips(events);
-const report = buildReport(events, trips);
+const meetings = buildImportantMeetings(events);
+const report = buildReport(events, trips, meetings);
 
 fs.writeFileSync('RUN_REPORT.json', JSON.stringify(report, null, 2) + '\n');
 
@@ -364,12 +490,13 @@ if (report.reviewRequired && !allowReviewFlags) {
 }
 
 if (!reviewOnly) {
-  fs.writeFileSync('index.html', renderHtml(trips));
-  fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false));
+  fs.writeFileSync('index.html', renderHtml(trips, meetings));
+  fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false, meetings));
   fs.mkdirSync('trips', { recursive:true });
   for (const f of fs.readdirSync('trips')) if (f.endsWith('.ics')) fs.rmSync(path.join('trips', f));
   for (const t of trips) fs.writeFileSync(path.join('trips', `${t.slug}.ics`), renderIcs([t], true));
 }
 
-console.log(`${reviewOnly ? 'Reviewed' : 'Generated'} ${trips.length} trips from ${events.length} events`);
+console.log(`${reviewOnly ? 'Reviewed' : 'Generated'} ${trips.length} trips and ${meetings.length} important meetings from ${events.length} events`);
+for (const m of meetings) console.log(`${localYmd(m.startRaw)} ${fmtTimeRange(m.startRaw, m.endRaw)} ${m.title}${m.location ? ' :: '+m.location : ''}`);
 for (const t of trips) console.log(`${ymd(t.start)} -> ${ymd(t.endExclusive)} ${t.city} :: ${t.purpose}${t.notes.length ? ' :: '+t.notes.join(' ') : ''}${t.reviewFlags.length ? ' :: REVIEW '+t.reviewFlags.join(',') : ''}`);

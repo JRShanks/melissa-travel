@@ -16,10 +16,12 @@ assert(html.includes('webcal://jstravelschedule.netlify.app/melissa-travel.ics')
 assert(html.includes('https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics'), 'index.html missing Google subscribe link');
 
 const vevents = (feed.match(/BEGIN:VEVENT/g) || []).length;
+const expectedFeedEvents = report ? (report.tripCount || 0) + (report.importantMeetingCount || 0) : tripFiles.length;
 assert(feed.includes('METHOD:PUBLISH'), 'feed missing METHOD:PUBLISH');
 assert(feed.includes('REFRESH-INTERVAL;VALUE=DURATION:PT12H'), 'feed missing refresh interval');
 assert(feed.includes('TRANSP:TRANSPARENT'), 'feed missing transparent events');
-assert(vevents === tripFiles.length, `feed VEVENT count ${vevents} does not match trip file count ${tripFiles.length}`);
+assert(html.includes('Important meetings'), 'index.html missing important meetings section');
+assert(vevents === expectedFeedEvents, `feed VEVENT count ${vevents} does not match expected events ${expectedFeedEvents}`);
 
 for (const file of ['melissa-travel.ics', ...tripFiles.map(f => path.join('trips', f))]) {
   const text = fs.readFileSync(file, 'utf8');
