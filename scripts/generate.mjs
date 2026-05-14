@@ -148,28 +148,20 @@ function flightNote(events, trip) {
   for (const e of events) {
     const s = e.summary || '';
     if (!/^Flight:/i.test(s) && !/^Drive:/i.test(s)) continue;
-    const {start} = eventDates(e);
+    const {startRaw, endRaw} = eventDateTimes(e);
+    const start = parseYmd(localYmd(startRaw));
     if (start < addDays(trip.start, -1) || start > addDays(trip.endExclusive, 1)) continue;
     const fm = s.match(/from\s+([A-Z]{3})\s+to\s+([A-Z]{3})/i);
-    if (fm) bits.push({ date: start, route: `${fm[1].toUpperCase()} -> ${fm[2].toUpperCase()}` });
-    else if (/Drive:/i.test(s)) bits.push({ date: start, route: s.replace(/^Drive:\s*/i,'Driving ') });
+    if (fm) bits.push({
+      date: start,
+      detail: `${fm[1].toUpperCase()} -> ${fm[2].toUpperCase()} ${fmtTimeRange(startRaw, endRaw)}`,
+    });
+    else if (/Drive:/i.test(s)) bits.push({ date: start, detail: s.replace(/^Drive:\s*/i,'Driving ') });
   }
   if (!bits.length) return '';
   const byDate = new Map();
-  for (const b of bits) byDate.set(ymd(b.date), [...(byDate.get(ymd(b.date)) || []), b.route]);
-  return [...byDate].map(([date, routes]) => `${joinRoutes(routes)} on ${fmtMonthDay(parseYmd(date))}`).join('; ') + '.';
-}
-function joinRoutes(routes) {
-  const airports = [];
-  const other = [];
-  for (const route of routes) {
-    const m = route.match(/^([A-Z]{3}) -> ([A-Z]{3})$/);
-    if (!m) { other.push(route); continue; }
-    if (!airports.length) airports.push(m[1], m[2]);
-    else if (airports.at(-1) === m[1]) airports.push(m[2]);
-    else airports.push(m[1], m[2]);
-  }
-  return [...other, airports.join(' -> ')].filter(Boolean).join('; ');
+  for (const b of bits) byDate.set(ymd(b.date), [...(byDate.get(ymd(b.date)) || []), b.detail]);
+  return [...byDate].map(([date, details]) => `${fmtMonthDay(parseYmd(date))}: ${details.join('; ')}`).join('. ') + '.';
 }
 
 function buildTrips(events) {

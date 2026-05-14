@@ -5,13 +5,14 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:melissa-travel-e3470f26517c@jstravelschedule.netlify.app
-DTSTAMP:20260514T022501Z
+DTSTAMP:20260514T022849Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260927
 SUMMARY:Jason: Raleigh\, NC
 DESCRIPTION:Speaking at Legatus Raleigh ("Strength in Surrender: Humility I
- n The Eucharist")\n\nFWA -> CLT -> RDU on Sep 24\; RDU -> CLT -> FWA on Sep
-  25.\n\nView live: https://jstravelschedule.netlify.app
+ n The Eucharist")\n\nSep 24: FWA -> CLT 12:01 PM–1:55 PM\; CLT -> RDU 2:3
+ 0 PM–3:33 PM. Sep 25: RDU -> CLT 12:52 PM–2:00 PM\; CLT -> FWA 2:35 PM
+ –4:30 PM.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Raleigh\, NC
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
