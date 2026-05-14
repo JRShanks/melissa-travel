@@ -5,13 +5,14 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:melissa-travel-f650e7883910@jstravelschedule.netlify.app
-DTSTAMP:20260508T121657Z
+DTSTAMP:20260514T022501Z
 DTSTART;VALUE=DATE:20260522
 DTEND;VALUE=DATE:20260528
 SUMMARY:Jason: St. Augustine\, FL
 DESCRIPTION:Pilgrimage kick-off\n\nFWA -> CLT -> JAX on May 22\; FWA -> ORD
-  -> JAX on May 23\; JAX -> CLT -> FWA on May 25.\n\nView live: https://jstr
- avelschedule.netlify.app
+  -> JAX on May 23\; JAX -> CLT -> FWA on May 25.\nSunday 10am outdoor openi
+ ng remarks\, kicking off the pilgrimage.\n\nView live: https://jstravelsche
+ dule.netlify.app
 LOCATION:St. Augustine\, FL
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

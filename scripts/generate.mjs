@@ -195,10 +195,20 @@ function buildTrips(events) {
     const note = flightNote(events, t);
     const notes = [];
     if (note) notes.push(note);
+    if (/Seattle, WA/.test(t.city)) {
+      notes.push('VIP dinner Friday night.');
+      notes.push('Speaking Saturday after Mass for 8-10 minutes, followed by trailer/video showing. Remarks should point them to the resource hub for their next steps, including 250 holy hours.');
+    }
+    if (/St\. Augustine, FL/.test(t.city)) {
+      notes.push('Sunday 10am outdoor opening remarks, kicking off the pilgrimage.');
+    }
     if (/Philadelphia, PA/.test(t.city) && ymd(t.start)==='2026-07-03') notes.push('Spans the July 4th holiday.');
     if (/Napa/.test(t.city)) notes.push('The Meritage Resort and Spa, Napa, CA.');
     if (/TBD/.test(t.city)) notes.push('Location not noted on calendar event.');
     if (/St\. Louis/.test(t.city) && /Jubilee 2033/.test(t.purpose)) notes.push('Merged overlapping St. Louis blocks from Staff Strategy Meetings and Jubilee 2033.');
+    if (/Guadalupe, Mexico/.test(t.city)) {
+      notes.push('Fly into Mexico City for Guadalupe pilgrimage; arrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compare departing Fort Wayne vs Indianapolis for cost.');
+    }
     t.notes = uniq(notes);
     t.slug = `${ymd(t.start)}-${slugify(t.city)}`;
     t.uid = `melissa-travel-${sha(`${ymd(t.start)}|${ymd(t.endExclusive)}|${t.city}`)}@jstravelschedule.netlify.app`;

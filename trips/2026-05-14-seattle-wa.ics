@@ -5,13 +5,15 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:melissa-travel-48f59a9f603b@jstravelschedule.netlify.app
-DTSTAMP:20260508T121657Z
+DTSTAMP:20260514T022501Z
 DTSTART;VALUE=DATE:20260514
 DTEND;VALUE=DATE:20260518
 SUMMARY:Jason: Seattle\, WA
 DESCRIPTION:Travel (purpose not noted on calendar)\n\nFWA -> DFW -> SEA on 
- May 14\; SEA -> CLT -> FWA on May 17.\n\nView live: https://jstravelschedul
- e.netlify.app
+ May 14\; SEA -> CLT -> FWA on May 17.\nVIP dinner Friday night.\nSpeaking S
+ aturday after Mass for 8-10 minutes\, followed by trailer/video showing. Re
+ marks should point them to the resource hub for their next steps\, includin
+ g 250 holy hours.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Seattle\, WA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
