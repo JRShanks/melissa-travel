@@ -6,13 +6,47 @@ import crypto from 'node:crypto';
 const SITE_URL = 'https://jstravelschedule.netlify.app';
 const FEED_URL = `${SITE_URL}/melissa-travel.ics`;
 const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID || 'jshanks@eucharisticcongress.org';
-const TOKEN_PATH = process.env.GOOGLE_TOKEN_PATH || `${process.env.HOME}/.openclaw/secrets/daily-briefing-google-token.json`;
+const OUTLOOK_EVENTS_PATH = process.env.OUTLOOK_CALENDAR_EVENTS_PATH || process.env.MELISSA_TRAVEL_OUTLOOK_EVENTS_PATH || path.join(process.cwd(), 'data', 'outlook-calendar-events.json');
+const DEFAULT_TOKEN_PATH = `${process.env.HOME}/.openclaw/secrets/daily-briefing-google-token.json`;
+const TOKEN_CANDIDATES = [
+  process.env.GOOGLE_TOKEN_PATH,
+  process.env.DAILY_BRIEFING_GOOGLE_TOKEN_PATH,
+  DEFAULT_TOKEN_PATH,
+  '/Users/clive/.openclaw/secrets/daily-briefing-google-token.json',
+  '/Users/jasonshanks/.openclaw/secrets/daily-briefing-google-token.json',
+].filter(Boolean);
 const TZ = 'America/Indiana/Indianapolis';
 const todayArg = process.argv.find(a => a.startsWith('--today='))?.split('=')[1];
 const reviewOnly = process.argv.includes('--review-only');
 const allowReviewFlags = process.argv.includes('--allow-review-flags');
 const today = parseYmd(todayArg || new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date()));
 const scanEnd = addDays(today, 365);
+const MANUAL_TRIPS = [
+  {
+    start: '2026-06-26',
+    endExclusive: '2026-06-29',
+    city: 'Boston, MA',
+    purpose: 'Boston Pilgrimage',
+    notes: [],
+    sources: ['Manual: Boston Pilgrimage'],
+  },
+  {
+    start: '2026-11-11',
+    endExclusive: '2026-11-16',
+    city: 'Guadalupe, Mexico',
+    purpose: 'Pilgrimage',
+    notes: [],
+    sources: ['Manual: Guadalupe pilgrimage'],
+  },
+];
+const MANUAL_TRIP_OVERRIDES = [
+  {
+    city: 'Philadelphia, PA',
+    start: '2026-06-10',
+    endExclusive: '2026-06-14',
+    notes: ['Melissa joining; trip now runs through Saturday.'],
+  },
+];
 
 function parseYmd(s) { const [y,m,d] = s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); }
 function ymd(d) { return d.toISOString().slice(0,10); }
@@ -46,9 +80,50 @@ function fmtTimeRange(startValue, endValue) {
   const fmt = new Intl.DateTimeFormat('en-US', { hour:'numeric', minute:'2-digit', timeZone:TZ });
   return `${fmt.format(new Date(startValue))}–${fmt.format(new Date(endValue))}`;
 }
+function outlookArray(payload) {
+  if (Array.isArray(payload)) return payload;
+  if (Array.isArray(payload?.events)) return payload.events;
+  if (Array.isArray(payload?.value)) return payload.value;
+  return [];
+}
+function outlookDateTime(value) {
+  if (!value) return null;
+  if (typeof value === 'string') return { dateTime: value };
+  const raw = value.dateTime || value.date;
+  if (!raw) return null;
+  if (value.date) return { date: raw.slice(0, 10) };
+  const dateTime = value.timeZone === 'UTC' && !/[zZ]|[+-]\d{2}:\d{2}$/.test(raw) ? `${raw}Z` : raw;
+  return { dateTime };
+}
+function isMidnightUtc(value) {
+  return /^\d{4}-\d{2}-\d{2}T00:00:00(?:\.0000000)?Z?$/.test(String(value || ''));
+}
+function normalizeOutlookEvent(e) {
+  const location = typeof e.location === 'string' ? e.location : e.location?.displayName || '';
+  const start = outlookDateTime(e.start);
+  const end = outlookDateTime(e.end);
+  const allDay = Boolean(e.isAllDay || e.is_all_day || (isMidnightUtc(start?.dateTime) && isMidnightUtc(end?.dateTime)));
+  return {
+    id: e.id || e.uid || e.iCalUId || e.i_cal_u_id || '',
+    summary: e.summary || e.subject || e.display_title || '',
+    description: e.description || e.notes || e.bodyPreview || e.body?.content || '',
+    location,
+    start: start || {},
+    end: end || {},
+    allDay,
+    source: 'outlook',
+  };
+}
+
+function tokenPath() {
+  const seen = [...new Set(TOKEN_CANDIDATES)];
+  const found = seen.find(p => fs.existsSync(p));
+  if (found) return found;
+  throw new Error(`Google Calendar token not found. Checked: ${seen.join(', ')}`);
+}
 
 async function accessToken() {
-  const auth = JSON.parse(fs.readFileSync(TOKEN_PATH, 'utf8'));
+  const auth = JSON.parse(fs.readFileSync(tokenPath(), 'utf8'));
   if (auth.tokens?.access_token && auth.tokens?.expiry_date > Date.now() + 60000) return auth.tokens.access_token;
   const body = new URLSearchParams({ client_id: auth.client_id, client_secret: auth.client_secret, refresh_token: auth.tokens.refresh_token, grant_type: 'refresh_token' });
   const res = await fetch('https://oauth2.googleapis.com/token', { method:'POST', headers:{'content-type':'application/x-www-form-urlencoded'}, body });
@@ -57,6 +132,16 @@ async function accessToken() {
 }
 
 async function fetchEvents() {
+  if (fs.existsSync(OUTLOOK_EVENTS_PATH)) {
+    const payload = JSON.parse(fs.readFileSync(OUTLOOK_EVENTS_PATH, 'utf8'));
+    const expectedStart = ymd(today);
+    const expectedEnd = ymd(scanEnd);
+    if (payload?.startDate && payload?.endDate && (payload.startDate !== expectedStart || payload.endDate !== expectedEnd)) {
+      throw new Error(`Stale Outlook travel calendar injection at ${OUTLOOK_EVENTS_PATH}; expected ${expectedStart} to ${expectedEnd}.`);
+    }
+    return outlookArray(payload).map(normalizeOutlookEvent);
+  }
+
   const token = await accessToken();
   const items = [];
   let pageToken;
@@ -82,6 +167,7 @@ function eventDates(e) {
   const endRaw = e.end?.date || e.end?.dateTime;
   const start = parseYmd(startRaw.slice(0,10));
   let endExclusive = parseYmd(endRaw.slice(0,10));
+  if (e.source === 'outlook' && e.allDay) return { start, endExclusive };
   // For this hand-maintained calendar, all-day travel blocks have historically been
   // entered/read as inclusive end dates. Timed events are widened to all-day envelopes.
   endExclusive = addDays(endExclusive, 1);
@@ -96,11 +182,19 @@ function eventDateTimes(e) {
 
 const EXCLUDE = /\b(SEAS|school|birthday|baptism|name day|payday|pay day|holiday|no school|field day|VBS|Luke|Nora|Xavier|Lila|Forum Meeting|Board Meeting|Chapter Meeting|Bluffton|1:1|weekly|bi-weekly|monthly|zoom|teams|podcast|radio|Rosary across America|staff call|Executive Team)\b/i;
 const TRAVEL_HINT = /\b(Jason in|Jason In|Jason Napa|flight:|drive:|pilgrimage|conference|speaking|gala|travel block|out-of-town|staff strategy|Napa Institute|Legatus Raleigh|Guadalupe|St\. Augustine|Philadelphia|Seattle|Dallas|Raleigh|St\. Louis|Arlington|Jubilee 2033|Becket)\b/i;
-const AIRPORT_TO_CITY = { SEA:'Seattle, WA', JAX:'St. Augustine, FL', RDU:'Raleigh, NC', DFW:'Dallas, TX', DAL:'Dallas, TX', STL:'St. Louis, MO', PHL:'Philadelphia, PA' };
+const AIRPORT_TO_CITY = { SEA:'Seattle, WA', JAX:'St. Augustine, FL', RDU:'Raleigh, NC', DFW:'Dallas, TX', DAL:'Dallas, TX', STL:'St. Louis, MO', PHL:'Philadelphia, PA', MEX:'Guadalupe, Mexico' };
 const HOME_AIRPORTS = new Set(['FWA','IND','ORD','CLT','DFW']);
 
 function inferCity(e) {
   const text = `${e.summary || ''} | ${e.location || ''} | ${stripHtml(e.description || '')}`;
+  const flight = text.match(/\bfrom\s+([A-Z]{3})\s+to\s+([A-Z]{3})\b/i);
+  if (flight) {
+    const from = flight[1].toUpperCase();
+    const to = flight[2].toUpperCase();
+    if (!HOME_AIRPORTS.has(to)) return AIRPORT_TO_CITY[to] || null;
+    if (!HOME_AIRPORTS.has(from)) return AIRPORT_TO_CITY[from] || null;
+    return null;
+  }
   const rules = [
     [/St\.?\s*Augustine/i, 'St. Augustine, FL'], [/Seattle|\bSEA\b/i, 'Seattle, WA'], [/Philadelphia|\bPHL\b/i, 'Philadelphia, PA'],
     [/Napa|Meritage/i, 'Napa, CA'], [/St\.?\s*Louis|Augustine Institute/i, 'St. Louis, MO'], [/Raleigh|\bRDU\b/i, 'Raleigh, NC'],
@@ -108,8 +202,6 @@ function inferCity(e) {
   ];
   for (const [re, city] of rules) if (re.test(text)) return city;
   if (/Art and Arch/i.test(text)) return 'TBD';
-  const m = text.match(/\bfrom\s+([A-Z]{3})\s+to\s+([A-Z]{3})\b/i);
-  if (m) return AIRPORT_TO_CITY[m[2].toUpperCase()] || null;
   return null;
 }
 
@@ -171,6 +263,18 @@ function buildTrips(events) {
     return { start, endExclusive, city, purpose: purposeFor(e, city), sources:[e.summary || ''], notes: [], sourceEvents: [summarizeEvent(e)] };
   }).filter(t => t.endExclusive >= today);
 
+  candidates.push(...MANUAL_TRIPS.map(t => ({
+    ...t,
+    start: parseYmd(t.start),
+    endExclusive: parseYmd(t.endExclusive),
+    sourceEvents: [{
+      summary: t.sources[0],
+      location: t.city,
+      start: t.start,
+      endExclusive: t.endExclusive,
+    }],
+  })).filter(t => t.endExclusive >= today && t.start < scanEnd));
+
   candidates.sort((a,b) => a.start - b.start || a.endExclusive - b.endExclusive);
   const trips = [];
   for (const c of candidates) {
@@ -200,6 +304,12 @@ function buildTrips(events) {
     if (/St\. Louis/.test(t.city) && /Jubilee 2033/.test(t.purpose)) notes.push('Merged overlapping St. Louis blocks from Staff Strategy Meetings and Jubilee 2033.');
     if (/Guadalupe, Mexico/.test(t.city)) {
       notes.push('Fly into Mexico City for Guadalupe pilgrimage; arrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compare departing Fort Wayne vs Indianapolis for cost.');
+    }
+    for (const override of MANUAL_TRIP_OVERRIDES) {
+      if (t.city !== override.city || ymd(t.start) !== override.start) continue;
+      const overrideEnd = parseYmd(override.endExclusive);
+      if (overrideEnd > t.endExclusive) t.endExclusive = overrideEnd;
+      notes.push(...(override.notes || []));
     }
     t.notes = uniq(notes);
     t.slug = `${ymd(t.start)}-${slugify(t.city)}`;
@@ -275,11 +385,12 @@ function reviewFlags(t) {
 function buildReport(events, trips, meetings) {
   const reviewTrips = trips.filter(t => t.reviewFlags.length);
   const next = trips[0] || null;
+  const sourceCalendar = fs.existsSync(OUTLOOK_EVENTS_PATH) ? `Outlook Calendar (${OUTLOOK_EVENTS_PATH})` : CALENDAR_ID;
   return {
     generatedAt: new Date().toISOString(),
     today: ymd(today),
     scanEnd: ymd(scanEnd),
-    sourceCalendar: CALENDAR_ID,
+    sourceCalendar,
     eventCount: events.length,
     tripCount: trips.length,
     importantMeetingCount: meetings.length,
@@ -444,7 +555,7 @@ ${style}
       ${trips.map(renderTrip).join('')}
     </section>
 
-    <footer>Generated from Jason's Google Calendar. Indianapolis-area, family, school, holiday, payday, and cloned non-trip entries are excluded.</footer>
+    <footer>Generated from Jason's Outlook Calendar. Indianapolis-area, family, school, holiday, payday, and cloned non-trip entries are excluded.</footer>
   </div>
 </body>
 </html>
@@ -456,7 +567,12 @@ function foldLine(line) {
   if (bytes.length <= 75) return line;
   let out = '', cur = '';
   for (const ch of line) {
-    if (Buffer.from(cur + ch, 'utf8').length > 75) { out += cur + '\r\n '; cur = ch; } else cur += ch;
+    if (Buffer.from(cur + ch, 'utf8').length > 75) {
+      const trimmed = cur.replace(/[ \t]+$/g, '');
+      const carry = cur.length === trimmed.length ? ch : ` ${ch}`;
+      out += trimmed + '\n ';
+      cur = carry;
+    } else cur += ch;
   }
   return out + cur;
 }
@@ -465,20 +581,20 @@ function vevent(t, stamp) {
   return [
     'BEGIN:VEVENT', `UID:${t.uid}`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${compactDate(t.start)}`, `DTEND;VALUE=DATE:${compactDate(t.endExclusive)}`,
     `SUMMARY:${icsEscape(`Jason: ${t.city}`)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(t.city)}`, 'TRANSP:TRANSPARENT', 'STATUS:CONFIRMED', 'END:VEVENT'
-  ].map(foldLine).join('\r\n');
+  ].map(foldLine).join('\n');
 }
 function meetingVevent(m, stamp) {
   const desc = `${m.title}\n\n${m.notes.join('\n')}\n\nView live: ${SITE_URL}`;
   return [
     'BEGIN:VEVENT', `UID:${m.uid}`, `DTSTAMP:${stamp}`, `DTSTART;TZID=${TZ}:${localCompactDateTime(m.startRaw)}`, `DTEND;TZID=${TZ}:${localCompactDateTime(m.endRaw)}`,
     `SUMMARY:${icsEscape(`Jason: ${m.title}`)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(m.location)}`, 'TRANSP:OPAQUE', 'STATUS:CONFIRMED', 'END:VEVENT'
-  ].map(foldLine).join('\r\n');
+  ].map(foldLine).join('\n');
 }
 function renderIcs(trips, single, meetings = []) {
   const stamp = new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
   const head = ['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Jason Shanks//Melissa Travel${single?'':' Feed'}//EN`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
   if (!single) head.push("X-WR-CALNAME:Jason's Travel", 'X-WR-CALDESC:Out-of-town trips for Jason Shanks (auto-updated monthly).', 'X-WR-TIMEZONE:America/Indiana/Indianapolis', 'REFRESH-INTERVAL;VALUE=DURATION:PT12H', 'X-PUBLISHED-TTL:PT12H');
-  return [...head, ...meetings.map(m => meetingVevent(m, stamp)), ...trips.map(t => vevent(t, stamp)), 'END:VCALENDAR'].join('\r\n') + '\r\n';
+  return [...head, ...meetings.map(m => meetingVevent(m, stamp)), ...trips.map(t => vevent(t, stamp)), 'END:VCALENDAR'].join('\n') + '\n';
 }
 
 const events = await fetchEvents();
@@ -495,7 +611,7 @@ if (report.reviewRequired && !allowReviewFlags) {
 }
 
 if (!reviewOnly) {
-  fs.writeFileSync('index.html', renderHtml(trips, meetings));
+  fs.writeFileSync('index.html', renderHtml(trips, meetings).replace(/^[ \t]+$/gm, ''));
   fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false, meetings));
   fs.mkdirSync('meetings', { recursive:true });
   for (const f of fs.readdirSync('meetings')) if (f.endsWith('.ics')) fs.rmSync(path.join('meetings', f));

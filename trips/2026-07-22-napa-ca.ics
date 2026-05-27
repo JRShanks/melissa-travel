@@ -4,10 +4,10 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-838348a565e8@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-a9e6607f72f7@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260722
-DTEND;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
 DESCRIPTION:15th Annual Napa Institute Summer Conference\n\nThe Meritage Re
  sort and Spa\, Napa\, CA.\n\nView live: https://jstravelschedule.netlify.ap

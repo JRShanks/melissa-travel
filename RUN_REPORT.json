@@ -1,82 +1,83 @@
 {
-  "generatedAt": "2026-05-14T02:28:49.054Z",
-  "today": "2026-05-13",
-  "scanEnd": "2027-05-13",
-  "sourceCalendar": "jshanks@eucharisticcongress.org",
-  "eventCount": 964,
-  "tripCount": 11,
-  "importantMeetingCount": 2,
+  "generatedAt": "2026-05-27T17:00:24.056Z",
+  "today": "2026-05-27",
+  "scanEnd": "2027-05-27",
+  "sourceCalendar": "Outlook Calendar (/Users/clive/Desktop/melissa-travel/data/outlook-calendar-events.json)",
+  "eventCount": 200,
+  "tripCount": 7,
+  "importantMeetingCount": 1,
   "nextTrip": {
-    "city": "Seattle, WA",
-    "start": "2026-05-14",
-    "endExclusive": "2026-05-18",
-    "purpose": "Travel (purpose not noted on calendar)"
+    "city": "Arlington",
+    "start": "2026-06-07",
+    "endExclusive": "2026-06-08",
+    "purpose": "Corpus Christi Arlington event (Melissa also listed)"
   },
   "importantMeetings": [
     {
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",
       "location": "Zoom"
-    },
-    {
-      "title": "NEC Board & Member Dinner",
-      "start": "2026-11-16T22:30:00.000Z",
-      "location": "Baltimore Marriott Waterfront"
     }
   ],
   "reviewRequired": true,
   "reviewFlags": [
     {
-      "slug": "2026-05-14-seattle-wa",
-      "city": "Seattle, WA",
-      "start": "2026-05-14",
-      "endExclusive": "2026-05-18",
-      "purpose": "Travel (purpose not noted on calendar)",
-      "flags": [
-        "missing-purpose"
-      ],
-      "sources": [
-        {
-          "summary": "Flight: AA 717 from DFW to SEA NEC",
-          "location": "Dallas/Fort Worth International Airport\n2400 Aviation Drive, Dallas, TX 75261, United States",
-          "start": "2026-05-14",
-          "endExclusive": "2026-05-15"
-        },
-        {
-          "summary": "Jason in Seattle May 14th starting at 6am to Sunday May 17th to (Clone)",
-          "location": "",
-          "start": "2026-05-14",
-          "endExclusive": "2026-05-18"
-        },
-        {
-          "summary": "Flight: AA 381 from SEA to CLT NEC",
-          "location": "Seattle-Tacoma International Airport\n17801 International Blvd, Seattle, WA  98158-1201, United States",
-          "start": "2026-05-17",
-          "endExclusive": "2026-05-18"
-        }
-      ]
-    },
-    {
       "slug": "2026-06-07-arlington",
       "city": "Arlington",
       "start": "2026-06-07",
-      "endExclusive": "2026-06-09",
+      "endExclusive": "2026-06-08",
       "purpose": "Corpus Christi Arlington event (Melissa also listed)",
       "flags": [
         "city-only"
       ],
       "sources": [
         {
-          "summary": "Corpus Chrsti Arlington Event NEC",
+          "summary": "Corpus Chrsti Arlington Event",
           "location": "Arlington\r\nUnited States",
           "start": "2026-06-07",
-          "endExclusive": "2026-06-09"
+          "endExclusive": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-10-philadelphia-pa",
+      "city": "Philadelphia, PA",
+      "start": "2026-06-10",
+      "endExclusive": "2026-06-14",
+      "purpose": "Philadelphia - Catholic Collaborators / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphia - Ward Fitzgerald Event Hold",
+      "flags": [
+        "merged-purpose-review"
+      ],
+      "sources": [
+        {
+          "summary": "Philadelphia - Catholic Collaborators",
+          "location": "Philadelphia, PA",
+          "start": "2026-06-10",
+          "endExclusive": "2026-06-12"
         },
         {
-          "summary": "Corpus Chrsti Arlington Event (Clone)",
-          "location": "",
-          "start": "2026-06-07",
-          "endExclusive": "2026-06-09"
+          "summary": "Becket Fund Meeting — Philadelphia NEC",
+          "location": "Kimpton Monaco, 433 Chestnut Street, Philadelphia, PA",
+          "start": "2026-06-10",
+          "endExclusive": "2026-06-12"
+        },
+        {
+          "summary": "Becket Lunch Briefing",
+          "location": "Philadelphia, PA",
+          "start": "2026-06-11",
+          "endExclusive": "2026-06-12"
+        },
+        {
+          "summary": "Becket Canterbury Medal Gala",
+          "location": "National Constitution Center, Philadelphia, PA",
+          "start": "2026-06-11",
+          "endExclusive": "2026-06-13"
+        },
+        {
+          "summary": "Philadelphia - Ward Fitzgerald Event Hold",
+          "location": "Philadelphia, PA",
+          "start": "2026-06-12",
+          "endExclusive": "2026-06-13"
         }
       ]
     },
@@ -84,73 +85,17 @@
       "slug": "2026-07-03-philadelphia-pa",
       "city": "Philadelphia, PA",
       "start": "2026-07-03",
-      "endExclusive": "2026-07-08",
+      "endExclusive": "2026-07-07",
       "purpose": "Out-of-town block (purpose not noted on calendar)",
       "flags": [
         "missing-purpose"
       ],
       "sources": [
         {
-          "summary": "Jason in Philadelphia",
+          "summary": "Jason in Philadelphia NEC",
           "location": "Philadelphia, PA",
           "start": "2026-07-03",
-          "endExclusive": "2026-07-08"
-        }
-      ]
-    },
-    {
-      "slug": "2026-08-31-st-louis-mo",
-      "city": "St. Louis, MO",
-      "start": "2026-08-31",
-      "endExclusive": "2026-09-08",
-      "purpose": "NEC staff strategy meetings at the Augustine Institute / Jubilee 2033",
-      "flags": [
-        "merged-purpose-review",
-        "merged-overlapping-blocks"
-      ],
-      "sources": [
-        {
-          "summary": "Drive: Fort Wayne to St. Louis (Staff Strategy Meetings)",
-          "location": "",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-01"
-        },
-        {
-          "summary": "St. Louis - Staff Strategy Meetings",
-          "location": "Augustine Institute, St. Louis, MO",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-05"
-        },
-        {
-          "summary": "Jason In St. Louis (Clone)",
-          "location": "",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-05"
-        },
-        {
-          "summary": "Jubilee 2033",
-          "location": "Augustine Institute, St. Louis, MO",
-          "start": "2026-09-03",
-          "endExclusive": "2026-09-08"
-        }
-      ]
-    },
-    {
-      "slug": "2026-09-17-tbd",
-      "city": "TBD",
-      "start": "2026-09-17",
-      "endExclusive": "2026-09-21",
-      "purpose": "Catholic Institute for Art and Architecture Conference",
-      "flags": [
-        "city-tbd",
-        "city-only"
-      ],
-      "sources": [
-        {
-          "summary": "Catholic Institute for Art and Archecture Conference (Clone)",
-          "location": "",
-          "start": "2026-09-17",
-          "endExclusive": "2026-09-21"
+          "endExclusive": "2026-07-07"
         }
       ]
     }
@@ -159,17 +104,12 @@
     "index.html",
     "melissa-travel.ics",
     "meetings/2026-08-18-nec-board-of-directors-meeting.ics",
-    "meetings/2026-11-16-nec-board-and-member-dinner.ics",
-    "trips/2026-05-14-seattle-wa.ics",
-    "trips/2026-05-22-st-augustine-fl.ics",
     "trips/2026-06-07-arlington.ics",
     "trips/2026-06-10-philadelphia-pa.ics",
+    "trips/2026-06-26-boston-ma.ics",
     "trips/2026-07-03-philadelphia-pa.ics",
     "trips/2026-07-22-napa-ca.ics",
     "trips/2026-08-31-st-louis-mo.ics",
-    "trips/2026-09-17-tbd.ics",
-    "trips/2026-09-23-raleigh-nc.ics",
-    "trips/2026-10-03-dallas-tx.ics",
     "trips/2026-11-11-guadalupe-mexico.ics"
   ],
   "costGuardrails": [

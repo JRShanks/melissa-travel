@@ -4,13 +4,13 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-f58e1c132672@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-6e3f4ae969d9@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260703
-DTEND;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nSpans the 
- July 4th holiday.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nSpans the
+  July 4th holiday.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

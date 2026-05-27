@@ -9,8 +9,8 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:melissa-important-e9dc0d54607a@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -21,53 +21,10 @@ TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-important-8e7460015100@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
-DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
-DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
-SUMMARY:Jason: NEC Board & Member Dinner
-DESCRIPTION:NEC Board & Member Dinner\n\nSubject to change.\n\nView live: h
- ttps://jstravelschedule.netlify.app
-LOCATION:Baltimore Marriott Waterfront
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-48f59a9f603b@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
-DTSTART;VALUE=DATE:20260514
-DTEND;VALUE=DATE:20260518
-SUMMARY:Jason: Seattle\, WA
-DESCRIPTION:Travel (purpose not noted on calendar)\n\nMay 14: FWA -> DFW 7:
- 00 AM–9:47 AM\; DFW -> SEA 11:53 AM–4:15 PM. May 17: SEA -> CLT 9:00 AM
- –2:09 PM\; CLT -> FWA 3:14 PM–5:13 PM.\nVIP dinner Friday night.\nSpeak
- ing Saturday after Mass for 8-10 minutes\, followed by trailer/video showin
- g. Remarks should point them to the resource hub for their next steps\, inc
- luding 250 holy hours.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Seattle\, WA
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-f650e7883910@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
-DTSTART;VALUE=DATE:20260522
-DTEND;VALUE=DATE:20260528
-SUMMARY:Jason: St. Augustine\, FL
-DESCRIPTION:Pilgrimage kick-off\n\nMay 22: FWA -> CLT 12:00 PM–1:53 PM\; 
- CLT -> JAX 3:48 PM–5:14 PM. May 23: FWA -> ORD 5:40 AM–6:52 AM\; ORD ->
-  JAX 9:04 AM–11:47 AM. May 25: JAX -> CLT 6:05 PM–7:42 PM\; CLT -> FWA 
- 8:33 PM–10:35 PM.\nSunday 10am outdoor opening remarks\, kicking off the 
- pilgrimage.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:St. Augustine\, FL
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-4d5ae8b982e3@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-5a8cce9897a1@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260607
-DTEND;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260608
 SUMMARY:Jason: Arlington
 DESCRIPTION:Corpus Christi Arlington event (Melissa also listed)\n\n\n\nVie
  w live: https://jstravelschedule.netlify.app
@@ -76,34 +33,48 @@ TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-ee62e17b57ac@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-67ebd661e9ff@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260610
-DTEND;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260614
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Becket Fund meeting & Gala\n\n\n\nView live: https://jstravelsc
- hedule.netlify.app
+DESCRIPTION:Philadelphia - Catholic Collaborators / Becket Fund meeting & G
+ ala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphi
+ a - Ward Fitzgerald Event Hold\n\nMelissa joining\; trip now runs through S
+ aturday.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-f58e1c132672@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-c635d972342e@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260629
+SUMMARY:Jason: Boston\, MA
+DESCRIPTION:Boston Pilgrimage\n\n\n\nView live: https://jstravelschedule.ne
+ tlify.app
+LOCATION:Boston\, MA
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-travel-6e3f4ae969d9@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260703
-DTEND;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nSpans the 
- July 4th holiday.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nSpans the
+  July 4th holiday.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-838348a565e8@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-a9e6607f72f7@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260722
-DTEND;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
 DESCRIPTION:15th Annual Napa Institute Summer Conference\n\nThe Meritage Re
  sort and Spa\, Napa\, CA.\n\nView live: https://jstravelschedule.netlify.ap
@@ -113,61 +84,21 @@ TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-f5694ecd993f@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-8a899582d8b3@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260908
+DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
-DESCRIPTION:NEC staff strategy meetings at the Augustine Institute / Jubile
- e 2033\n\nAug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings)
- .\nMerged overlapping St. Louis blocks from Staff Strategy Meetings and Jub
- ilee 2033.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:NEC staff strategy meetings at the Augustine Institute\n\nAug 3
+ 1: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.\n\nView l
+ ive: https://jstravelschedule.netlify.app
 LOCATION:St. Louis\, MO
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-cafff70e1728@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
-DTSTART;VALUE=DATE:20260917
-DTEND;VALUE=DATE:20260921
-SUMMARY:Jason: TBD
-DESCRIPTION:Catholic Institute for Art and Architecture Conference\n\nLocat
- ion not noted on calendar event.\n\nView live: https://jstravelschedule.net
- lify.app
-LOCATION:TBD
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-e3470f26517c@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260927
-SUMMARY:Jason: Raleigh\, NC
-DESCRIPTION:Speaking at Legatus Raleigh ("Strength in Surrender: Humility I
- n The Eucharist")\n\nSep 24: FWA -> CLT 12:01 PM–1:55 PM\; CLT -> RDU 2:3
- 0 PM–3:33 PM. Sep 25: RDU -> CLT 12:52 PM–2:00 PM\; CLT -> FWA 2:35 PM
- –4:30 PM.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Raleigh\, NC
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-42b63212d51e@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261005
-SUMMARY:Jason: Dallas\, TX
-DESCRIPTION:Speaking engagement\n\n\n\nView live: https://jstravelschedule.
- netlify.app
-LOCATION:Dallas\, TX
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-travel-02f5c7757dea@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico

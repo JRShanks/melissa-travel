@@ -4,13 +4,15 @@ PRODID:-//Jason Shanks//Melissa Travel//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:melissa-travel-ee62e17b57ac@jstravelschedule.netlify.app
-DTSTAMP:20260514T022849Z
+UID:melissa-travel-67ebd661e9ff@jstravelschedule.netlify.app
+DTSTAMP:20260527T170024Z
 DTSTART;VALUE=DATE:20260610
-DTEND;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260614
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Becket Fund meeting & Gala\n\n\n\nView live: https://jstravelsc
- hedule.netlify.app
+DESCRIPTION:Philadelphia - Catholic Collaborators / Becket Fund meeting & G
+ ala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphi
+ a - Ward Fitzgerald Event Hold\n\nMelissa joining\; trip now runs through S
+ aturday.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
