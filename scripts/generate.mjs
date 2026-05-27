@@ -47,6 +47,14 @@ const MANUAL_TRIP_OVERRIDES = [
     notes: ['Melissa joining; trip now runs through Saturday.'],
   },
 ];
+const EXCLUDED_TRIPS = [
+  {
+    start: '2026-06-07',
+    city: 'Arlington',
+    match: /\bCorpus Chrsti Arlington Event\b/i,
+    reason: 'Jason confirmed he is not going to Arlington on June 7, 2026.',
+  },
+];
 
 function parseYmd(s) { const [y,m,d] = s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); }
 function ymd(d) { return d.toISOString().slice(0,10); }
@@ -231,6 +239,7 @@ function isCandidate(e) {
   if (!city) return false;
   if (/Indianapolis|Fort Wayne|Bluffton/i.test(city)) return false;
   const {start, endExclusive} = eventDates(e);
+  if (EXCLUDED_TRIPS.some(t => t.start === ymd(start) && t.city === city && t.match.test(text))) return false;
   const dur = daysBetween(start, endExclusive);
   return dur >= 1 || /^Flight:/i.test(e.summary || '') || /^Drive:/i.test(e.summary || '');
 }

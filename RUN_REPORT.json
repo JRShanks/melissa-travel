@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-27T17:00:24.056Z",
+  "generatedAt": "2026-05-27T19:41:56.251Z",
   "today": "2026-05-27",
   "scanEnd": "2027-05-27",
   "sourceCalendar": "Outlook Calendar (/Users/clive/Desktop/melissa-travel/data/outlook-calendar-events.json)",
   "eventCount": 200,
-  "tripCount": 7,
+  "tripCount": 6,
   "importantMeetingCount": 1,
   "nextTrip": {
-    "city": "Arlington",
-    "start": "2026-06-07",
-    "endExclusive": "2026-06-08",
-    "purpose": "Corpus Christi Arlington event (Melissa also listed)"
+    "city": "Philadelphia, PA",
+    "start": "2026-06-10",
+    "endExclusive": "2026-06-14",
+    "purpose": "Philadelphia - Catholic Collaborators / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphia - Ward Fitzgerald Event Hold"
   },
   "importantMeetings": [
     {
@@ -21,24 +21,6 @@
   ],
   "reviewRequired": true,
   "reviewFlags": [
-    {
-      "slug": "2026-06-07-arlington",
-      "city": "Arlington",
-      "start": "2026-06-07",
-      "endExclusive": "2026-06-08",
-      "purpose": "Corpus Christi Arlington event (Melissa also listed)",
-      "flags": [
-        "city-only"
-      ],
-      "sources": [
-        {
-          "summary": "Corpus Chrsti Arlington Event",
-          "location": "Arlington\r\nUnited States",
-          "start": "2026-06-07",
-          "endExclusive": "2026-06-08"
-        }
-      ]
-    },
     {
       "slug": "2026-06-10-philadelphia-pa",
       "city": "Philadelphia, PA",
@@ -104,7 +86,6 @@
     "index.html",
     "melissa-travel.ics",
     "meetings/2026-08-18-nec-board-of-directors-meeting.ics",
-    "trips/2026-06-07-arlington.ics",
     "trips/2026-06-10-philadelphia-pa.ics",
     "trips/2026-06-26-boston-ma.ics",
     "trips/2026-07-03-philadelphia-pa.ics",
