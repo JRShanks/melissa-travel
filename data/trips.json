@@ -164,6 +164,26 @@
         "workCalendar": true,
         "travelFeed": true
       }
+    },
+    {
+      "id": "travel-2027-11-15-baltimore-md",
+      "status": "Held",
+      "start": "2027-11-15",
+      "endExclusive": "2027-11-16",
+      "city": "Baltimore, MD",
+      "purpose": "NEC Board / Member In-Person Dinner during the USCCB November Assembly",
+      "notes": [
+        "One in-person annual board/member gathering in Baltimore.",
+        "Exact travel, lodging, and meeting details pending.",
+        "Group calendar invitations still need to be sent to board members."
+      ],
+      "sources": [
+        "Outlook email: Board Dates 2027"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
     }
   ],
   "meetings": [
@@ -192,6 +212,76 @@
         "Exact time/details pending; Jason noted Monday night."
       ],
       "sourceSummary": "Manual seed: Baltimore board meeting",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2027-02-09-nec-board-q1",
+      "status": "Held",
+      "title": "NEC Board Meeting - Q1 2027",
+      "startRaw": "2027-02-09T13:00:00-05:00",
+      "endRaw": "2027-02-09T14:30:00-05:00",
+      "location": "Virtual",
+      "notes": [
+        "Personal hold from proposed 2027 NEC Board dates email.",
+        "Group calendar invitations still need to be sent to board members."
+      ],
+      "sourceSummary": "Outlook email: Board Dates 2027",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2027-05-11-nec-board-q2",
+      "status": "Held",
+      "title": "NEC Board Meeting - Q2 2027",
+      "startRaw": "2027-05-11T13:00:00-04:00",
+      "endRaw": "2027-05-11T14:30:00-04:00",
+      "location": "Virtual",
+      "notes": [
+        "Personal hold from proposed 2027 NEC Board dates email.",
+        "Group calendar invitations still need to be sent to board members."
+      ],
+      "sourceSummary": "Outlook email: Board Dates 2027",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2027-08-17-nec-board-q3",
+      "status": "Held",
+      "title": "NEC Board Meeting - Q3 2027",
+      "startRaw": "2027-08-17T13:00:00-04:00",
+      "endRaw": "2027-08-17T14:30:00-04:00",
+      "location": "Virtual",
+      "notes": [
+        "Personal hold from proposed 2027 NEC Board dates email.",
+        "Archbishop may have a retreat conflict this week.",
+        "Group calendar invitations still need to be sent to board members."
+      ],
+      "sourceSummary": "Outlook email: Board Dates 2027",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2027-11-15-nec-board-dinner",
+      "status": "Held",
+      "title": "NEC Board / Member In-Person Dinner",
+      "startRaw": "2027-11-15T18:00:00-05:00",
+      "endRaw": "2027-11-15T21:00:00-05:00",
+      "location": "Baltimore, MD",
+      "notes": [
+        "In-person Board / Member Dinner during the USCCB November Assembly.",
+        "Exact time/details pending.",
+        "Group calendar invitations still need to be sent to board members."
+      ],
+      "sourceSummary": "Outlook email: Board Dates 2027",
       "visibility": {
         "workCalendar": true,
         "travelFeed": true

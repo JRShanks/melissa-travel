@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-29T21:07:56.501Z",
+  "generatedAt": "2026-05-29T21:35:16.324Z",
   "today": "2026-05-29",
   "scanEnd": "2027-05-29",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/daily-briefing-run/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 8,
   "tripCount": 8,
-  "importantMeetingCount": 2,
+  "importantMeetingCount": 6,
   "nextTrip": {
     "city": "Philadelphia, PA",
     "start": "2026-06-10",
@@ -22,6 +22,26 @@
     {
       "title": "Baltimore Board Meeting",
       "start": "2026-11-17T00:00:00.000Z",
+      "location": "Baltimore, MD"
+    },
+    {
+      "title": "NEC Board Meeting - Q1 2027",
+      "start": "2027-02-09T18:00:00.000Z",
+      "location": "Virtual"
+    },
+    {
+      "title": "NEC Board Meeting - Q2 2027",
+      "start": "2027-05-11T17:00:00.000Z",
+      "location": "Virtual"
+    },
+    {
+      "title": "NEC Board Meeting - Q3 2027",
+      "start": "2027-08-17T17:00:00.000Z",
+      "location": "Virtual"
+    },
+    {
+      "title": "NEC Board / Member In-Person Dinner",
+      "start": "2027-11-15T23:00:00.000Z",
       "location": "Baltimore, MD"
     }
   ],
