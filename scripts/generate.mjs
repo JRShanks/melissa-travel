@@ -54,12 +54,33 @@ const MANUAL_TRIPS = [
     sources: ['Manual seed: St. Louis staff strategy meetings'],
   },
   {
+    start: '2026-10-03',
+    endExclusive: '2026-10-04',
+    city: 'Dallas, TX',
+    purpose: 'Speaking in Dallas',
+    notes: ['Details pending; surfaced from Apple Calendar family event.'],
+    sources: ['Apple Calendar: Speaking in Dallas'],
+  },
+  {
     start: '2026-11-11',
     endExclusive: '2026-11-16',
     city: 'Guadalupe, Mexico',
     purpose: 'Pilgrimage',
     notes: [],
     sources: ['Manual: Guadalupe pilgrimage'],
+  },
+  {
+    start: '2026-11-15',
+    endExclusive: '2026-11-20',
+    city: 'Baltimore, MD',
+    purpose: 'Baltimore follow-on after Guadalupe pilgrimage and board meeting',
+    notes: [
+      'After Guadalupe pilgrimage; flying MEX-DFW-BWI Sunday, Nov 15 under AA reservation QLLCPF.',
+      'In Baltimore Sunday through Thursday.',
+      'Board meeting Monday night.',
+      'Return flight details need confirmation; earlier calendar records showed BWI-ORD-FWA on Nov 18 under reservation QLLCPF.',
+    ],
+    sources: ['Manual seed: Baltimore after Guadalupe'],
   },
 ];
 const MANUAL_MEETINGS = [
@@ -71,6 +92,15 @@ const MANUAL_MEETINGS = [
     notes: [],
     status: 'Confirmed',
     sourceSummary: 'Manual seed: NEC Board of Directors Meeting',
+  },
+  {
+    title: 'Baltimore Board Meeting',
+    startRaw: '2026-11-16T19:00:00-05:00',
+    endRaw: '2026-11-16T21:00:00-05:00',
+    location: 'Baltimore, MD',
+    notes: ['Exact time/details pending; Jason noted Monday night.'],
+    status: 'Tentative',
+    sourceSummary: 'Manual seed: Baltimore board meeting',
   },
 ];
 const MANUAL_TRIP_OVERRIDES = [
@@ -100,7 +130,7 @@ function stripHtml(s='') { return String(s).replace(/<br\s*\/?>/gi, '\n').replac
 function slugify(s) { return s.toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,80); }
 function sha(s) { return crypto.createHash('sha1').update(s).digest('hex').slice(0,12); }
 function uniq(a) { return [...new Set(a.filter(Boolean))]; }
-function titleCaseState(city) { return city.replace(/\bFlorida\b/i,'FL').replace(/\bCalifornia\b/i,'CA').replace(/\bMissouri\b/i,'MO').replace(/\bNorth Carolina\b/i,'NC').replace(/\bTexas\b/i,'TX').replace(/\bPennsylvania\b/i,'PA').replace(/\bWashington\b/i,'WA'); }
+function titleCaseState(city) { return city.replace(/\bFlorida\b/i,'FL').replace(/\bCalifornia\b/i,'CA').replace(/\bMissouri\b/i,'MO').replace(/\bNorth Carolina\b/i,'NC').replace(/\bTexas\b/i,'TX').replace(/\bPennsylvania\b/i,'PA').replace(/\bWashington\b/i,'WA').replace(/\bMaryland\b/i,'MD'); }
 function pad(n) { return String(n).padStart(2,'0'); }
 function localDateTimeParts(value) {
   const parts = new Intl.DateTimeFormat('en-US', {
@@ -189,8 +219,8 @@ function eventDateTimes(e) {
 }
 
 const EXCLUDE = /\b(SEAS|school|birthday|baptism|name day|payday|pay day|holiday|no school|field day|VBS|Luke|Nora|Xavier|Lila|Forum Meeting|Board Meeting|Chapter Meeting|Bluffton|1:1|weekly|bi-weekly|monthly|zoom|teams|podcast|radio|Rosary across America|staff call|Executive Team)\b/i;
-const TRAVEL_HINT = /\b(Jason in|Jason In|Jason Napa|flight:|drive:|pilgrimage|conference|speaking|gala|travel block|out-of-town|staff strategy|Napa Institute|Legatus Raleigh|Guadalupe|St\. Augustine|Philadelphia|Seattle|Dallas|Raleigh|St\. Louis|Arlington|Jubilee 2033|Becket)\b/i;
-const AIRPORT_TO_CITY = { SEA:'Seattle, WA', JAX:'St. Augustine, FL', RDU:'Raleigh, NC', DFW:'Dallas, TX', DAL:'Dallas, TX', STL:'St. Louis, MO', PHL:'Philadelphia, PA', MEX:'Guadalupe, Mexico' };
+const TRAVEL_HINT = /\b(Jason in|Jason In|Jason Napa|flight:|drive:|pilgrimage|conference|speaking|gala|travel block|out-of-town|staff strategy|Napa Institute|Legatus Raleigh|Guadalupe|St\. Augustine|Philadelphia|Seattle|Dallas|Baltimore|Raleigh|St\. Louis|Arlington|Jubilee 2033|Becket)\b/i;
+const AIRPORT_TO_CITY = { SEA:'Seattle, WA', JAX:'St. Augustine, FL', RDU:'Raleigh, NC', DFW:'Dallas, TX', DAL:'Dallas, TX', STL:'St. Louis, MO', PHL:'Philadelphia, PA', MEX:'Guadalupe, Mexico', BWI:'Baltimore, MD' };
 const HOME_AIRPORTS = new Set(['FWA','IND','ORD','CLT','DFW']);
 
 function inferCity(e) {
@@ -206,7 +236,7 @@ function inferCity(e) {
   const rules = [
     [/St\.?\s*Augustine/i, 'St. Augustine, FL'], [/Seattle|\bSEA\b/i, 'Seattle, WA'], [/Philadelphia|\bPHL\b/i, 'Philadelphia, PA'],
     [/Napa|Meritage/i, 'Napa, CA'], [/St\.?\s*Louis|Augustine Institute/i, 'St. Louis, MO'], [/Raleigh|\bRDU\b/i, 'Raleigh, NC'],
-    [/Dallas|\bDFW\b|\bDAL\b/i, 'Dallas, TX'], [/Guadalupe/i, 'Guadalupe, Mexico'], [/Arlington/i, 'Arlington'],
+    [/Dallas|\bDFW\b|\bDAL\b/i, 'Dallas, TX'], [/Baltimore|\bBWI\b/i, 'Baltimore, MD'], [/Guadalupe/i, 'Guadalupe, Mexico'], [/Arlington/i, 'Arlington'],
   ];
   for (const [re, city] of rules) if (re.test(text)) return city;
   if (/Art and Arch/i.test(text)) return 'TBD';
@@ -227,6 +257,7 @@ function purposeFor(e, city) {
   if (/Art and Arch/i.test(s)) return 'Catholic Institute for Art and Architecture Conference';
   if (/Raleigh/i.test(city)) return 'Speaking at Legatus Raleigh ("Strength in Surrender: Humility In The Eucharist")';
   if (/Dallas/i.test(city)) return 'Speaking engagement';
+  if (/Baltimore/i.test(city)) return 'Baltimore follow-on after Guadalupe pilgrimage and board meeting';
   if (/Guadalupe/i.test(city)) return 'Pilgrimage';
   return s.replace(/\s*\(Clone\)$/i,'').replace(/\s+NEC$/,'') || 'Travel';
 }
@@ -318,7 +349,7 @@ function buildTrips(events) {
     if (/TBD/.test(t.city)) notes.push('Location not noted on calendar event.');
     if (/St\. Louis/.test(t.city) && /Jubilee 2033/.test(t.purpose)) notes.push('Merged overlapping St. Louis blocks from Staff Strategy Meetings and Jubilee 2033.');
     if (/Guadalupe, Mexico/.test(t.city)) {
-      notes.push('Fly into Mexico City for Guadalupe pilgrimage; arrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compare departing Fort Wayne vs Indianapolis for cost.');
+      notes.push('Fly into Mexico City for Guadalupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15 under AA reservation QLLCPF.');
     }
     for (const override of MANUAL_TRIP_OVERRIDES) {
       if (t.city !== override.city || ymd(t.start) !== override.start) continue;
@@ -561,7 +592,6 @@ ${style}
       <p>Use the feed if Jason's Travel needs to be added again or shared on another device.</p>
       <div class="sub-buttons">
         <a href="webcal://jstravelschedule.netlify.app/melissa-travel.ics">Apple Calendar</a>
-        <a class="ghost" href="https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics" target="_blank" rel="noopener">Google Calendar</a>
         <button class="ghost" type="button" onclick="navigator.clipboard.writeText('https://jstravelschedule.netlify.app/melissa-travel.ics'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy feed URL',1500)">Copy feed URL</button>
       </div>
       <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>

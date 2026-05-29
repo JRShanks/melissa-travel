@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-29T20:54:06.987Z",
+  "generatedAt": "2026-05-29T21:02:39.403Z",
   "today": "2026-05-29",
   "scanEnd": "2027-05-29",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/daily-briefing-run/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 8,
-  "tripCount": 6,
-  "importantMeetingCount": 1,
+  "tripCount": 8,
+  "importantMeetingCount": 2,
   "nextTrip": {
     "city": "Philadelphia, PA",
     "start": "2026-06-10",
@@ -18,6 +18,11 @@
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",
       "location": "Zoom"
+    },
+    {
+      "title": "Baltimore Board Meeting",
+      "start": "2026-11-17T00:00:00.000Z",
+      "location": "Baltimore, MD"
     }
   ],
   "reviewRequired": true,

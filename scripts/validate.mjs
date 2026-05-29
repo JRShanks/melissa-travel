@@ -14,7 +14,7 @@ assert(html.includes('Travel desk'), 'index.html missing travel desk section');
 assert(html.includes("Jason's Travel"), 'index.html missing shared calendar reference');
 assert(html.includes('Subscribe to this calendar'), 'index.html missing bottom subscribe card');
 assert(html.includes('webcal://jstravelschedule.netlify.app/melissa-travel.ics'), 'index.html missing Apple feed link');
-assert(html.includes('https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics'), 'index.html missing Google feed link');
+assert(!html.includes('calendar.google.com'), 'index.html should not rely on Google Calendar subscription links');
 assert(!html.includes('download>'), 'index.html should not show .ics download links');
 
 assert(html.includes('Important meetings'), 'index.html missing important meetings section');
