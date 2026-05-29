@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-29T21:35:16.324Z",
+  "generatedAt": "2026-05-29T21:41:06.118Z",
   "today": "2026-05-29",
   "scanEnd": "2027-05-29",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/daily-briefing-run/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 8,
-  "tripCount": 8,
+  "tripCount": 9,
   "importantMeetingCount": 6,
   "nextTrip": {
     "city": "Philadelphia, PA",

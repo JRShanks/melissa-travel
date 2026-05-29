@@ -166,6 +166,27 @@
       }
     },
     {
+      "id": "travel-2027-02-04-charlotte-harbor-fl",
+      "status": "Held",
+      "start": "2027-02-04",
+      "endExclusive": "2027-02-07",
+      "city": "Charlotte Harbor, FL",
+      "purpose": "Legatus Summit 2027",
+      "notes": [
+        "Published Legatus Summit dates are February 4-6, 2027.",
+        "Location: Sunseeker Resort in Charlotte Harbor, Florida.",
+        "Theme: Walking on Water: Faith Over Fear.",
+        "Registration listed as coming this summer; look to register when registration opens."
+      ],
+      "sources": [
+        "Legatus public event page: https://legatus.org/events/the-summit-2027"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
       "id": "travel-2027-11-15-baltimore-md",
       "status": "Held",
       "start": "2027-11-15",
