@@ -10,8 +10,8 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:melissa-important-e9dc0d54607a@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+UID:melissa-important-d4a9fe029a5f@jstravelschedule.netlify.app
+DTSTAMP:20260529T210756Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -22,8 +22,8 @@ TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-important-0ec1288b27ec@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
+DTSTAMP:20260529T210756Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -36,12 +36,12 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-1fe2a0538522@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260614
 SUMMARY:Jason: Philadelphia\, PA
 DESCRIPTION:Philadelphia Catholic Collaborators / Becket Fund meeting and G
- ala / Ward Fitzgerald event hold\n\nStatus: Tentative\nMelissa joining\; tr
+ ala / Ward Fitzgerald event hold\n\nStatus: Confirmed\nMelissa joining\; tr
  ip now runs through Saturday.\n\nView live: https://jstravelschedule.netlif
  y.app
 LOCATION:Philadelphia\, PA
@@ -50,7 +50,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-0fcad97cca9e@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260629
 SUMMARY:Jason: Boston\, MA
@@ -62,20 +62,20 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20260703
 DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nStatus: Co
- nfirmed\nSpans the July 4th holiday.\n\nView live: https://jstravelschedule
- .netlify.app
+DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nStatus: He
+ ld\nSpans the July 4th holiday.\n\nView live: https://jstravelschedule.netl
+ ify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -88,7 +88,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
@@ -101,43 +101,43 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
-DESCRIPTION:Speaking in Dallas\n\nStatus: Tentative\nDetails pending\; surf
- aced from Apple Calendar family event.\n\nView live: https://jstravelschedu
- le.netlify.app
+DESCRIPTION:Speaking in Dallas\n\nStatus: Likely\nDetails pending\; surface
+ d from Apple Calendar family event.\n\nView live: https://jstravelschedule.
+ netlify.app
 LOCATION:Dallas\, TX
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
-DESCRIPTION:Pilgrimage\n\nStatus: Confirmed\nFly into Mexico City for Guada
- lupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15
-  under AA reservation QLLCPF.\n\nView live: https://jstravelschedule.netlif
- y.app
+DESCRIPTION:Pilgrimage\n\nStatus: Booked\nFly into Mexico City for Guadalup
+ e pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15. R
+ eservation details are intentionally omitted from the public feed.\n\nView
+  live: https://jstravelschedule.netlify.app
 LOCATION:Guadalupe\, Mexico
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260529T210239Z
+DTSTAMP:20260529T210756Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD
 DESCRIPTION:Baltimore follow-on after Guadalupe pilgrimage and board meetin
- g\n\nStatus: Tentative\nAfter Guadalupe pilgrimage\; flying MEX-DFW-BWI Sun
- day\, Nov 15 under AA reservation QLLCPF.\nIn Baltimore Sunday through Thur
- sday.\nBoard meeting Monday night.\nReturn flight details need confirmation
- \; earlier calendar records showed BWI-ORD-FWA on Nov 18 under reservation
-  QLLCPF.\n\nView live: https://jstravelschedule.netlify.app
+ g\n\nStatus: Booked\nAfter Guadalupe pilgrimage\; flying MEX-DFW-BWI Sunday
+ \, Nov 15.\nIn Baltimore Sunday through Thursday.\nBoard meeting Monday nig
+ ht.\nReturn flight details need confirmation\; reservation details are inte
+ ntionally omitted from the public feed.\n\nView live: https://jstravelsched
+ ule.netlify.app
 LOCATION:Baltimore\, MD
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

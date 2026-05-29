@@ -2,7 +2,7 @@
 
 Jason's travel assistant dashboard and family-visibility workflow.
 
-The live HTML page is the quick itinerary view Jason can use while planning or traveling. It should show upcoming work travel, significant evening obligations, major meetings, and assistant notes such as flight, hotel, agenda, and "details pending" context.
+The live HTML page is the quick itinerary view Jason can use while planning or traveling. It should show upcoming work travel, significant evening obligations, major meetings, and Clive Notes such as flight, hotel, agenda, and "details pending" context.
 
 Calendar visibility flows through the published feed:
 
@@ -18,6 +18,7 @@ This repo is a pure static Netlify site. The generator has no npm dependencies a
 ```bash
 npm run review
 npm run refresh
+npm run publish-now
 ```
 
 Useful options/environment:
@@ -40,21 +41,52 @@ Calendar injection format:
 
 The default injection path is `data/outlook-calendar-events.json`, and the file is ignored by git. Clive/OpenClaw should fetch Jason's primary Outlook calendar and/or Apple Calendar events for the next 12 months, write normalized event objects into `events`, and then run `npm run review`.
 
+Structured trip records live in `data/trips.json`. That file is the first place Clive should update when Jason gives a likely trip, date hold, flight, hotel, agenda, board meeting, or itinerary correction.
+
 ## Clive/OpenClaw workflow
 
 When Jason says something like "I'm likely going to Philadelphia June 10-13, details to come," Clive should:
 
 1. Create or update the work-calendar event if it belongs on the work calendar.
-2. Create or update the matching travel record that feeds `melissa-travel.ics`.
+2. Create or update the matching `data/trips.json` travel record that feeds `melissa-travel.ics`.
 3. Preserve a stable Clive travel identifier so future updates do not duplicate the trip in the feed.
 4. Add status and itinerary context as it becomes available: tentative, booked, confirmed, flights, hotel, ground transport, agenda, Melissa joining, and missing details.
-5. Regenerate this HTML dashboard and the `melissa-travel.ics` feed after the travel sync batch.
+5. Immediately regenerate this HTML dashboard and the `melissa-travel.ics` feed after the travel sync batch.
+6. Commit and push the refresh so Netlify publishes the update. Do not wait for the monthly review when Jason has just scheduled or changed a trip.
 
 `Jason's Travel` appears to be a subscribed Apple Calendar fed from `https://jstravelschedule.netlify.app/melissa-travel.ics`. This repo maintains that feed; it does not manage Apple/iCloud sharing or subscription permissions.
+
+Recommended intake phrase:
+
+```text
+Clive, add a likely trip to [city] from [start] to [end] for [purpose]. Details are [known/missing].
+```
+
+Minimum fields to capture: city, date range, purpose, status, whether it belongs on the work calendar, whether Melissa/family needs visibility, and what details are still missing.
+
+## Refresh cadence
+
+Use immediate refresh for active scheduling:
+
+```bash
+npm run refresh
+git add data/trips.json RUN_REPORT.json index.html melissa-travel.ics scripts README.md package.json
+git commit -m "Update Jason travel schedule"
+git push origin main
+```
+
+Run a deeper monthly reconciliation as a backstop: compare Outlook, Apple Calendar, travel emails, bookings, the feed, and the HTML page for missing or stale trips. The monthly review should surface mismatches; it should not be the only publishing path.
+
+## Email and booking watch
+
+Clive should watch Outlook and Apple Mail for flight, hotel, conference, rideshare, rental-car, and booking confirmations. Clear matches can update `data/trips.json` followed by an immediate refresh/push. Uncertain matches, payment actions, purchases, cancellations, or sensitive details require Jason approval first.
+
+Keep public feed safety in mind: this Netlify site and `melissa-travel.ics` are reachable by URL. Do not publish confirmation numbers, ticket numbers, payment details, private phone numbers, or other sensitive booking details unless Jason explicitly approves that specific publication. Use "reservation details on file with Clive" style notes instead.
 
 Outputs:
 
 - `RUN_REPORT.json` — generated every run; includes trip count, next trip, review flags, and cost guardrails
+- `data/trips.json`
 - `index.html`
 - `melissa-travel.ics`
 

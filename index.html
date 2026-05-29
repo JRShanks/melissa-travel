@@ -40,6 +40,13 @@
   }
   .assistant-note h2, .subscribe h2 { font-size: 14px; margin: 0 0 4px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
   .assistant-note p, .subscribe p { font-size: 13px; color: var(--muted); margin: 0; }
+  .today-panel {
+    background: var(--card); border:1px solid var(--rule); border-left:4px solid var(--current);
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 20px;
+  }
+  .today-panel h2 { font-size: 14px; margin: 0 0 8px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+  .today-trip + .today-trip { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+  .today-meetings { font-size: 13px; color: var(--ink); margin-top: 10px; }
   .sub-buttons { display:flex; flex-wrap:wrap; gap:8px; }
   .sub-buttons a, .sub-buttons button {
     flex:1 1 auto; min-width: 140px; text-align:center;
@@ -119,10 +126,12 @@
 
     <section class="assistant-note">
       <h2>Travel desk</h2>
-      <p>Clive keeps work travel, evening obligations, and major meetings visible on Jason's work calendar and the shared <b>Jason's Travel</b> calendar. This page is the quick itinerary view while Jason is planning or traveling.</p>
+      <p>Clive keeps work travel, evening obligations, and major meetings visible through Jason's work calendar and the subscribed <b>Jason's Travel</b> feed. This page is the quick itinerary view while Jason is planning or traveling.</p>
     </section>
 
-    <div class="summary">8 upcoming trips • 2 significant meetings • Last updated May 29, 2026 at 5:02 PM</div>
+
+
+    <div class="summary">8 upcoming trips • 2 significant meetings • Last updated May 29, 2026 at 5:07 PM</div>
 
     <section class="section-block important-meetings">
       <h2>Important meetings</h2>
@@ -175,8 +184,8 @@
             <span class="badge badge-upcoming">In 12 days</span>
           </header>
           <div class="trip-meta">
-            <span>Tentative</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Confirmed</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Philadelphia, PA</div>
           <div class="purpose">Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold</div>
@@ -192,7 +201,7 @@
           </header>
           <div class="trip-meta">
             <span>Confirmed</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Boston, MA</div>
           <div class="purpose">Boston Pilgrimage</div>
@@ -207,8 +216,8 @@
             <span class="badge badge-upcoming">In 35 days</span>
           </header>
           <div class="trip-meta">
-            <span>Confirmed</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Held</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Philadelphia, PA</div>
           <div class="purpose">Out-of-town block (purpose not noted on calendar)</div>
@@ -224,7 +233,7 @@
           </header>
           <div class="trip-meta">
             <span>Confirmed</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Napa, CA</div>
           <div class="purpose">15th Annual Napa Institute Summer Conference</div>
@@ -240,7 +249,7 @@
           </header>
           <div class="trip-meta">
             <span>Confirmed</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">St. Louis, MO</div>
           <div class="purpose">NEC staff strategy meetings at the Augustine Institute</div>
@@ -255,8 +264,8 @@
             <span class="badge badge-upcoming">In 127 days</span>
           </header>
           <div class="trip-meta">
-            <span>Tentative</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Likely</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Dallas, TX</div>
           <div class="purpose">Speaking in Dallas</div>
@@ -271,12 +280,12 @@
             <span class="badge badge-upcoming">In 166 days</span>
           </header>
           <div class="trip-meta">
-            <span>Confirmed</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Booked</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Guadalupe, Mexico</div>
           <div class="purpose">Pilgrimage</div>
-          <div class="notes"><b>Clive Notes:</b> Fly into Mexico City for Guadalupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15 under AA reservation QLLCPF.</div>
+          <div class="notes"><b>Clive Notes:</b> Fly into Mexico City for Guadalupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15. Reservation details are intentionally omitted from the public feed.</div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -287,12 +296,12 @@
             <span class="badge badge-upcoming">In 170 days</span>
           </header>
           <div class="trip-meta">
-            <span>Tentative</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Booked</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">Baltimore, MD</div>
           <div class="purpose">Baltimore follow-on after Guadalupe pilgrimage and board meeting</div>
-          <div class="notes"><b>Clive Notes:</b> After Guadalupe pilgrimage; flying MEX-DFW-BWI Sunday, Nov 15 under AA reservation QLLCPF. In Baltimore Sunday through Thursday. Board meeting Monday night. Return flight details need confirmation; earlier calendar records showed BWI-ORD-FWA on Nov 18 under reservation QLLCPF.</div>
+          <div class="notes"><b>Clive Notes:</b> After Guadalupe pilgrimage; flying MEX-DFW-BWI Sunday, Nov 15. In Baltimore Sunday through Thursday. Board meeting Monday night. Return flight details need confirmation; reservation details are intentionally omitted from the public feed.</div>
         </article>
     </section>
 

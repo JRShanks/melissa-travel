@@ -3,6 +3,7 @@ import fs from 'node:fs';
 
 const html = fs.readFileSync('index.html', 'utf8');
 const feed = fs.readFileSync('melissa-travel.ics', 'utf8');
+const tripStore = JSON.parse(fs.readFileSync('data/trips.json', 'utf8'));
 const report = fs.existsSync('RUN_REPORT.json') ? JSON.parse(fs.readFileSync('RUN_REPORT.json', 'utf8')) : null;
 
 const failures = [];
@@ -12,12 +13,17 @@ assert(html.includes("Jason's Travel Schedule"), 'index.html missing page title'
 assert(html.includes('Travel assistant dashboard'), 'index.html missing assistant-dashboard subtitle');
 assert(html.includes('Travel desk'), 'index.html missing travel desk section');
 assert(html.includes("Jason's Travel"), 'index.html missing shared calendar reference');
+assert(html.includes('Clive Notes'), 'index.html missing Clive Notes label');
+assert(!html.includes('Assistant notes'), 'index.html should not use old Assistant notes label');
 assert(html.includes('Subscribe to this calendar'), 'index.html missing bottom subscribe card');
 assert(html.includes('webcal://jstravelschedule.netlify.app/melissa-travel.ics'), 'index.html missing Apple feed link');
 assert(!html.includes('calendar.google.com'), 'index.html should not rely on Google Calendar subscription links');
 assert(!html.includes('download>'), 'index.html should not show .ics download links');
 
 assert(html.includes('Important meetings'), 'index.html missing important meetings section');
+assert(Array.isArray(tripStore.trips) && tripStore.trips.length >= 1, 'trip store missing trips');
+assert(Array.isArray(tripStore.meetings), 'trip store missing meetings array');
+assert(tripStore.workflow?.refreshPolicy?.includes('immediately'), 'trip store missing immediate refresh policy');
 
 const vevents = (feed.match(/BEGIN:VEVENT/g) || []).length;
 const expectedFeedEvents = report ? (report.tripCount || 0) + (report.importantMeetingCount || 0) : vevents;

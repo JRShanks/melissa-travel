@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "updatedBy": "Clive",
+  "workflow": {
+    "refreshPolicy": "Regenerate and push immediately after Clive/OpenClaw adds or updates a trip, booking, flight, hotel, or significant meeting.",
+    "monthlyReview": "Run a deeper reconciliation monthly, but do not wait for it before publishing scheduling changes."
+  },
+  "statusDefinitions": {
+    "Likely": "Jason expects the trip may happen, but details are still forming.",
+    "Held": "Dates are being held for planning or invitation purposes.",
+    "Booked": "At least one major booking such as flight or hotel is known.",
+    "Confirmed": "The trip or meeting is firm enough for family visibility.",
+    "Completed": "The trip is in the past and retained only for history."
+  },
+  "trips": [
+    {
+      "id": "travel-2026-06-10-philadelphia-pa",
+      "status": "Confirmed",
+      "start": "2026-06-10",
+      "endExclusive": "2026-06-14",
+      "city": "Philadelphia, PA",
+      "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold",
+      "notes": [
+        "Melissa joining; trip now runs through Saturday."
+      ],
+      "sources": [
+        "Manual seed: Philadelphia June travel"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "travel-2026-06-26-boston-ma",
+      "status": "Confirmed",
+      "start": "2026-06-26",
+      "endExclusive": "2026-06-29",
+      "city": "Boston, MA",
+      "purpose": "Boston Pilgrimage",
+      "notes": [],
+      "sources": [
+        "Manual: Boston Pilgrimage"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "travel-2026-07-03-philadelphia-pa",
+      "status": "Held",
+      "start": "2026-07-03",
+      "endExclusive": "2026-07-07",
+      "city": "Philadelphia, PA",
+      "purpose": "Out-of-town block (purpose not noted on calendar)",
+      "notes": [
+        "Spans the July 4th holiday."
+      ],
+      "sources": [
+        "Manual seed: Philadelphia July travel"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "travel-2026-07-22-napa-ca",
+      "status": "Confirmed",
+      "start": "2026-07-22",
+      "endExclusive": "2026-07-27",
+      "city": "Napa, CA",
+      "purpose": "15th Annual Napa Institute Summer Conference",
+      "notes": [
+        "The Meritage Resort and Spa, Napa, CA."
+      ],
+      "sources": [
+        "Manual seed: Napa Institute"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "travel-2026-08-31-st-louis-mo",
+      "status": "Confirmed",
+      "start": "2026-08-31",
+      "endExclusive": "2026-09-05",
+      "city": "St. Louis, MO",
+      "purpose": "NEC staff strategy meetings at the Augustine Institute",
+      "notes": [
+        "Aug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC."
+      ],
+      "sources": [
+        "Manual seed: St. Louis staff strategy meetings"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "travel-2026-10-03-dallas-tx",
+      "status": "Likely",
+      "start": "2026-10-03",
+      "endExclusive": "2026-10-04",
+      "city": "Dallas, TX",
+      "purpose": "Speaking in Dallas",
+      "notes": [
+        "Details pending; surfaced from Apple Calendar family event."
+      ],
+      "sources": [
+        "Apple Calendar: Speaking in Dallas"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "travel-2026-11-11-guadalupe-mexico",
+      "status": "Booked",
+      "start": "2026-11-11",
+      "endExclusive": "2026-11-16",
+      "city": "Guadalupe, Mexico",
+      "purpose": "Pilgrimage",
+      "notes": [],
+      "sources": [
+        "Manual: Guadalupe pilgrimage"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      },
+      "flights": [
+        {
+          "date": "2026-11-15",
+          "route": "MEX-DFW-BWI",
+          "airline": "American Airlines",
+          "status": "Booked",
+          "publicNotes": "Reservation code intentionally omitted from public feed."
+        }
+      ]
+    },
+    {
+      "id": "travel-2026-11-15-baltimore-md",
+      "status": "Booked",
+      "start": "2026-11-15",
+      "endExclusive": "2026-11-20",
+      "city": "Baltimore, MD",
+      "purpose": "Baltimore follow-on after Guadalupe pilgrimage and board meeting",
+      "notes": [
+        "After Guadalupe pilgrimage; flying MEX-DFW-BWI Sunday, Nov 15.",
+        "In Baltimore Sunday through Thursday.",
+        "Board meeting Monday night.",
+        "Return flight details need confirmation; reservation details are intentionally omitted from the public feed."
+      ],
+      "sources": [
+        "Manual seed: Baltimore after Guadalupe"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    }
+  ],
+  "meetings": [
+    {
+      "id": "meeting-2026-08-18-nec-board",
+      "status": "Confirmed",
+      "title": "NEC Board of Directors Meeting",
+      "startRaw": "2026-08-18T14:00:00-04:00",
+      "endRaw": "2026-08-18T15:30:00-04:00",
+      "location": "Zoom",
+      "notes": [],
+      "sourceSummary": "Manual seed: NEC Board of Directors Meeting",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-11-16-baltimore-board",
+      "status": "Tentative",
+      "title": "Baltimore Board Meeting",
+      "startRaw": "2026-11-16T19:00:00-05:00",
+      "endRaw": "2026-11-16T21:00:00-05:00",
+      "location": "Baltimore, MD",
+      "notes": [
+        "Exact time/details pending; Jason noted Monday night."
+      ],
+      "sourceSummary": "Manual seed: Baltimore board meeting",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    }
+  ],
+  "watchRules": [
+    "Watch Outlook and Apple Mail for flight, hotel, conference, rideshare, rental-car, and booking confirmations.",
+    "Match confirmations to existing trips by date, city, airport, reservation code, venue, and sender.",
+    "Add clear matches to the trip record and refresh/push immediately.",
+    "Ask Jason before adding uncertain matches, sensitive details, or payment-related information."
+  ]
+}

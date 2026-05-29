@@ -6,111 +6,14 @@ import crypto from 'node:crypto';
 const SITE_URL = 'https://jstravelschedule.netlify.app';
 const FEED_URL = `${SITE_URL}/melissa-travel.ics`;
 const OUTLOOK_EVENTS_PATH = process.env.OUTLOOK_CALENDAR_EVENTS_PATH || process.env.MELISSA_TRAVEL_OUTLOOK_EVENTS_PATH || path.join(process.cwd(), 'data', 'outlook-calendar-events.json');
+const TRIP_STORE_PATH = process.env.TRAVEL_TRIP_STORE_PATH || path.join(process.cwd(), 'data', 'trips.json');
 const TZ = 'America/Indiana/Indianapolis';
 const todayArg = process.argv.find(a => a.startsWith('--today='))?.split('=')[1];
 const reviewOnly = process.argv.includes('--review-only');
 const allowReviewFlags = process.argv.includes('--allow-review-flags');
 const today = parseYmd(todayArg || new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date()));
 const scanEnd = addDays(today, 365);
-const MANUAL_TRIPS = [
-  {
-    start: '2026-06-10',
-    endExclusive: '2026-06-14',
-    city: 'Philadelphia, PA',
-    purpose: 'Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold',
-    notes: ['Melissa joining; trip now runs through Saturday.'],
-    sources: ['Manual seed: Philadelphia June travel'],
-  },
-  {
-    start: '2026-06-26',
-    endExclusive: '2026-06-29',
-    city: 'Boston, MA',
-    purpose: 'Boston Pilgrimage',
-    notes: [],
-    sources: ['Manual: Boston Pilgrimage'],
-  },
-  {
-    start: '2026-07-03',
-    endExclusive: '2026-07-07',
-    city: 'Philadelphia, PA',
-    purpose: 'Out-of-town block (purpose not noted on calendar)',
-    notes: ['Spans the July 4th holiday.'],
-    sources: ['Manual seed: Philadelphia July travel'],
-  },
-  {
-    start: '2026-07-22',
-    endExclusive: '2026-07-27',
-    city: 'Napa, CA',
-    purpose: '15th Annual Napa Institute Summer Conference',
-    notes: ['The Meritage Resort and Spa, Napa, CA.'],
-    sources: ['Manual seed: Napa Institute'],
-  },
-  {
-    start: '2026-08-31',
-    endExclusive: '2026-09-05',
-    city: 'St. Louis, MO',
-    purpose: 'NEC staff strategy meetings at the Augustine Institute',
-    notes: ['Aug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.'],
-    sources: ['Manual seed: St. Louis staff strategy meetings'],
-  },
-  {
-    start: '2026-10-03',
-    endExclusive: '2026-10-04',
-    city: 'Dallas, TX',
-    purpose: 'Speaking in Dallas',
-    notes: ['Details pending; surfaced from Apple Calendar family event.'],
-    sources: ['Apple Calendar: Speaking in Dallas'],
-  },
-  {
-    start: '2026-11-11',
-    endExclusive: '2026-11-16',
-    city: 'Guadalupe, Mexico',
-    purpose: 'Pilgrimage',
-    notes: [],
-    sources: ['Manual: Guadalupe pilgrimage'],
-  },
-  {
-    start: '2026-11-15',
-    endExclusive: '2026-11-20',
-    city: 'Baltimore, MD',
-    purpose: 'Baltimore follow-on after Guadalupe pilgrimage and board meeting',
-    notes: [
-      'After Guadalupe pilgrimage; flying MEX-DFW-BWI Sunday, Nov 15 under AA reservation QLLCPF.',
-      'In Baltimore Sunday through Thursday.',
-      'Board meeting Monday night.',
-      'Return flight details need confirmation; earlier calendar records showed BWI-ORD-FWA on Nov 18 under reservation QLLCPF.',
-    ],
-    sources: ['Manual seed: Baltimore after Guadalupe'],
-  },
-];
-const MANUAL_MEETINGS = [
-  {
-    title: 'NEC Board of Directors Meeting',
-    startRaw: '2026-08-18T14:00:00-04:00',
-    endRaw: '2026-08-18T15:30:00-04:00',
-    location: 'Zoom',
-    notes: [],
-    status: 'Confirmed',
-    sourceSummary: 'Manual seed: NEC Board of Directors Meeting',
-  },
-  {
-    title: 'Baltimore Board Meeting',
-    startRaw: '2026-11-16T19:00:00-05:00',
-    endRaw: '2026-11-16T21:00:00-05:00',
-    location: 'Baltimore, MD',
-    notes: ['Exact time/details pending; Jason noted Monday night.'],
-    status: 'Tentative',
-    sourceSummary: 'Manual seed: Baltimore board meeting',
-  },
-];
-const MANUAL_TRIP_OVERRIDES = [
-  {
-    city: 'Philadelphia, PA',
-    start: '2026-06-10',
-    endExclusive: '2026-06-14',
-    notes: ['Melissa joining; trip now runs through Saturday.'],
-  },
-];
+const TRIP_STORE = loadTripStore();
 const EXCLUDED_TRIPS = [
   {
     start: '2026-06-07',
@@ -157,6 +60,17 @@ function outlookArray(payload) {
   if (Array.isArray(payload?.events)) return payload.events;
   if (Array.isArray(payload?.value)) return payload.value;
   return [];
+}
+function loadTripStore() {
+  if (!fs.existsSync(TRIP_STORE_PATH)) return { trips: [], meetings: [], watchRules: [], workflow: {} };
+  const store = JSON.parse(fs.readFileSync(TRIP_STORE_PATH, 'utf8'));
+  return {
+    ...store,
+    trips: Array.isArray(store.trips) ? store.trips : [],
+    meetings: Array.isArray(store.meetings) ? store.meetings : [],
+    watchRules: Array.isArray(store.watchRules) ? store.watchRules : [],
+    workflow: store.workflow || {},
+  };
 }
 function outlookDateTime(value) {
   if (!value) return null;
@@ -309,12 +223,14 @@ function buildTrips(events) {
     return { start, endExclusive, city, purpose: purposeFor(e, city), sources:[e.summary || ''], notes: [], sourceEvents: [summarizeEvent(e)] };
   }).filter(t => t.endExclusive >= today);
 
-  candidates.push(...MANUAL_TRIPS.map(t => ({
+  candidates.push(...TRIP_STORE.trips.filter(t => t.visibility?.travelFeed !== false).map(t => ({
     ...t,
     start: parseYmd(t.start),
     endExclusive: parseYmd(t.endExclusive),
+    status: t.status || 'Confirmed',
+    cliveId: t.id || `travel-${t.start}-${slugify(t.city)}`,
     sourceEvents: [{
-      summary: t.sources[0],
+      summary: t.sources?.[0] || t.id || 'Trip store',
       location: t.city,
       start: t.start,
       endExclusive: t.endExclusive,
@@ -349,19 +265,13 @@ function buildTrips(events) {
     if (/TBD/.test(t.city)) notes.push('Location not noted on calendar event.');
     if (/St\. Louis/.test(t.city) && /Jubilee 2033/.test(t.purpose)) notes.push('Merged overlapping St. Louis blocks from Staff Strategy Meetings and Jubilee 2033.');
     if (/Guadalupe, Mexico/.test(t.city)) {
-      notes.push('Fly into Mexico City for Guadalupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15 under AA reservation QLLCPF.');
-    }
-    for (const override of MANUAL_TRIP_OVERRIDES) {
-      if (t.city !== override.city || ymd(t.start) !== override.start) continue;
-      const overrideEnd = parseYmd(override.endExclusive);
-      if (overrideEnd > t.endExclusive) t.endExclusive = overrideEnd;
-      notes.push(...(override.notes || []));
+      notes.push('Fly into Mexico City for Guadalupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15. Reservation details are intentionally omitted from the public feed.');
     }
     t.notes = uniq(notes);
     t.slug = `${ymd(t.start)}-${slugify(t.city)}`;
-    t.cliveId = `travel-${ymd(t.start)}-${slugify(t.city)}`;
+    t.cliveId = t.cliveId || `travel-${ymd(t.start)}-${slugify(t.city)}`;
     t.uid = `melissa-travel-${sha(t.cliveId)}@jstravelschedule.netlify.app`;
-    t.status = tripStatus(t);
+    t.status = t.status || tripStatus(t);
     t.reviewFlags = reviewFlags(t);
   }
   return trips.sort((a,b) => a.start - b.start);
@@ -402,11 +312,11 @@ function buildImportantMeetings(events) {
     };
   }).filter(m => m.endRaw && new Date(m.endRaw) >= today);
 
-  candidates.push(...MANUAL_MEETINGS.map(m => ({
+  candidates.push(...TRIP_STORE.meetings.filter(m => m.visibility?.travelFeed !== false).map(m => ({
     ...m,
     startDay: parseYmd(localYmd(m.startRaw)),
     slug: `${localYmd(m.startRaw)}-${slugify(m.title)}`,
-    uid: `melissa-important-${sha(`${m.startRaw}|${m.title}`)}@jstravelschedule.netlify.app`,
+    uid: `melissa-important-${sha(m.id || `${m.startRaw}|${m.title}`)}@jstravelschedule.netlify.app`,
   })).filter(m => new Date(m.endRaw) >= today));
 
   const byKey = new Map();
@@ -490,6 +400,25 @@ function status(t) {
 function updatedLine() {
   return new Intl.DateTimeFormat('en-US', { month:'long', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit', timeZone:TZ }).format(new Date());
 }
+function activeTrips(trips) {
+  return trips.filter(t => today >= t.start && today < t.endExclusive);
+}
+function renderTodayPanel(trips, meetings) {
+  const active = activeTrips(trips);
+  if (!active.length) return '';
+  const activeCities = active.map(t => t.city);
+  const activeMeetings = meetings.filter(m => active.some(t => m.startDay >= t.start && m.startDay < t.endExclusive));
+  return `
+    <section class="today-panel">
+      <h2>Today while traveling</h2>
+      ${active.map(t => `<div class="today-trip">
+        <div class="city">${html(t.city)}</div>
+        <div class="purpose">${html(t.purpose)}</div>
+        <div class="notes"><b>Clive Notes:</b> ${html(t.notes.length ? t.notes.join(' ') : 'Details pending.')}</div>
+      </div>`).join('')}
+      ${activeMeetings.length ? `<div class="today-meetings"><b>On the agenda:</b> ${html(activeMeetings.map(m => `${m.title} (${fmtTimeRange(m.startRaw, m.endRaw)})`).join('; '))}</div>` : ''}
+    </section>`;
+}
 function renderTrip(t) {
   const st = status(t), nights = daysBetween(t.start, t.endExclusive);
   return `
@@ -503,7 +432,7 @@ function renderTrip(t) {
           </header>
           <div class="trip-meta">
             <span>${html(t.status)}</span>
-            <span>Synced to Work + Jason's Travel</span>
+            <span>Published to Jason's Travel feed</span>
           </div>
           <div class="city">${html(t.city)}</div>
           <div class="purpose">${html(t.purpose)}</div>
@@ -570,8 +499,10 @@ ${style}
 
     <section class="assistant-note">
       <h2>Travel desk</h2>
-      <p>Clive keeps work travel, evening obligations, and major meetings visible on Jason's work calendar and the shared <b>Jason's Travel</b> calendar. This page is the quick itinerary view while Jason is planning or traveling.</p>
+      <p>Clive keeps work travel, evening obligations, and major meetings visible through Jason's work calendar and the subscribed <b>Jason's Travel</b> feed. This page is the quick itinerary view while Jason is planning or traveling.</p>
     </section>
+
+    ${renderTodayPanel(trips, meetings)}
 
     <div class="summary">${trips.length} upcoming ${trips.length===1?'trip':'trips'} • ${meetings.length} significant ${meetings.length===1?'meeting':'meetings'} • Last updated ${html(updatedLine())}</div>
 
