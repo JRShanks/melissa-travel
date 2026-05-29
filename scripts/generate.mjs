@@ -5,16 +5,7 @@ import crypto from 'node:crypto';
 
 const SITE_URL = 'https://jstravelschedule.netlify.app';
 const FEED_URL = `${SITE_URL}/melissa-travel.ics`;
-const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID || 'jshanks@eucharisticcongress.org';
 const OUTLOOK_EVENTS_PATH = process.env.OUTLOOK_CALENDAR_EVENTS_PATH || process.env.MELISSA_TRAVEL_OUTLOOK_EVENTS_PATH || path.join(process.cwd(), 'data', 'outlook-calendar-events.json');
-const DEFAULT_TOKEN_PATH = `${process.env.HOME}/.openclaw/secrets/daily-briefing-google-token.json`;
-const TOKEN_CANDIDATES = [
-  process.env.GOOGLE_TOKEN_PATH,
-  process.env.DAILY_BRIEFING_GOOGLE_TOKEN_PATH,
-  DEFAULT_TOKEN_PATH,
-  '/Users/clive/.openclaw/secrets/daily-briefing-google-token.json',
-  '/Users/jasonshanks/.openclaw/secrets/daily-briefing-google-token.json',
-].filter(Boolean);
 const TZ = 'America/Indiana/Indianapolis';
 const todayArg = process.argv.find(a => a.startsWith('--today='))?.split('=')[1];
 const reviewOnly = process.argv.includes('--review-only');
@@ -22,6 +13,14 @@ const allowReviewFlags = process.argv.includes('--allow-review-flags');
 const today = parseYmd(todayArg || new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date()));
 const scanEnd = addDays(today, 365);
 const MANUAL_TRIPS = [
+  {
+    start: '2026-06-10',
+    endExclusive: '2026-06-14',
+    city: 'Philadelphia, PA',
+    purpose: 'Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold',
+    notes: ['Melissa joining; trip now runs through Saturday.'],
+    sources: ['Manual seed: Philadelphia June travel'],
+  },
   {
     start: '2026-06-26',
     endExclusive: '2026-06-29',
@@ -31,12 +30,47 @@ const MANUAL_TRIPS = [
     sources: ['Manual: Boston Pilgrimage'],
   },
   {
+    start: '2026-07-03',
+    endExclusive: '2026-07-07',
+    city: 'Philadelphia, PA',
+    purpose: 'Out-of-town block (purpose not noted on calendar)',
+    notes: ['Spans the July 4th holiday.'],
+    sources: ['Manual seed: Philadelphia July travel'],
+  },
+  {
+    start: '2026-07-22',
+    endExclusive: '2026-07-27',
+    city: 'Napa, CA',
+    purpose: '15th Annual Napa Institute Summer Conference',
+    notes: ['The Meritage Resort and Spa, Napa, CA.'],
+    sources: ['Manual seed: Napa Institute'],
+  },
+  {
+    start: '2026-08-31',
+    endExclusive: '2026-09-05',
+    city: 'St. Louis, MO',
+    purpose: 'NEC staff strategy meetings at the Augustine Institute',
+    notes: ['Aug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.'],
+    sources: ['Manual seed: St. Louis staff strategy meetings'],
+  },
+  {
     start: '2026-11-11',
     endExclusive: '2026-11-16',
     city: 'Guadalupe, Mexico',
     purpose: 'Pilgrimage',
     notes: [],
     sources: ['Manual: Guadalupe pilgrimage'],
+  },
+];
+const MANUAL_MEETINGS = [
+  {
+    title: 'NEC Board of Directors Meeting',
+    startRaw: '2026-08-18T14:00:00-04:00',
+    endRaw: '2026-08-18T15:30:00-04:00',
+    location: 'Zoom',
+    notes: [],
+    status: 'Confirmed',
+    sourceSummary: 'Manual seed: NEC Board of Directors Meeting',
   },
 ];
 const MANUAL_TRIP_OVERRIDES = [
@@ -123,51 +157,17 @@ function normalizeOutlookEvent(e) {
   };
 }
 
-function tokenPath() {
-  const seen = [...new Set(TOKEN_CANDIDATES)];
-  const found = seen.find(p => fs.existsSync(p));
-  if (found) return found;
-  throw new Error(`Google Calendar token not found. Checked: ${seen.join(', ')}`);
-}
-
-async function accessToken() {
-  const auth = JSON.parse(fs.readFileSync(tokenPath(), 'utf8'));
-  if (auth.tokens?.access_token && auth.tokens?.expiry_date > Date.now() + 60000) return auth.tokens.access_token;
-  const body = new URLSearchParams({ client_id: auth.client_id, client_secret: auth.client_secret, refresh_token: auth.tokens.refresh_token, grant_type: 'refresh_token' });
-  const res = await fetch('https://oauth2.googleapis.com/token', { method:'POST', headers:{'content-type':'application/x-www-form-urlencoded'}, body });
-  if (!res.ok) throw new Error(`Google token refresh failed: ${res.status} ${await res.text()}`);
-  return (await res.json()).access_token;
-}
-
 async function fetchEvents() {
-  if (fs.existsSync(OUTLOOK_EVENTS_PATH)) {
-    const payload = JSON.parse(fs.readFileSync(OUTLOOK_EVENTS_PATH, 'utf8'));
-    const expectedStart = ymd(today);
-    const expectedEnd = ymd(scanEnd);
-    if (payload?.startDate && payload?.endDate && (payload.startDate !== expectedStart || payload.endDate !== expectedEnd)) {
-      throw new Error(`Stale Outlook travel calendar injection at ${OUTLOOK_EVENTS_PATH}; expected ${expectedStart} to ${expectedEnd}.`);
-    }
-    return outlookArray(payload).map(normalizeOutlookEvent);
+  if (!fs.existsSync(OUTLOOK_EVENTS_PATH)) {
+    throw new Error(`Calendar export not found at ${OUTLOOK_EVENTS_PATH}. Clive/OpenClaw should inject Outlook or Apple Calendar events before generating.`);
   }
-
-  const token = await accessToken();
-  const items = [];
-  let pageToken;
-  do {
-    const url = new URL(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events`);
-    url.searchParams.set('timeMin', `${ymd(today)}T00:00:00-04:00`);
-    url.searchParams.set('timeMax', `${ymd(scanEnd)}T00:00:00-04:00`);
-    url.searchParams.set('singleEvents', 'true');
-    url.searchParams.set('orderBy', 'startTime');
-    url.searchParams.set('maxResults', '500');
-    if (pageToken) url.searchParams.set('pageToken', pageToken);
-    const res = await fetch(url, { headers: { authorization: `Bearer ${token}` }});
-    if (!res.ok) throw new Error(`Google Calendar fetch failed: ${res.status} ${await res.text()}`);
-    const data = await res.json();
-    items.push(...(data.items || []));
-    pageToken = data.nextPageToken;
-  } while (pageToken);
-  return items;
+  const payload = JSON.parse(fs.readFileSync(OUTLOOK_EVENTS_PATH, 'utf8'));
+  const expectedStart = ymd(today);
+  const expectedEnd = ymd(scanEnd);
+  if (payload?.startDate && payload?.endDate && (payload.startDate !== expectedStart || payload.endDate !== expectedEnd)) {
+    throw new Error(`Stale travel calendar injection at ${OUTLOOK_EVENTS_PATH}; expected ${expectedStart} to ${expectedEnd}.`);
+  }
+  return outlookArray(payload).map(normalizeOutlookEvent);
 }
 
 function eventDates(e) {
@@ -229,6 +229,12 @@ function purposeFor(e, city) {
   if (/Dallas/i.test(city)) return 'Speaking engagement';
   if (/Guadalupe/i.test(city)) return 'Pilgrimage';
   return s.replace(/\s*\(Clone\)$/i,'').replace(/\s+NEC$/,'') || 'Travel';
+}
+
+function tripStatus(t) {
+  if (/hold|likely|tentative|details/i.test(`${t.purpose} ${t.notes.join(' ')}`)) return 'Tentative';
+  if (/Flight:|Drive:|hotel|arrive|depart|confirmation/i.test(t.notes.join(' '))) return 'Booked';
+  return 'Confirmed';
 }
 
 function isCandidate(e) {
@@ -298,7 +304,7 @@ function buildTrips(events) {
   for (const t of trips) {
     t.purpose = t.purpose.replace(/\/ Jason in .+?(?=\/|$)/gi,'').replace(/^Jason in .+?\/\s*/i,'').trim();
     const note = flightNote(events, t);
-    const notes = [];
+    const notes = [...(t.notes || [])];
     if (note) notes.push(note);
     if (/Seattle, WA/.test(t.city)) {
       notes.push('VIP dinner Friday night.');
@@ -322,7 +328,9 @@ function buildTrips(events) {
     }
     t.notes = uniq(notes);
     t.slug = `${ymd(t.start)}-${slugify(t.city)}`;
-    t.uid = `melissa-travel-${sha(`${ymd(t.start)}|${ymd(t.endExclusive)}|${t.city}`)}@jstravelschedule.netlify.app`;
+    t.cliveId = `travel-${ymd(t.start)}-${slugify(t.city)}`;
+    t.uid = `melissa-travel-${sha(t.cliveId)}@jstravelschedule.netlify.app`;
+    t.status = tripStatus(t);
     t.reviewFlags = reviewFlags(t);
   }
   return trips.sort((a,b) => a.start - b.start);
@@ -357,10 +365,18 @@ function buildImportantMeetings(events) {
       location: meetingLocation(e),
       notes: /subject to change/i.test(`${e.summary || ''} ${stripHtml(e.description || '')}`) ? ['Subject to change.'] : [],
       slug: `${localYmd(startRaw)}-${slugify(meetingTitle(e))}`,
+      status: /subject to change/i.test(`${e.summary || ''} ${stripHtml(e.description || '')}`) ? 'Tentative' : 'Confirmed',
       uid: `melissa-important-${sha(`${startRaw}|${meetingTitle(e)}`)}@jstravelschedule.netlify.app`,
       sourceSummary: e.summary || '',
     };
   }).filter(m => m.endRaw && new Date(m.endRaw) >= today);
+
+  candidates.push(...MANUAL_MEETINGS.map(m => ({
+    ...m,
+    startDay: parseYmd(localYmd(m.startRaw)),
+    slug: `${localYmd(m.startRaw)}-${slugify(m.title)}`,
+    uid: `melissa-important-${sha(`${m.startRaw}|${m.title}`)}@jstravelschedule.netlify.app`,
+  })).filter(m => new Date(m.endRaw) >= today));
 
   const byKey = new Map();
   for (const m of candidates) {
@@ -394,12 +410,12 @@ function reviewFlags(t) {
 function buildReport(events, trips, meetings) {
   const reviewTrips = trips.filter(t => t.reviewFlags.length);
   const next = trips[0] || null;
-  const sourceCalendar = fs.existsSync(OUTLOOK_EVENTS_PATH) ? `Outlook Calendar (${OUTLOOK_EVENTS_PATH})` : CALENDAR_ID;
   return {
     generatedAt: new Date().toISOString(),
     today: ymd(today),
     scanEnd: ymd(scanEnd),
-    sourceCalendar,
+    sourceCalendar: `Injected calendar export (${OUTLOOK_EVENTS_PATH})`,
+    calendarVisibilityTarget: `Subscribed Apple Calendar: Jason's Travel (${FEED_URL})`,
     eventCount: events.length,
     tripCount: trips.length,
     importantMeetingCount: meetings.length,
@@ -418,13 +434,11 @@ function buildReport(events, trips, meetings) {
     generatedFiles: [
       'index.html',
       'melissa-travel.ics',
-      ...meetings.map(m => `meetings/${m.slug}.ics`),
-      ...trips.map(t => `trips/${t.slug}.ics`),
     ],
     costGuardrails: [
       'Batch all generated files into one commit/push per refresh.',
       'Keep Netlify no-build static publish from repo root.',
-      'Refresh monthly or on demand, not per-file or hourly.',
+      'Refresh the HTML dashboard and subscribed calendar feed after Clive/OpenClaw calendar sync batches, not per event.',
     ],
   };
 }
@@ -445,14 +459,6 @@ function status(t) {
 function updatedLine() {
   return new Intl.DateTimeFormat('en-US', { month:'long', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit', timeZone:TZ }).format(new Date());
 }
-function googleUrl(t) {
-  const details = `${t.purpose}\n\n${t.notes.join('\n')}\n\nView live: ${SITE_URL}`;
-  const u = new URL('https://calendar.google.com/calendar/render');
-  u.searchParams.set('action','TEMPLATE'); u.searchParams.set('text',`Jason: ${t.city}`);
-  u.searchParams.set('dates',`${compactDate(t.start)}/${compactDate(t.endExclusive)}`);
-  u.searchParams.set('details', details); u.searchParams.set('location', t.city);
-  return u.toString();
-}
 function renderTrip(t) {
   const st = status(t), nights = daysBetween(t.start, t.endExclusive);
   return `
@@ -464,13 +470,13 @@ function renderTrip(t) {
             </div>
             <span class="badge badge-${st.cls}">${html(st.text)}</span>
           </header>
+          <div class="trip-meta">
+            <span>${html(t.status)}</span>
+            <span>Synced to Work + Jason's Travel</span>
+          </div>
           <div class="city">${html(t.city)}</div>
           <div class="purpose">${html(t.purpose)}</div>
-          ${t.notes.length ? `<div class="notes">${html(t.notes.join(' '))}</div>` : ''}
-          <div class="add-row">
-            <a class="add-btn" href="/trips/${html(t.slug)}.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="${html(googleUrl(t))}" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
+          ${t.notes.length ? `<div class="notes"><b>Clive Notes:</b> ${html(t.notes.join(' '))}</div>` : '<div class="notes"><b>Clive Notes:</b> Details pending.</div>'}
         </article>`;
 }
 function fmtMeetingDate(m) {
@@ -483,14 +489,6 @@ function meetingStatus(m) {
   if (delta === 1) return { text:'Tomorrow', cls:'soon' };
   return { text:`In ${delta} days`, cls: delta <= 7 ? 'soon' : 'upcoming' };
 }
-function googleMeetingUrl(m) {
-  const details = `${m.title}\n\n${m.notes.join('\n')}\n\nView live: ${SITE_URL}`;
-  const u = new URL('https://calendar.google.com/calendar/render');
-  u.searchParams.set('action','TEMPLATE'); u.searchParams.set('text',`Jason: ${m.title}`);
-  u.searchParams.set('dates',`${localCompactDateTime(m.startRaw)}/${localCompactDateTime(m.endRaw)}`);
-  u.searchParams.set('details', details); if (m.location) u.searchParams.set('location', m.location);
-  return u.toString();
-}
 function renderMeeting(m) {
   const st = meetingStatus(m);
   return `
@@ -502,13 +500,13 @@ function renderMeeting(m) {
             </div>
             <span class="badge badge-${st.cls}">${html(st.text)}</span>
           </header>
+          <div class="trip-meta">
+            <span>${html(m.status)}</span>
+            <span>Family visibility</span>
+          </div>
           <div class="city">${html(m.title)}</div>
           ${m.location ? `<div class="purpose">${html(m.location)}</div>` : ''}
           ${m.notes.length ? `<div class="notes">${html(m.notes.join(' '))}</div>` : ''}
-          <div class="add-row">
-            <a class="add-btn" href="/meetings/${html(m.slug)}.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="${html(googleMeetingUrl(m))}" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
         </article>`;
 }
 function renderHtml(trips, meetings) {
@@ -534,27 +532,21 @@ ${style}
   <div class="wrap">
     <header class="page">
       <h1>Jason's Travel Schedule</h1>
-      <div class="sub">Next 12 months</div>
+      <div class="sub">Travel assistant dashboard • next 12 months</div>
     </header>
 
     ${hero}
 
-    <section class="subscribe">
-      <h2>Subscribe to this calendar</h2>
-      <p>Set it once and trips appear automatically — updates every month.</p>
-      <div class="sub-buttons">
-        <a href="webcal://jstravelschedule.netlify.app/melissa-travel.ics">Apple Calendar</a>
-        <a class="ghost" href="https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics" target="_blank" rel="noopener">Google Calendar</a>
-        <button class="ghost" type="button" onclick="navigator.clipboard.writeText('https://jstravelschedule.netlify.app/melissa-travel.ics'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy feed URL',1500)">Copy feed URL</button>
-      </div>
-      <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>
+    <section class="assistant-note">
+      <h2>Travel desk</h2>
+      <p>Clive keeps work travel, evening obligations, and major meetings visible on Jason's work calendar and the shared <b>Jason's Travel</b> calendar. This page is the quick itinerary view while Jason is planning or traveling.</p>
     </section>
 
-    <div class="summary">${trips.length} upcoming ${trips.length===1?'trip':'trips'} • ${meetings.length} important ${meetings.length===1?'meeting':'meetings'} • Last updated ${html(updatedLine())}</div>
+    <div class="summary">${trips.length} upcoming ${trips.length===1?'trip':'trips'} • ${meetings.length} significant ${meetings.length===1?'meeting':'meetings'} • Last updated ${html(updatedLine())}</div>
 
     <section class="section-block important-meetings">
       <h2>Important meetings</h2>
-      <p>Board meetings Jason wants Melissa to be able to plan around.</p>
+      <p>Board meetings and other work obligations that should be visible at home.</p>
       ${meetings.length ? meetings.map(renderMeeting).join('') : '<div class="empty">No upcoming important meetings found.</div>'}
     </section>
 
@@ -564,7 +556,18 @@ ${style}
       ${trips.map(renderTrip).join('')}
     </section>
 
-    <footer>Generated from Jason's Outlook Calendar. Indianapolis-area, family, school, holiday, payday, and cloned non-trip entries are excluded.</footer>
+    <section class="subscribe bottom-subscribe">
+      <h2>Subscribe to this calendar</h2>
+      <p>Use the feed if Jason's Travel needs to be added again or shared on another device.</p>
+      <div class="sub-buttons">
+        <a href="webcal://jstravelschedule.netlify.app/melissa-travel.ics">Apple Calendar</a>
+        <a class="ghost" href="https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics" target="_blank" rel="noopener">Google Calendar</a>
+        <button class="ghost" type="button" onclick="navigator.clipboard.writeText('https://jstravelschedule.netlify.app/melissa-travel.ics'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy feed URL',1500)">Copy feed URL</button>
+      </div>
+      <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>
+    </section>
+
+    <footer>Generated from Clive/OpenClaw calendar exports. Family visibility publishes through the Jason's Travel subscribed calendar feed.</footer>
   </div>
 </body>
 </html>
@@ -586,24 +589,34 @@ function foldLine(line) {
   return out + cur;
 }
 function vevent(t, stamp) {
-  const desc = `${t.purpose}\n\n${t.notes.join('\n')}\n\nView live: ${SITE_URL}`;
+  const desc = `${t.purpose}\n\nStatus: ${t.status}\n${t.notes.join('\n')}\n\nView live: ${SITE_URL}`;
   return [
     'BEGIN:VEVENT', `UID:${t.uid}`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${compactDate(t.start)}`, `DTEND;VALUE=DATE:${compactDate(t.endExclusive)}`,
     `SUMMARY:${icsEscape(`Jason: ${t.city}`)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(t.city)}`, 'TRANSP:TRANSPARENT', 'STATUS:CONFIRMED', 'END:VEVENT'
   ].map(foldLine).join('\n');
 }
 function meetingVevent(m, stamp) {
-  const desc = `${m.title}\n\n${m.notes.join('\n')}\n\nView live: ${SITE_URL}`;
+  const desc = `${m.title}\n\nStatus: ${m.status}\n${m.notes.join('\n')}\n\nView live: ${SITE_URL}`;
   return [
     'BEGIN:VEVENT', `UID:${m.uid}`, `DTSTAMP:${stamp}`, `DTSTART;TZID=${TZ}:${localCompactDateTime(m.startRaw)}`, `DTEND;TZID=${TZ}:${localCompactDateTime(m.endRaw)}`,
     `SUMMARY:${icsEscape(`Jason: ${m.title}`)}`, `DESCRIPTION:${icsEscape(desc)}`, `LOCATION:${icsEscape(m.location)}`, 'TRANSP:OPAQUE', 'STATUS:CONFIRMED', 'END:VEVENT'
   ].map(foldLine).join('\n');
 }
-function renderIcs(trips, single, meetings = []) {
+function renderIcs(trips, meetings = []) {
   const stamp = new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
-  const head = ['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Jason Shanks//Melissa Travel${single?'':' Feed'}//EN`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
-  if (!single) head.push("X-WR-CALNAME:Jason's Travel", 'X-WR-CALDESC:Out-of-town trips for Jason Shanks (auto-updated monthly).', 'X-WR-TIMEZONE:America/Indiana/Indianapolis', 'REFRESH-INTERVAL;VALUE=DURATION:PT12H', 'X-PUBLISHED-TTL:PT12H');
-  return [...head, ...meetings.map(m => meetingVevent(m, stamp)), ...trips.map(t => vevent(t, stamp)), 'END:VCALENDAR'].join('\n') + '\n';
+  const head = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Jason Shanks//Travel Assistant Feed//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    "X-WR-CALNAME:Jason's Travel",
+    'X-WR-CALDESC:Family-visible work travel and significant commitments for Jason Shanks.',
+    'X-WR-TIMEZONE:America/Indiana/Indianapolis',
+    'REFRESH-INTERVAL;VALUE=DURATION:PT12H',
+    'X-PUBLISHED-TTL:PT12H',
+  ];
+  return [...head.map(foldLine), ...meetings.map(m => meetingVevent(m, stamp)), ...trips.map(t => vevent(t, stamp)), 'END:VCALENDAR'].join('\n') + '\n';
 }
 
 const events = await fetchEvents();
@@ -621,13 +634,7 @@ if (report.reviewRequired && !allowReviewFlags) {
 
 if (!reviewOnly) {
   fs.writeFileSync('index.html', renderHtml(trips, meetings).replace(/^[ \t]+$/gm, ''));
-  fs.writeFileSync('melissa-travel.ics', renderIcs(trips, false, meetings));
-  fs.mkdirSync('meetings', { recursive:true });
-  for (const f of fs.readdirSync('meetings')) if (f.endsWith('.ics')) fs.rmSync(path.join('meetings', f));
-  for (const m of meetings) fs.writeFileSync(path.join('meetings', `${m.slug}.ics`), renderIcs([], true, [m]));
-  fs.mkdirSync('trips', { recursive:true });
-  for (const f of fs.readdirSync('trips')) if (f.endsWith('.ics')) fs.rmSync(path.join('trips', f));
-  for (const t of trips) fs.writeFileSync(path.join('trips', `${t.slug}.ics`), renderIcs([t], true));
+  fs.writeFileSync('melissa-travel.ics', renderIcs(trips, meetings));
 }
 
 console.log(`${reviewOnly ? 'Reviewed' : 'Generated'} ${trips.length} trips and ${meetings.length} important meetings from ${events.length} events`);

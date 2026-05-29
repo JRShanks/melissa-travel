@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-05-27T19:41:56.251Z",
-  "today": "2026-05-27",
-  "scanEnd": "2027-05-27",
-  "sourceCalendar": "Outlook Calendar (/Users/clive/Desktop/melissa-travel/data/outlook-calendar-events.json)",
-  "eventCount": 200,
+  "generatedAt": "2026-05-29T20:54:06.987Z",
+  "today": "2026-05-29",
+  "scanEnd": "2027-05-29",
+  "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/daily-briefing-run/data/outlook-calendar-events.json)",
+  "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
+  "eventCount": 8,
   "tripCount": 6,
   "importantMeetingCount": 1,
   "nextTrip": {
     "city": "Philadelphia, PA",
     "start": "2026-06-10",
     "endExclusive": "2026-06-14",
-    "purpose": "Philadelphia - Catholic Collaborators / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphia - Ward Fitzgerald Event Hold"
+    "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold"
   },
   "importantMeetings": [
     {
@@ -26,40 +27,16 @@
       "city": "Philadelphia, PA",
       "start": "2026-06-10",
       "endExclusive": "2026-06-14",
-      "purpose": "Philadelphia - Catholic Collaborators / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphia - Ward Fitzgerald Event Hold",
+      "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold",
       "flags": [
         "merged-purpose-review"
       ],
       "sources": [
         {
-          "summary": "Philadelphia - Catholic Collaborators",
+          "summary": "Manual seed: Philadelphia June travel",
           "location": "Philadelphia, PA",
           "start": "2026-06-10",
-          "endExclusive": "2026-06-12"
-        },
-        {
-          "summary": "Becket Fund Meeting — Philadelphia NEC",
-          "location": "Kimpton Monaco, 433 Chestnut Street, Philadelphia, PA",
-          "start": "2026-06-10",
-          "endExclusive": "2026-06-12"
-        },
-        {
-          "summary": "Becket Lunch Briefing",
-          "location": "Philadelphia, PA",
-          "start": "2026-06-11",
-          "endExclusive": "2026-06-12"
-        },
-        {
-          "summary": "Becket Canterbury Medal Gala",
-          "location": "National Constitution Center, Philadelphia, PA",
-          "start": "2026-06-11",
-          "endExclusive": "2026-06-13"
-        },
-        {
-          "summary": "Philadelphia - Ward Fitzgerald Event Hold",
-          "location": "Philadelphia, PA",
-          "start": "2026-06-12",
-          "endExclusive": "2026-06-13"
+          "endExclusive": "2026-06-14"
         }
       ]
     },
@@ -74,7 +51,7 @@
       ],
       "sources": [
         {
-          "summary": "Jason in Philadelphia NEC",
+          "summary": "Manual seed: Philadelphia July travel",
           "location": "Philadelphia, PA",
           "start": "2026-07-03",
           "endExclusive": "2026-07-07"
@@ -84,18 +61,11 @@
   ],
   "generatedFiles": [
     "index.html",
-    "melissa-travel.ics",
-    "meetings/2026-08-18-nec-board-of-directors-meeting.ics",
-    "trips/2026-06-10-philadelphia-pa.ics",
-    "trips/2026-06-26-boston-ma.ics",
-    "trips/2026-07-03-philadelphia-pa.ics",
-    "trips/2026-07-22-napa-ca.ics",
-    "trips/2026-08-31-st-louis-mo.ics",
-    "trips/2026-11-11-guadalupe-mexico.ics"
+    "melissa-travel.ics"
   ],
   "costGuardrails": [
     "Batch all generated files into one commit/push per refresh.",
     "Keep Netlify no-build static publish from repo root.",
-    "Refresh monthly or on demand, not per-file or hourly."
+    "Refresh the HTML dashboard and subscribed calendar feed after Clive/OpenClaw calendar sync batches, not per event."
   ]
 }

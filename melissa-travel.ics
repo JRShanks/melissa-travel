@@ -1,99 +1,101 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Jason Shanks//Melissa Travel Feed//EN
+PRODID:-//Jason Shanks//Travel Assistant Feed//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Jason's Travel
-X-WR-CALDESC:Out-of-town trips for Jason Shanks (auto-updated monthly).
+X-WR-CALDESC:Family-visible work travel and significant commitments for Jas
+ on Shanks.
 X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-important-e9dc0d54607a@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
-DESCRIPTION:NEC Board of Directors Meeting\n\n\n\nView live: https://jstrav
- elschedule.netlify.app
+DESCRIPTION:NEC Board of Directors Meeting\n\nStatus: Confirmed\n\n\nView l
+ ive: https://jstravelschedule.netlify.app
 LOCATION:Zoom
 TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-67ebd661e9ff@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-travel-1fe2a0538522@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260614
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Philadelphia - Catholic Collaborators / Becket Fund meeting & G
- ala / Becket Fund meeting & Gala / Becket Fund meeting & Gala / Philadelphi
- a - Ward Fitzgerald Event Hold\n\nMelissa joining\; trip now runs through S
- aturday.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Philadelphia Catholic Collaborators / Becket Fund meeting and G
+ ala / Ward Fitzgerald event hold\n\nStatus: Tentative\nMelissa joining\; tr
+ ip now runs through Saturday.\n\nView live: https://jstravelschedule.netlif
+ y.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-c635d972342e@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-travel-0fcad97cca9e@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260629
 SUMMARY:Jason: Boston\, MA
-DESCRIPTION:Boston Pilgrimage\n\n\n\nView live: https://jstravelschedule.ne
- tlify.app
+DESCRIPTION:Boston Pilgrimage\n\nStatus: Confirmed\n\n\nView live: https://
+ jstravelschedule.netlify.app
 LOCATION:Boston\, MA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-6e3f4ae969d9@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;VALUE=DATE:20260703
 DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nSpans the
-  July 4th holiday.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nStatus: Co
+ nfirmed\nSpans the July 4th holiday.\n\nView live: https://jstravelschedule
+ .netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-a9e6607f72f7@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
-DESCRIPTION:15th Annual Napa Institute Summer Conference\n\nThe Meritage Re
- sort and Spa\, Napa\, CA.\n\nView live: https://jstravelschedule.netlify.ap
- p
+DESCRIPTION:15th Annual Napa Institute Summer Conference\n\nStatus: Confirm
+ ed\nThe Meritage Resort and Spa\, Napa\, CA.\n\nView live: https://jstravel
+ schedule.netlify.app
 LOCATION:Napa\, CA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-8a899582d8b3@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
-DESCRIPTION:NEC staff strategy meetings at the Augustine Institute\n\nAug 3
- 1: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.\n\nView l
- ive: https://jstravelschedule.netlify.app
+DESCRIPTION:NEC staff strategy meetings at the Augustine Institute\n\nStatu
+ s: Confirmed\nAug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meeti
+ ngs) NEC.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:St. Louis\, MO
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-02f5c7757dea@jstravelschedule.netlify.app
-DTSTAMP:20260527T194156Z
+UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
+DTSTAMP:20260529T205406Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
-DESCRIPTION:Pilgrimage\n\nFly into Mexico City for Guadalupe pilgrimage\; a
- rrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compare departing For
- t Wayne vs Indianapolis for cost.\n\nView live: https://jstravelschedule.ne
- tlify.app
+DESCRIPTION:Pilgrimage\n\nStatus: Booked\nFly into Mexico City for Guadalup
+ e pilgrimage\; arrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compa
+ re departing Fort Wayne vs Indianapolis for cost.\n\nView live: https://jst
+ ravelschedule.netlify.app
 LOCATION:Guadalupe\, Mexico
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED

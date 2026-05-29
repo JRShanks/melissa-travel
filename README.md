@@ -1,10 +1,19 @@
-# melissa-travel
+# Jason Travel
 
-Jason's 12-month travel schedule, generated monthly for Melissa.
+Jason's travel assistant dashboard and family-visibility workflow.
+
+The live HTML page is the quick itinerary view Jason can use while planning or traveling. It should show upcoming work travel, significant evening obligations, major meetings, and assistant notes such as flight, hotel, agenda, and "details pending" context.
+
+Calendar visibility flows through the published feed:
+
+- Work commitments stay on Jason's work calendar.
+- Family-facing visibility is published through `https://jstravelschedule.netlify.app/melissa-travel.ics`.
+- Apple Calendar `Jason's Travel` should subscribe to that feed, and Melissa should either subscribe to the same feed or have visibility through the shared/subscribed Apple Calendar setup.
+- The HTML page is regenerated alongside the feed after Clive/OpenClaw updates or reconciles the travel records.
 
 ## Generate
 
-This repo is a pure static Netlify site. The generator has no npm dependencies; it uses an injected Outlook Calendar export as the primary source. Jason's existing OpenClaw Google OAuth token remains an optional legacy fallback.
+This repo is a pure static Netlify site. The generator has no npm dependencies and requires an injected calendar export from Clive/OpenClaw. Google Calendar is intentionally no longer a fallback source.
 
 ```bash
 npm run review
@@ -16,12 +25,9 @@ Useful options/environment:
 ```bash
 node scripts/generate.mjs --today=2026-05-04 --review-only
 OUTLOOK_CALENDAR_EVENTS_PATH=data/outlook-calendar-events.json node scripts/generate.mjs --review-only
-GOOGLE_CALENDAR_ID=jshanks@eucharisticcongress.org node scripts/generate.mjs --review-only
-GOOGLE_TOKEN_PATH=$HOME/.openclaw/secrets/daily-briefing-google-token.json node scripts/generate.mjs --review-only
-DAILY_BRIEFING_GOOGLE_TOKEN_PATH=$HOME/.openclaw/secrets/daily-briefing-google-token.json node scripts/generate.mjs --review-only
 ```
 
-Outlook injection format:
+Calendar injection format:
 
 ```json
 {
@@ -32,14 +38,25 @@ Outlook injection format:
 }
 ```
 
-The default injection path is `data/outlook-calendar-events.json`, and the file is ignored by git. Cron agents should fetch Jason's primary Outlook calendar events for the next 12 months, write the raw Outlook event array into `events`, and then run `npm run review`.
+The default injection path is `data/outlook-calendar-events.json`, and the file is ignored by git. Clive/OpenClaw should fetch Jason's primary Outlook calendar and/or Apple Calendar events for the next 12 months, write normalized event objects into `events`, and then run `npm run review`.
+
+## Clive/OpenClaw workflow
+
+When Jason says something like "I'm likely going to Philadelphia June 10-13, details to come," Clive should:
+
+1. Create or update the work-calendar event if it belongs on the work calendar.
+2. Create or update the matching travel record that feeds `melissa-travel.ics`.
+3. Preserve a stable Clive travel identifier so future updates do not duplicate the trip in the feed.
+4. Add status and itinerary context as it becomes available: tentative, booked, confirmed, flights, hotel, ground transport, agenda, Melissa joining, and missing details.
+5. Regenerate this HTML dashboard and the `melissa-travel.ics` feed after the travel sync batch.
+
+`Jason's Travel` appears to be a subscribed Apple Calendar fed from `https://jstravelschedule.netlify.app/melissa-travel.ics`. This repo maintains that feed; it does not manage Apple/iCloud sharing or subscription permissions.
 
 Outputs:
 
 - `RUN_REPORT.json` — generated every run; includes trip count, next trip, review flags, and cost guardrails
 - `index.html`
 - `melissa-travel.ics`
-- `trips/<slug>.ics`
 
 ## Review guardrails
 

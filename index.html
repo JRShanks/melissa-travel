@@ -34,12 +34,12 @@
   .next-up .next-city { font-size: 22px; font-weight: 700; margin-top: 4px; }
   .next-up .next-when { font-size: 14px; opacity:.85; margin-top: 2px; }
 
-  .subscribe {
+  .assistant-note, .subscribe {
     background: var(--card); border:1px solid var(--rule); border-radius: 14px;
     padding: 16px 18px; margin-bottom: 20px;
   }
-  .subscribe h2 { font-size: 14px; margin: 0 0 4px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
-  .subscribe p { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .assistant-note h2, .subscribe h2 { font-size: 14px; margin: 0 0 4px; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+  .assistant-note p, .subscribe p { font-size: 13px; color: var(--muted); margin: 0; }
   .sub-buttons { display:flex; flex-wrap:wrap; gap:8px; }
   .sub-buttons a, .sub-buttons button {
     flex:1 1 auto; min-width: 140px; text-align:center;
@@ -75,6 +75,11 @@
   .city { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
   .purpose { font-size: 14px; color: var(--ink); }
   .notes { font-size: 12px; color: var(--muted); margin-top: 6px; font-style: italic; }
+  .trip-meta { display:flex; flex-wrap:wrap; gap:6px; margin-bottom: 8px; }
+  .trip-meta span {
+    font-size: 11px; font-weight: 600; color: var(--accent);
+    background: var(--accent-soft); border-radius: 999px; padding: 3px 8px;
+  }
   .add-row { display:flex; gap:8px; margin-top: 12px; flex-wrap:wrap; }
   .add-btn {
     flex:1 1 auto; text-align:center; text-decoration:none;
@@ -103,31 +108,25 @@
   <div class="wrap">
     <header class="page">
       <h1>Jason's Travel Schedule</h1>
-      <div class="sub">Next 12 months</div>
+      <div class="sub">Travel assistant dashboard • next 12 months</div>
     </header>
 
     <div class="next-up">
-          <div class="next-label">Jason's next trip is in <b>14 days</b></div>
+          <div class="next-label">Jason's next trip is in <b>12 days</b></div>
           <div class="next-city">Philadelphia, PA</div>
           <div class="next-when">Wed, Jun 10 – Sat, Jun 13, 2026</div>
         </div>
 
-    <section class="subscribe">
-      <h2>Subscribe to this calendar</h2>
-      <p>Set it once and trips appear automatically — updates every month.</p>
-      <div class="sub-buttons">
-        <a href="webcal://jstravelschedule.netlify.app/melissa-travel.ics">Apple Calendar</a>
-        <a class="ghost" href="https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics" target="_blank" rel="noopener">Google Calendar</a>
-        <button class="ghost" type="button" onclick="navigator.clipboard.writeText('https://jstravelschedule.netlify.app/melissa-travel.ics'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy feed URL',1500)">Copy feed URL</button>
-      </div>
-      <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>
+    <section class="assistant-note">
+      <h2>Travel desk</h2>
+      <p>Clive keeps work travel, evening obligations, and major meetings visible on Jason's work calendar and the shared <b>Jason's Travel</b> calendar. This page is the quick itinerary view while Jason is planning or traveling.</p>
     </section>
 
-    <div class="summary">6 upcoming trips • 1 important meeting • Last updated May 27, 2026 at 3:41 PM</div>
+    <div class="summary">6 upcoming trips • 1 significant meeting • Last updated May 29, 2026 at 4:54 PM</div>
 
     <section class="section-block important-meetings">
       <h2>Important meetings</h2>
-      <p>Board meetings Jason wants Melissa to be able to plan around.</p>
+      <p>Board meetings and other work obligations that should be visible at home.</p>
 
         <article class="trip important-meeting">
           <header class="trip-head">
@@ -135,15 +134,15 @@
               <div class="date-range">Tue, Aug 18, 2026 • 2:00 PM–3:30 PM</div>
               <div class="nights">Important meeting</div>
             </div>
-            <span class="badge badge-upcoming">In 83 days</span>
+            <span class="badge badge-upcoming">In 81 days</span>
           </header>
+          <div class="trip-meta">
+            <span>Confirmed</span>
+            <span>Family visibility</span>
+          </div>
           <div class="city">NEC Board of Directors Meeting</div>
           <div class="purpose">Zoom</div>
 
-          <div class="add-row">
-            <a class="add-btn" href="/meetings/2026-08-18-nec-board-of-directors-meeting.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+NEC+Board+of+Directors+Meeting&amp;dates=20260818T140000%2F20260818T153000&amp;details=NEC+Board+of+Directors+Meeting%0A%0A%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Zoom" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
         </article>
     </section>
 
@@ -157,15 +156,15 @@
               <div class="date-range">Wed, Jun 10 – Sat, Jun 13, 2026</div>
               <div class="nights">4 nights</div>
             </div>
-            <span class="badge badge-upcoming">In 14 days</span>
+            <span class="badge badge-upcoming">In 12 days</span>
           </header>
-          <div class="city">Philadelphia, PA</div>
-          <div class="purpose">Philadelphia - Catholic Collaborators / Becket Fund meeting &amp; Gala / Becket Fund meeting &amp; Gala / Becket Fund meeting &amp; Gala / Philadelphia - Ward Fitzgerald Event Hold</div>
-          <div class="notes">Melissa joining; trip now runs through Saturday.</div>
-          <div class="add-row">
-            <a class="add-btn" href="/trips/2026-06-10-philadelphia-pa.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+Philadelphia%2C+PA&amp;dates=20260610%2F20260614&amp;details=Philadelphia+-+Catholic+Collaborators+%2F+Becket+Fund+meeting+%26+Gala+%2F+Becket+Fund+meeting+%26+Gala+%2F+Becket+Fund+meeting+%26+Gala+%2F+Philadelphia+-+Ward+Fitzgerald+Event+Hold%0A%0AMelissa+joining%3B+trip+now+runs+through+Saturday.%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Philadelphia%2C+PA" target="_blank" rel="noopener">Google Calendar</a>
+          <div class="trip-meta">
+            <span>Tentative</span>
+            <span>Synced to Work + Jason's Travel</span>
           </div>
+          <div class="city">Philadelphia, PA</div>
+          <div class="purpose">Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold</div>
+          <div class="notes"><b>Clive Notes:</b> Melissa joining; trip now runs through Saturday.</div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -173,15 +172,15 @@
               <div class="date-range">Fri, Jun 26 – Sun, Jun 28, 2026</div>
               <div class="nights">3 nights</div>
             </div>
-            <span class="badge badge-upcoming">In 30 days</span>
+            <span class="badge badge-upcoming">In 28 days</span>
           </header>
+          <div class="trip-meta">
+            <span>Confirmed</span>
+            <span>Synced to Work + Jason's Travel</span>
+          </div>
           <div class="city">Boston, MA</div>
           <div class="purpose">Boston Pilgrimage</div>
-
-          <div class="add-row">
-            <a class="add-btn" href="/trips/2026-06-26-boston-ma.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+Boston%2C+MA&amp;dates=20260626%2F20260629&amp;details=Boston+Pilgrimage%0A%0A%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Boston%2C+MA" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
+          <div class="notes"><b>Clive Notes:</b> Details pending.</div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -189,15 +188,15 @@
               <div class="date-range">Fri, Jul 3 – Mon, Jul 6, 2026</div>
               <div class="nights">4 nights</div>
             </div>
-            <span class="badge badge-upcoming">In 37 days</span>
+            <span class="badge badge-upcoming">In 35 days</span>
           </header>
+          <div class="trip-meta">
+            <span>Confirmed</span>
+            <span>Synced to Work + Jason's Travel</span>
+          </div>
           <div class="city">Philadelphia, PA</div>
           <div class="purpose">Out-of-town block (purpose not noted on calendar)</div>
-          <div class="notes">Spans the July 4th holiday.</div>
-          <div class="add-row">
-            <a class="add-btn" href="/trips/2026-07-03-philadelphia-pa.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+Philadelphia%2C+PA&amp;dates=20260703%2F20260707&amp;details=Out-of-town+block+%28purpose+not+noted+on+calendar%29%0A%0ASpans+the+July+4th+holiday.%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Philadelphia%2C+PA" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
+          <div class="notes"><b>Clive Notes:</b> Spans the July 4th holiday.</div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -205,15 +204,15 @@
               <div class="date-range">Wed, Jul 22 – Sun, Jul 26, 2026</div>
               <div class="nights">5 nights</div>
             </div>
-            <span class="badge badge-upcoming">In 56 days</span>
+            <span class="badge badge-upcoming">In 54 days</span>
           </header>
+          <div class="trip-meta">
+            <span>Confirmed</span>
+            <span>Synced to Work + Jason's Travel</span>
+          </div>
           <div class="city">Napa, CA</div>
           <div class="purpose">15th Annual Napa Institute Summer Conference</div>
-          <div class="notes">The Meritage Resort and Spa, Napa, CA.</div>
-          <div class="add-row">
-            <a class="add-btn" href="/trips/2026-07-22-napa-ca.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+Napa%2C+CA&amp;dates=20260722%2F20260727&amp;details=15th+Annual+Napa+Institute+Summer+Conference%0A%0AThe+Meritage+Resort+and+Spa%2C+Napa%2C+CA.%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Napa%2C+CA" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
+          <div class="notes"><b>Clive Notes:</b> The Meritage Resort and Spa, Napa, CA.</div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -221,15 +220,15 @@
               <div class="date-range">Mon, Aug 31 – Fri, Sep 4, 2026</div>
               <div class="nights">5 nights</div>
             </div>
-            <span class="badge badge-upcoming">In 96 days</span>
+            <span class="badge badge-upcoming">In 94 days</span>
           </header>
+          <div class="trip-meta">
+            <span>Confirmed</span>
+            <span>Synced to Work + Jason's Travel</span>
+          </div>
           <div class="city">St. Louis, MO</div>
           <div class="purpose">NEC staff strategy meetings at the Augustine Institute</div>
-          <div class="notes">Aug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.</div>
-          <div class="add-row">
-            <a class="add-btn" href="/trips/2026-08-31-st-louis-mo.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+St.+Louis%2C+MO&amp;dates=20260831%2F20260905&amp;details=NEC+staff+strategy+meetings+at+the+Augustine+Institute%0A%0AAug+31%3A+Driving+Fort+Wayne+to+St.+Louis+%28Staff+Strategy+Meetings%29+NEC.%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=St.+Louis%2C+MO" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
+          <div class="notes"><b>Clive Notes:</b> Aug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.</div>
         </article>
         <article class="trip upcoming">
           <header class="trip-head">
@@ -237,19 +236,30 @@
               <div class="date-range">Wed, Nov 11 – Sun, Nov 15, 2026</div>
               <div class="nights">5 nights</div>
             </div>
-            <span class="badge badge-upcoming">In 168 days</span>
+            <span class="badge badge-upcoming">In 166 days</span>
           </header>
+          <div class="trip-meta">
+            <span>Booked</span>
+            <span>Synced to Work + Jason's Travel</span>
+          </div>
           <div class="city">Guadalupe, Mexico</div>
           <div class="purpose">Pilgrimage</div>
-          <div class="notes">Fly into Mexico City for Guadalupe pilgrimage; arrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compare departing Fort Wayne vs Indianapolis for cost.</div>
-          <div class="add-row">
-            <a class="add-btn" href="/trips/2026-11-11-guadalupe-mexico.ics" download>📅 Add to Calendar (.ics)</a>
-            <a class="add-btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jason%3A+Guadalupe%2C+Mexico&amp;dates=20261111%2F20261116&amp;details=Pilgrimage%0A%0AFly+into+Mexico+City+for+Guadalupe+pilgrimage%3B+arrive+Nov+11+before+3pm.+Fly+out+Nov+15+to+Baltimore.+Compare+departing+Fort+Wayne+vs+Indianapolis+for+cost.%0A%0AView+live%3A+https%3A%2F%2Fjstravelschedule.netlify.app&amp;location=Guadalupe%2C+Mexico" target="_blank" rel="noopener">Google Calendar</a>
-          </div>
+          <div class="notes"><b>Clive Notes:</b> Fly into Mexico City for Guadalupe pilgrimage; arrive Nov 11 before 3pm. Fly out Nov 15 to Baltimore. Compare departing Fort Wayne vs Indianapolis for cost.</div>
         </article>
     </section>
 
-    <footer>Generated from Jason's Outlook Calendar. Indianapolis-area, family, school, holiday, payday, and cloned non-trip entries are excluded.</footer>
+    <section class="subscribe bottom-subscribe">
+      <h2>Subscribe to this calendar</h2>
+      <p>Use the feed if Jason's Travel needs to be added again or shared on another device.</p>
+      <div class="sub-buttons">
+        <a href="webcal://jstravelschedule.netlify.app/melissa-travel.ics">Apple Calendar</a>
+        <a class="ghost" href="https://calendar.google.com/calendar/r?cid=https://jstravelschedule.netlify.app/melissa-travel.ics" target="_blank" rel="noopener">Google Calendar</a>
+        <button class="ghost" type="button" onclick="navigator.clipboard.writeText('https://jstravelschedule.netlify.app/melissa-travel.ics'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy feed URL',1500)">Copy feed URL</button>
+      </div>
+      <code class="feed-url">https://jstravelschedule.netlify.app/melissa-travel.ics</code>
+    </section>
+
+    <footer>Generated from Clive/OpenClaw calendar exports. Family visibility publishes through the Jason's Travel subscribed calendar feed.</footer>
   </div>
 </body>
 </html>
