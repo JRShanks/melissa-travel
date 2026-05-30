@@ -265,7 +265,7 @@ function buildTrips(events) {
     if (/TBD/.test(t.city)) notes.push('Location not noted on calendar event.');
     if (/St\. Louis/.test(t.city) && /Jubilee 2033/.test(t.purpose)) notes.push('Merged overlapping St. Louis blocks from Staff Strategy Meetings and Jubilee 2033.');
     if (/Guadalupe, Mexico/.test(t.city)) {
-      notes.push('Fly into Mexico City for Guadalupe pilgrimage on Nov 11. Continue from MEX-DFW-BWI to Baltimore on Nov 15. Reservation details are intentionally omitted from the public feed.');
+      notes.push('Fly into Mexico City for Guadalupe pilgrimage on Nov 11; onward travel to Baltimore on Nov 15 still needs fresh flight selection.');
     }
     t.notes = uniq(notes);
     t.slug = `${ymd(t.start)}-${slugify(t.city)}`;

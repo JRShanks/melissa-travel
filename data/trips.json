@@ -121,12 +121,15 @@
     },
     {
       "id": "travel-2026-11-11-guadalupe-mexico",
-      "status": "Booked",
+      "status": "Held",
       "start": "2026-11-11",
       "endExclusive": "2026-11-16",
       "city": "Guadalupe, Mexico",
       "purpose": "Pilgrimage",
-      "notes": [],
+      "notes": [
+        "Dates held for Guadalupe pilgrimage; prior AA reservation QLLCPF was rescinded for travel credit and should not be treated as active.",
+        "Fresh flight selection needed for FWA to Mexico City / Guadalupe."
+      ],
       "sources": [
         "Manual: Guadalupe pilgrimage"
       ],
@@ -134,28 +137,20 @@
         "workCalendar": true,
         "travelFeed": true
       },
-      "flights": [
-        {
-          "date": "2026-11-15",
-          "route": "MEX-DFW-BWI",
-          "airline": "American Airlines",
-          "status": "Booked",
-          "publicNotes": "Reservation code intentionally omitted from public feed."
-        }
-      ]
+      "flights": []
     },
     {
       "id": "travel-2026-11-15-baltimore-md",
-      "status": "Booked",
+      "status": "Held",
       "start": "2026-11-15",
       "endExclusive": "2026-11-20",
       "city": "Baltimore, MD",
       "purpose": "Baltimore follow-on after Guadalupe pilgrimage and board meeting",
       "notes": [
-        "After Guadalupe pilgrimage; flying MEX-DFW-BWI Sunday, Nov 15.",
+        "After Guadalupe pilgrimage; likely travel from Mexico City / Guadalupe to Baltimore Sunday, Nov 15.",
         "In Baltimore Sunday through Thursday.",
         "Board meeting Monday night.",
-        "Return flight details need confirmation; reservation details are intentionally omitted from the public feed."
+        "Flights need fresh search/selection; old AA reservation QLLCPF was rescinded for travel credit and should not be treated as active."
       ],
       "sources": [
         "Manual seed: Baltimore after Guadalupe"
