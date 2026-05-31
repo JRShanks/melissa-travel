@@ -15,27 +15,31 @@
   "trips": [
     {
       "id": "travel-2026-06-10-philadelphia-pa",
-      "status": "Confirmed",
+      "status": "Booked",
       "start": "2026-06-10",
       "endExclusive": "2026-06-14",
       "city": "Philadelphia, PA",
       "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold",
       "notes": [
         "Melissa joining; trip now runs through Saturday.",
-        "Selected working flight plan, not yet treated as booked until confirmations are found.",
-        "Jason outbound: early Wednesday FWA-ORD-PHL option to arrive before the noon Catholic Funders start.",
-        "Melissa outbound: later Wednesday FWA-ORD-PHL option arriving about 4:50/4:53 PM for the 6 PM Barnes event; Melissa carry-on only because the transfer is tight.",
+        "Melissa outbound remains unconfirmed in Jason iCloud: planned later Wednesday FWA-ORD-PHL option arriving about 4:50/4:53 PM for the 6 PM Barnes event; Melissa carry-on only because the transfer is tight.",
         "Jason plans to check bags.",
-        "Saturday return: Jason and Melissa should be on the same later Saturday return flight; current assumption is the mid-morning PHL-CLT-FWA option unless Jason confirms the afternoon/evening return."
+        "Jason flight confirmation found in personal iCloud: American confirmation is on file with Clive; do not publish booking/payment details publicly.",
+        "Jason booked outbound: Wed Jun 10 AA6208 FWA-ORD 5:25 AM-5:35 AM, seat 7B; AA2115 ORD-PHL 6:29 AM-9:40 AM, seat 13A.",
+        "Jason booked return: Sat Jun 13 AA1311 PHL-CLT 12:07 PM-2:00 PM; AA6078 CLT-FWA 3:19 PM-5:14 PM, seat 8B. This replaces the earlier assumed 10:30 AM PHL-CLT option.",
+        "Boston Freedom Trail Catholic options: St. Leonard of Port Maurice, 320 Hanover St, is best for the North End / Paul Revere House / Old North area; St. Joseph Catholic Church serves Government Center / North Station / Beacon Hill; St. Anthony Shrine, 100 Arch St, is best for downtown/lunch-hour Mass and confession; Our Lady of Good Voyage, 51 Seaport Blvd, is useful if ending near Seaport/harbor. Old North Church is on the trail but Episcopal, not Catholic."
       ],
       "sources": [
         "Manual seed: Philadelphia June travel",
-        "Telegram from Jason: selected working flight plan and baggage notes, 2026-05-30"
+        "Telegram from Jason: selected working flight plan and baggage notes, 2026-05-30",
+        "Telegram from Jason: asked to save Boston Freedom Trail Catholic parish options, 2026-05-30",
+        "Apple Mail: American Airlines trip confirmation FWA-PHL, 2026-05-31 UTC"
       ],
       "visibility": {
         "workCalendar": true,
         "travelFeed": true
-      }
+      },
+      "cliveNotes": []
     },
     {
       "id": "travel-2026-06-26-boston-ma",
