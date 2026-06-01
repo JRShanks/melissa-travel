@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:melissa-important-d4a9fe029a5f@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -23,7 +23,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -36,7 +36,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -50,7 +50,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -64,7 +64,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -78,7 +78,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -92,52 +92,60 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-1fe2a0538522@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260614
 SUMMARY:Jason: Philadelphia\, PA
 DESCRIPTION:Philadelphia Catholic Collaborators / Becket Fund meeting and G
- ala / Ward Fitzgerald event hold\n\nStatus: Booked\nMelissa joining\; trip
-  now runs through Saturday.\nHotel: Canopy by Hilton Philadelphia Center Ci
- ty\, 1180 Ludlow Street\, Philadelphia\, PA 19107. Stay Wed Jun 10-Sat Jun
-  13\, 2026\; check-in 4:00 PM\, check-out 12:00 PM. Hotel phone: +1 215-258
- -9400. Hilton page: https://www.hilton.com/en/hotels/phloppy-canopy-philade
- lphia-center-city/.\nMelissa outbound remains unconfirmed in Jason iCloud:
-  planned later Wednesday FWA-ORD-PHL option arriving about 4:50/4:53 PM for
-  the 6 PM Barnes event\; Melissa carry-on only because the transfer is tigh
- t.\nJason plans to check bags.\nJason flight confirmation found in personal
-  iCloud: American confirmation is on file with Clive\; do not publish booki
- ng/payment details publicly.\nJason booked outbound: Wed Jun 10 AA6208 FWA-
- ORD 5:25 AM-5:35 AM\, seat 7B\; AA2115 ORD-PHL 6:29 AM-9:40 AM\, seat 13A.\
- nJason booked return: Sat Jun 13 AA1311 PHL-CLT 12:07 PM-2:00 PM\; AA6078 C
- LT-FWA 3:19 PM-5:14 PM\, seat 8B. This replaces the earlier assumed 10:30 A
- M PHL-CLT option.\nBoston Freedom Trail Catholic options: St. Leonard of Po
- rt Maurice\, 320 Hanover St\, is best for the North End / Paul Revere House
-  / Old North area\; St. Joseph Catholic Church serves Government Center / N
- orth Station / Beacon Hill\; St. Anthony Shrine\, 100 Arch St\, is best for
-  downtown/lunch-hour Mass and confession\; Our Lady of Good Voyage\, 51 Sea
- port Blvd\, is useful if ending near Seaport/harbor. Old North Church is on
-  the trail but Episcopal\, not Catholic.\n\nView live: https://jstravelsche
- dule.netlify.app
+ ala / Ward Fitzgerald event hold\n\nStatus: Booked\nOverview: Melissa is jo
+ ining\; Philadelphia trip runs Wednesday Jun 10 through Saturday Jun 13.\nH
+ otel: Canopy by Hilton Philadelphia Center City\, 1180 Ludlow Street\, Phil
+ adelphia\, PA 19107. Check-in starts 4:00 PM Wednesday\; checkout is by 12:
+ 00 PM Saturday. Phone: +1 215-258-9400. Hilton page: https://www.hilton.com
+ /en/hotels/phloppy-canopy-philadelphia-center-city/.\nWed Jun 10: Jason fli
+ es FWA-ORD-PHL early and is scheduled to arrive PHL at 9:40 AM. Hotel check
+ -in starts at 4:00 PM. Melissa's outbound is still unconfirmed in Jason iCl
+ oud\, but the working option arrives PHL around 4:50/4:53 PM for the 6:00 P
+ M Barnes event.\nThu Jun 11: Philadelphia Catholic Collaborators / Becket F
+ und schedule details still need final confirmation.\nFri Jun 12: Gala / War
+ d Fitzgerald event hold remains on the trip plan\; final time and venue det
+ ails still need confirmation.\nSat Jun 13: Jason returns PHL-CLT-FWA\, depa
+ rting PHL at 12:07 PM and arriving FWA at 5:14 PM. Hotel checkout is availa
+ ble until noon\, but the flight timing means airport departure will need to
+  be earlier.\nPacking/logistics: Melissa should plan carry-on only because
+  the Wednesday transfer is tight. Jason plans to check bags.\nJason flight
+  confirmation found in personal iCloud: American confirmation is on file wi
+ th Clive\; do not publish booking/payment details publicly.\nJason booked o
+ utbound: Wed Jun 10 AA6208 FWA-ORD 5:25 AM-5:35 AM\, seat 7B\; AA2115 ORD-P
+ HL 6:29 AM-9:40 AM\, seat 13A.\nJason booked return: Sat Jun 13 AA1311 PHL-
+ CLT 12:07 PM-2:00 PM\; AA6078 CLT-FWA 3:19 PM-5:14 PM\, seat 8B. This repla
+ ces the earlier assumed 10:30 AM PHL-CLT option.\n\nView live: https://jstr
+ avelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-0fcad97cca9e@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260629
 SUMMARY:Jason: Boston\, MA
-DESCRIPTION:Boston Pilgrimage\n\nStatus: Confirmed\n\n\nView live: https://
- jstravelschedule.netlify.app
+DESCRIPTION:Boston Pilgrimage\n\nStatus: Confirmed\nBoston Freedom Trail Ca
+ tholic options saved from Jason: St. Leonard of Port Maurice\, 320 Hanover
+  St\, is best for the North End / Paul Revere House / Old North area\; St.
+  Joseph Catholic Church serves Government Center / North Station / Beacon H
+ ill\; St. Anthony Shrine\, 100 Arch St\, is best for downtown/lunch-hour Ma
+ ss and confession\; Our Lady of Good Voyage\, 51 Seaport Blvd\, is useful i
+ f ending near Seaport/harbor. Old North Church is on the trail but Episcopa
+ l\, not Catholic.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Boston\, MA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20260703
 DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
@@ -150,7 +158,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -163,7 +171,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
@@ -176,7 +184,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -189,7 +197,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -208,7 +216,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD
@@ -224,7 +232,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260601T153024Z
+DTSTAMP:20260601T153822Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL

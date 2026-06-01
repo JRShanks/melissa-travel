@@ -29,6 +29,10 @@ function compactDate(d) { return ymd(d).replaceAll('-',''); }
 function addDays(d, n) { const x = new Date(d); x.setUTCDate(x.getUTCDate()+n); return x; }
 function daysBetween(a,b) { return Math.round((parseYmd(ymd(b)) - parseYmd(ymd(a))) / 86400000); }
 function html(s='') { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function renderNotes(notes, label = '') {
+  if (!notes?.length) return label ? `<div class="notes"><b>${html(label)}</b> Details pending.</div>` : '';
+  return `<div class="notes">${label ? `<b>${html(label)}</b>` : ''}<ul>${notes.map(n => `<li>${html(n)}</li>`).join('')}</ul></div>`;
+}
 function stripHtml(s='') { return String(s).replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim(); }
 function slugify(s) { return s.toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,80); }
 function sha(s) { return crypto.createHash('sha1').update(s).digest('hex').slice(0,12); }
@@ -414,7 +418,7 @@ function renderTodayPanel(trips, meetings) {
       ${active.map(t => `<div class="today-trip">
         <div class="city">${html(t.city)}</div>
         <div class="purpose">${html(t.purpose)}</div>
-        <div class="notes"><b>Clive Notes:</b> ${html(t.notes.length ? t.notes.join(' ') : 'Details pending.')}</div>
+        ${renderNotes(t.notes, 'Clive Notes:')}
       </div>`).join('')}
       ${activeMeetings.length ? `<div class="today-meetings"><b>On the agenda:</b> ${html(activeMeetings.map(m => `${m.title} (${fmtTimeRange(m.startRaw, m.endRaw)})`).join('; '))}</div>` : ''}
     </section>`;
@@ -436,7 +440,7 @@ function renderTrip(t) {
           </div>
           <div class="city">${html(t.city)}</div>
           <div class="purpose">${html(t.purpose)}</div>
-          ${t.notes.length ? `<div class="notes"><b>Clive Notes:</b> ${html(t.notes.join(' '))}</div>` : '<div class="notes"><b>Clive Notes:</b> Details pending.</div>'}
+          ${renderNotes(t.notes, 'Clive Notes:')}
         </article>`;
 }
 function fmtMeetingDate(m) {
@@ -466,7 +470,7 @@ function renderMeeting(m) {
           </div>
           <div class="city">${html(m.title)}</div>
           ${m.location ? `<div class="purpose">${html(m.location)}</div>` : ''}
-          ${m.notes.length ? `<div class="notes">${html(m.notes.join(' '))}</div>` : ''}
+          ${renderNotes(m.notes)}
         </article>`;
 }
 function renderHtml(trips, meetings) {
