@@ -10,8 +10,22 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
+UID:melissa-important-b88d6e25fba8@jstravelschedule.netlify.app
+DTSTAMP:20260603T160430Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260612T193000
+DTEND;TZID=America/Indiana/Indianapolis:20260612T213000
+SUMMARY:Jason: Archbishop Nelson's Birthday Dinner
+DESCRIPTION:Archbishop Nelson's Birthday Dinner\n\nStatus: Confirmed\nBirth
+ day celebration from invitation Jason sent.\nDuring the Philadelphia trip.\
+ n\nView live: https://jstravelschedule.netlify.app
+LOCATION:Sang Kee Asian Bistro\, 339 E Lancaster Ave\, Unit 6\, Wynnewood\,
+  PA 19096
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:melissa-important-d4a9fe029a5f@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -23,7 +37,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -36,7 +50,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -50,7 +64,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -64,7 +78,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -78,7 +92,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -92,7 +106,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-1fe2a0538522@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260614
 SUMMARY:Jason: Philadelphia\, PA
@@ -107,27 +121,27 @@ DESCRIPTION:Philadelphia Catholic Collaborators / Becket Fund meeting and G
  -in starts at 4:00 PM. Melissa's outbound is still unconfirmed in Jason iCl
  oud\, but the working option arrives PHL around 4:50/4:53 PM for the 6:00 P
  M Barnes event.\nThu Jun 11: Philadelphia Catholic Collaborators / Becket F
- und schedule details still need final confirmation.\nFri Jun 12: Gala / War
- d Fitzgerald event hold remains on the trip plan\; final time and venue det
- ails still need confirmation.\nSat Jun 13: Jason returns PHL-CLT-FWA\, depa
- rting PHL at 12:07 PM and arriving FWA at 5:14 PM. Hotel checkout is availa
- ble until noon\, but the flight timing means airport departure will need to
-  be earlier.\nPacking/logistics: Melissa should plan carry-on only because
-  the Wednesday transfer is tight. Jason plans to check bags.\nJason flight
-  confirmation found in personal iCloud: American confirmation is on file wi
- th Clive\; do not publish booking/payment details publicly.\nJason booked o
- utbound: Wed Jun 10 AA6208 FWA-ORD 5:25 AM-5:35 AM\, seat 7B\; AA2115 ORD-P
- HL 6:29 AM-9:40 AM\, seat 13A.\nJason booked return: Sat Jun 13 AA1311 PHL-
- CLT 12:07 PM-2:00 PM\; AA6078 CLT-FWA 3:19 PM-5:14 PM\, seat 8B. This repla
- ces the earlier assumed 10:30 AM PHL-CLT option.\n\nView live: https://jstr
- avelschedule.netlify.app
+ und schedule details still need final confirmation.\nFri Jun 12: Archbishop
+  Nelson's Birthday Dinner is confirmed for 7:30 PM at Sang Kee Asian Bistro
+ \, 339 E Lancaster Ave\, Unit 6\, Wynnewood\, PA 19096.\nSat Jun 13: Jason
+  returns PHL-CLT-FWA\, departing PHL at 12:07 PM and arriving FWA at 5:14 P
+ M. Hotel checkout is available until noon\, but the flight timing means air
+ port departure will need to be earlier.\nPacking/logistics: Melissa should
+  plan carry-on only because the Wednesday transfer is tight. Jason plans to
+  check bags.\nJason flight confirmation found in personal iCloud: American
+  confirmation is on file with Clive\; do not publish booking/payment detail
+ s publicly.\nJason booked outbound: Wed Jun 10 AA6208 FWA-ORD 5:25 AM-5:35
+  AM\, seat 7B\; AA2115 ORD-PHL 6:29 AM-9:40 AM\, seat 13A.\nJason booked re
+ turn: Sat Jun 13 AA1311 PHL-CLT 12:07 PM-2:00 PM\; AA6078 CLT-FWA 3:19 PM-5
+ :14 PM\, seat 8B. This replaces the earlier assumed 10:30 AM PHL-CLT option
+ .\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-0fcad97cca9e@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260629
 SUMMARY:Jason: Boston\, MA
@@ -145,7 +159,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20260703
 DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
@@ -158,7 +172,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -171,7 +185,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
@@ -184,7 +198,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -197,7 +211,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -216,7 +230,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD
@@ -232,7 +246,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260601T153822Z
+DTSTAMP:20260603T160430Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL

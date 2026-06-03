@@ -25,7 +25,7 @@
         "Hotel: Canopy by Hilton Philadelphia Center City, 1180 Ludlow Street, Philadelphia, PA 19107. Check-in starts 4:00 PM Wednesday; checkout is by 12:00 PM Saturday. Phone: +1 215-258-9400. Hilton page: https://www.hilton.com/en/hotels/phloppy-canopy-philadelphia-center-city/.",
         "Wed Jun 10: Jason flies FWA-ORD-PHL early and is scheduled to arrive PHL at 9:40 AM. Hotel check-in starts at 4:00 PM. Melissa's outbound is still unconfirmed in Jason iCloud, but the working option arrives PHL around 4:50/4:53 PM for the 6:00 PM Barnes event.",
         "Thu Jun 11: Philadelphia Catholic Collaborators / Becket Fund schedule details still need final confirmation.",
-        "Fri Jun 12: Gala / Ward Fitzgerald event hold remains on the trip plan; final time and venue details still need confirmation.",
+        "Fri Jun 12: Archbishop Nelson's Birthday Dinner is confirmed for 7:30 PM at Sang Kee Asian Bistro, 339 E Lancaster Ave, Unit 6, Wynnewood, PA 19096.",
         "Sat Jun 13: Jason returns PHL-CLT-FWA, departing PHL at 12:07 PM and arriving FWA at 5:14 PM. Hotel checkout is available until noon, but the flight timing means airport departure will need to be earlier.",
         "Packing/logistics: Melissa should plan carry-on only because the Wednesday transfer is tight. Jason plans to check bags.",
         "Jason flight confirmation found in personal iCloud: American confirmation is on file with Clive; do not publish booking/payment details publicly.",
@@ -36,7 +36,8 @@
         "Manual seed: Philadelphia June travel",
         "Telegram from Jason: selected working flight plan and baggage notes, 2026-05-30",
         "Apple Mail: American Airlines trip confirmation FWA-PHL, 2026-05-31 UTC",
-        "Telegram from Jason: Canopy by Hilton Philadelphia Center City stay details, 2026-06-01"
+        "Telegram from Jason: Canopy by Hilton Philadelphia Center City stay details, 2026-06-01",
+        "Telegram from Jason: Archbishop Nelson birthday dinner invitation image, 2026-06-03"
       ],
       "visibility": {
         "workCalendar": true,
@@ -221,6 +222,23 @@
     }
   ],
   "meetings": [
+    {
+      "id": "meeting-2026-06-12-archbishop-nelson-birthday",
+      "status": "Confirmed",
+      "title": "Archbishop Nelson's Birthday Dinner",
+      "startRaw": "2026-06-12T19:30:00-04:00",
+      "endRaw": "2026-06-12T21:30:00-04:00",
+      "location": "Sang Kee Asian Bistro, 339 E Lancaster Ave, Unit 6, Wynnewood, PA 19096",
+      "notes": [
+        "Birthday celebration from invitation Jason sent.",
+        "During the Philadelphia trip."
+      ],
+      "sourceSummary": "Telegram from Jason: invitation image, 2026-06-03",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
     {
       "id": "meeting-2026-08-18-nec-board",
       "status": "Confirmed",

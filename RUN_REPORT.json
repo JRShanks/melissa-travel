@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-01T15:38:22.613Z",
-  "today": "2026-06-01",
-  "scanEnd": "2027-06-01",
+  "generatedAt": "2026-06-03T16:04:30.910Z",
+  "today": "2026-06-03",
+  "scanEnd": "2027-06-03",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 0,
   "tripCount": 9,
-  "importantMeetingCount": 6,
+  "importantMeetingCount": 7,
   "nextTrip": {
     "city": "Philadelphia, PA",
     "start": "2026-06-10",
@@ -14,6 +14,11 @@
     "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold"
   },
   "importantMeetings": [
+    {
+      "title": "Archbishop Nelson's Birthday Dinner",
+      "start": "2026-06-12T23:30:00.000Z",
+      "location": "Sang Kee Asian Bistro, 339 E Lancaster Ave, Unit 6, Wynnewood, PA 19096"
+    },
     {
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",
