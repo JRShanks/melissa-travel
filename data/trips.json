@@ -23,8 +23,10 @@
       "notes": [
         "Overview: Melissa is joining; Philadelphia trip runs Wednesday Jun 10 through Saturday Jun 13.",
         "Hotel: Canopy by Hilton Philadelphia Center City, 1180 Ludlow Street, Philadelphia, PA 19107. Check-in starts 4:00 PM Wednesday; checkout is by 12:00 PM Saturday. Phone: +1 215-258-9400. Hilton page: https://www.hilton.com/en/hotels/phloppy-canopy-philadelphia-center-city/.",
-        "Wed Jun 10: Jason flies FWA-ORD-PHL early and is scheduled to arrive PHL at 9:40 AM. Hotel check-in starts at 4:00 PM. Melissa's outbound is still unconfirmed in Jason iCloud, but the working option arrives PHL around 4:50/4:53 PM for the 6:00 PM Barnes event.",
-        "Thu Jun 11: Philadelphia Catholic Collaborators / Becket Fund schedule details still need final confirmation.",
+        "Wed Jun 10: Jason flies FWA-ORD-PHL early and is scheduled to arrive PHL at 9:40 AM. Hotel check-in starts at 4:00 PM. Melissa's outbound is still unconfirmed in Jason iCloud, but the working option arrives PHL around 4:50/4:53 PM for the 6:00 PM Barnes Foundation Reception.",
+        "Wed Jun 10: Becket Barnes Foundation Reception, 6:00-9:30 PM at The Barnes Foundation, 2025 Benjamin Franklin Parkway. Dress: smart casual. Outdoor terrace reception with light buffet, beverages, desserts, and private Barnes Collection viewing from 6:30-8:00 PM. Security and bag inspection; larger bags/coats must be checked.",
+        "Thu Jun 11: Becket President's Luncheon & Legal Briefing, 11:30 AM-1:30 PM at The Union League Club, 140 South Broad Street. Dress: business casual; no sneakers or jeans. Use the Broad Street entrance; buffet begins at 11:30 AM, briefing at noon.",
+        "Thu Jun 11: Becket Canterbury Medal Gala, 6:00-11:00 PM at the National Constitution Center, 525 Arch Street. Dress: black tie. Pre-registration required; free parking in museum garage; metal detectors and bag inspection on entry.",
         "Fri Jun 12: Archbishop Nelson's Birthday Dinner is confirmed for 7:30 PM at Sang Kee Asian Bistro, 339 E Lancaster Ave, Unit 6, Wynnewood, PA 19096.",
         "Sat Jun 13: Jason returns PHL-CLT-FWA, departing PHL at 12:07 PM and arriving FWA at 5:14 PM. Hotel checkout is available until noon, but the flight timing means airport departure will need to be earlier.",
         "Packing/logistics: Melissa should plan carry-on only because the Wednesday transfer is tight. Jason plans to check bags.",
@@ -37,7 +39,8 @@
         "Telegram from Jason: selected working flight plan and baggage notes, 2026-05-30",
         "Apple Mail: American Airlines trip confirmation FWA-PHL, 2026-05-31 UTC",
         "Telegram from Jason: Canopy by Hilton Philadelphia Center City stay details, 2026-06-01",
-        "Telegram from Jason: Archbishop Nelson birthday dinner invitation image, 2026-06-03"
+        "Telegram from Jason: Archbishop Nelson birthday dinner invitation image, 2026-06-03",
+        "Telegram from Jason: Becket Fund 2026 Canterbury Medal Gala itinerary PDF, 2026-06-08"
       ],
       "visibility": {
         "workCalendar": true,
@@ -234,6 +237,62 @@
         "During the Philadelphia trip."
       ],
       "sourceSummary": "Telegram from Jason: invitation image, 2026-06-03",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-06-10-becket-barnes-reception",
+      "status": "Confirmed",
+      "title": "Becket: Barnes Foundation Reception",
+      "startRaw": "2026-06-10T18:00:00-04:00",
+      "endRaw": "2026-06-10T21:30:00-04:00",
+      "location": "The Barnes Foundation, 2025 Benjamin Franklin Parkway, Philadelphia, PA 19130",
+      "notes": [
+        "Dress: smart casual.",
+        "Outdoor terrace reception with light buffet, beverages, and desserts.",
+        "Private Barnes Collection viewing from 6:30-8:00 PM.",
+        "Security and bag inspection; larger bags/coats must be checked."
+      ],
+      "sourceSummary": "Telegram from Jason: Becket Fund 2026 Canterbury Medal Gala itinerary PDF, 2026-06-08",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-06-11-becket-legal-briefing",
+      "status": "Confirmed",
+      "title": "Becket: President's Luncheon & Legal Briefing",
+      "startRaw": "2026-06-11T11:30:00-04:00",
+      "endRaw": "2026-06-11T13:30:00-04:00",
+      "location": "The Union League Club, 140 South Broad Street, Philadelphia, PA 19102",
+      "notes": [
+        "Dress: business casual; no sneakers or jeans.",
+        "Use the Union League main Broad Street entrance.",
+        "Buffet lunch begins at 11:30 AM; briefing at noon with Mark Rienzi and Becket litigation team; Q&A before conclusion at 1:30 PM."
+      ],
+      "sourceSummary": "Telegram from Jason: Becket Fund 2026 Canterbury Medal Gala itinerary PDF, 2026-06-08",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-06-11-becket-canterbury-gala",
+      "status": "Confirmed",
+      "title": "Becket: Canterbury Medal Gala",
+      "startRaw": "2026-06-11T18:00:00-04:00",
+      "endRaw": "2026-06-11T23:00:00-04:00",
+      "location": "National Constitution Center, 525 Arch Street, Philadelphia, PA 19106",
+      "notes": [
+        "Dress: black tie.",
+        "Pre-registration required.",
+        "Free parking in museum garage.",
+        "Metal detectors and bag inspection on entry; reception in lobby, dinner on overlook, dessert reception outdoors on terrace."
+      ],
+      "sourceSummary": "Telegram from Jason: Becket Fund 2026 Canterbury Medal Gala itinerary PDF, 2026-06-08",
       "visibility": {
         "workCalendar": true,
         "travelFeed": true
