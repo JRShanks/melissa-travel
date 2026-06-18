@@ -1,38 +1,23 @@
 {
-  "generatedAt": "2026-06-08T13:35:29.127Z",
-  "today": "2026-06-08",
-  "scanEnd": "2027-06-08",
+  "generatedAt": "2026-06-18T13:52:24.005Z",
+  "today": "2026-06-18",
+  "scanEnd": "2027-06-18",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 0,
-  "tripCount": 9,
-  "importantMeetingCount": 10,
+  "tripCount": 8,
+  "importantMeetingCount": 7,
   "nextTrip": {
-    "city": "Philadelphia, PA",
-    "start": "2026-06-10",
-    "endExclusive": "2026-06-14",
-    "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold"
+    "city": "Boston, MA",
+    "start": "2026-06-26",
+    "endExclusive": "2026-06-29",
+    "purpose": "Boston Pilgrimage"
   },
   "importantMeetings": [
     {
-      "title": "Becket: Barnes Foundation Reception",
-      "start": "2026-06-10T22:00:00.000Z",
-      "location": "The Barnes Foundation, 2025 Benjamin Franklin Parkway, Philadelphia, PA 19130"
-    },
-    {
-      "title": "Becket: President's Luncheon & Legal Briefing",
-      "start": "2026-06-11T15:30:00.000Z",
-      "location": "The Union League Club, 140 South Broad Street, Philadelphia, PA 19102"
-    },
-    {
-      "title": "Becket: Canterbury Medal Gala",
-      "start": "2026-06-11T22:00:00.000Z",
-      "location": "National Constitution Center, 525 Arch Street, Philadelphia, PA 19106"
-    },
-    {
-      "title": "Archbishop Nelson's Birthday Dinner",
-      "start": "2026-06-12T23:30:00.000Z",
-      "location": "Sang Kee Asian Bistro, 339 E Lancaster Ave, Unit 6, Wynnewood, PA 19096"
+      "title": "Road to 2029 Call",
+      "start": "2026-06-18T19:00:00.000Z",
+      "location": "Zoom"
     },
     {
       "title": "NEC Board of Directors Meeting",
@@ -67,24 +52,6 @@
   ],
   "reviewRequired": true,
   "reviewFlags": [
-    {
-      "slug": "2026-06-10-philadelphia-pa",
-      "city": "Philadelphia, PA",
-      "start": "2026-06-10",
-      "endExclusive": "2026-06-14",
-      "purpose": "Philadelphia Catholic Collaborators / Becket Fund meeting and Gala / Ward Fitzgerald event hold",
-      "flags": [
-        "merged-purpose-review"
-      ],
-      "sources": [
-        {
-          "summary": "Manual seed: Philadelphia June travel",
-          "location": "Philadelphia, PA",
-          "start": "2026-06-10",
-          "endExclusive": "2026-06-14"
-        }
-      ]
-    },
     {
       "slug": "2026-07-03-philadelphia-pa",
       "city": "Philadelphia, PA",

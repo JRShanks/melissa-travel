@@ -10,70 +10,21 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:melissa-important-6181350a98af@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260610T180000
-DTEND;TZID=America/Indiana/Indianapolis:20260610T213000
-SUMMARY:Jason: Becket: Barnes Foundation Reception
-DESCRIPTION:Becket: Barnes Foundation Reception\n\nStatus: Confirmed\nDress
- : smart casual.\nOutdoor terrace reception with light buffet\, beverages\,
-  and desserts.\nPrivate Barnes Collection viewing from 6:30-8:00 PM.\nSecur
- ity and bag inspection\; larger bags/coats must be checked.\n\nView live: h
- ttps://jstravelschedule.netlify.app
-LOCATION:The Barnes Foundation\, 2025 Benjamin Franklin Parkway\, Philadelp
- hia\, PA 19130
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-1fd2bb0ddfa1@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260611T113000
-DTEND;TZID=America/Indiana/Indianapolis:20260611T133000
-SUMMARY:Jason: Becket: President's Luncheon & Legal Briefing
-DESCRIPTION:Becket: President's Luncheon & Legal Briefing\n\nStatus: Confir
- med\nDress: business casual\; no sneakers or jeans.\nUse the Union League m
- ain Broad Street entrance.\nBuffet lunch begins at 11:30 AM\; briefing at n
- oon with Mark Rienzi and Becket litigation team\; Q&A before conclusion at
-  1:30 PM.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:The Union League Club\, 140 South Broad Street\, Philadelphia\, PA
-  19102
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-2fbd78cdde6d@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260611T180000
-DTEND;TZID=America/Indiana/Indianapolis:20260611T230000
-SUMMARY:Jason: Becket: Canterbury Medal Gala
-DESCRIPTION:Becket: Canterbury Medal Gala\n\nStatus: Confirmed\nDress: blac
- k tie.\nPre-registration required.\nFree parking in museum garage.\nMetal d
- etectors and bag inspection on entry\; reception in lobby\, dinner on overl
- ook\, dessert reception outdoors on terrace.\n\nView live: https://jstravel
- schedule.netlify.app
-LOCATION:National Constitution Center\, 525 Arch Street\, Philadelphia\, PA
-  19106
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-b88d6e25fba8@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260612T193000
-DTEND;TZID=America/Indiana/Indianapolis:20260612T213000
-SUMMARY:Jason: Archbishop Nelson's Birthday Dinner
-DESCRIPTION:Archbishop Nelson's Birthday Dinner\n\nStatus: Confirmed\nBirth
- day celebration from invitation Jason sent.\nDuring the Philadelphia trip.\
- n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Sang Kee Asian Bistro\, 339 E Lancaster Ave\, Unit 6\, Wynnewood\,
-  PA 19096
+UID:melissa-important-f4a4b533367b@jstravelschedule.netlify.app
+DTSTAMP:20260618T135224Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260618T150000
+DTEND;TZID=America/Indiana/Indianapolis:20260618T153000
+SUMMARY:Jason: Road to 2029 Call
+DESCRIPTION:Road to 2029 Call\n\nStatus: Confirmed\nMoved to 3:00 PM Easter
+ n on Jason's Outlook calendar.\n\nView live: https://jstravelschedule.netli
+ fy.app
+LOCATION:Zoom
 TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-d4a9fe029a5f@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -85,7 +36,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -98,7 +49,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -112,7 +63,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -126,7 +77,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -140,7 +91,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -153,53 +104,8 @@ TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-1fe2a0538522@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
-DTSTART;VALUE=DATE:20260610
-DTEND;VALUE=DATE:20260614
-SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Philadelphia Catholic Collaborators / Becket Fund meeting and G
- ala / Ward Fitzgerald event hold\n\nStatus: Booked\nOverview: Melissa is jo
- ining\; Philadelphia trip runs Wednesday Jun 10 through Saturday Jun 13.\nH
- otel: Canopy by Hilton Philadelphia Center City\, 1180 Ludlow Street\, Phil
- adelphia\, PA 19107. Check-in starts 4:00 PM Wednesday\; checkout is by 12:
- 00 PM Saturday. Phone: +1 215-258-9400. Hilton page: https://www.hilton.com
- /en/hotels/phloppy-canopy-philadelphia-center-city/.\nWed Jun 10: Jason fli
- es FWA-ORD-PHL early and is scheduled to arrive PHL at 9:40 AM. Hotel check
- -in starts at 4:00 PM. Melissa's outbound is still unconfirmed in Jason iCl
- oud\, but the working option arrives PHL around 4:50/4:53 PM for the 6:00 P
- M Barnes Foundation Reception.\nWed Jun 10: Becket Barnes Foundation Recept
- ion\, 6:00-9:30 PM at The Barnes Foundation\, 2025 Benjamin Franklin Parkwa
- y. Dress: smart casual. Outdoor terrace reception with light buffet\, bever
- ages\, desserts\, and private Barnes Collection viewing from 6:30-8:00 PM.
-  Security and bag inspection\; larger bags/coats must be checked.\nThu Jun
-  11: Becket President's Luncheon & Legal Briefing\, 11:30 AM-1:30 PM at The
-  Union League Club\, 140 South Broad Street. Dress: business casual\; no sn
- eakers or jeans. Use the Broad Street entrance\; buffet begins at 11:30 AM\
- , briefing at noon.\nThu Jun 11: Becket Canterbury Medal Gala\, 6:00-11:00
-  PM at the National Constitution Center\, 525 Arch Street. Dress: black tie
- . Pre-registration required\; free parking in museum garage\; metal detecto
- rs and bag inspection on entry.\nFri Jun 12: Archbishop Nelson's Birthday D
- inner is confirmed for 7:30 PM at Sang Kee Asian Bistro\, 339 E Lancaster A
- ve\, Unit 6\, Wynnewood\, PA 19096.\nSat Jun 13: Jason returns PHL-CLT-FWA\
- , departing PHL at 12:07 PM and arriving FWA at 5:14 PM. Hotel checkout is
-  available until noon\, but the flight timing means airport departure will
-  need to be earlier.\nPacking/logistics: Melissa should plan carry-on only
-  because the Wednesday transfer is tight. Jason plans to check bags.\nJason
-  flight confirmation found in personal iCloud: American confirmation is on
-  file with Clive\; do not publish booking/payment details publicly.\nJason
-  booked outbound: Wed Jun 10 AA6208 FWA-ORD 5:25 AM-5:35 AM\, seat 7B\; AA2
- 115 ORD-PHL 6:29 AM-9:40 AM\, seat 13A.\nJason booked return: Sat Jun 13 AA
- 1311 PHL-CLT 12:07 PM-2:00 PM\; AA6078 CLT-FWA 3:19 PM-5:14 PM\, seat 8B. T
- his replaces the earlier assumed 10:30 AM PHL-CLT option.\n\nView live: htt
- ps://jstravelschedule.netlify.app
-LOCATION:Philadelphia\, PA
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-travel-0fcad97cca9e@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260629
 SUMMARY:Jason: Boston\, MA
@@ -217,7 +123,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20260703
 DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
@@ -230,7 +136,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -243,7 +149,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
@@ -256,7 +162,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -269,7 +175,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -288,7 +194,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD
@@ -304,7 +210,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260608T133529Z
+DTSTAMP:20260618T135224Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL

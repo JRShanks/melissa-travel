@@ -226,6 +226,22 @@
   ],
   "meetings": [
     {
+      "id": "meeting-2026-06-18-road-to-2029",
+      "status": "Confirmed",
+      "title": "Road to 2029 Call",
+      "startRaw": "2026-06-18T15:00:00-04:00",
+      "endRaw": "2026-06-18T15:30:00-04:00",
+      "location": "Zoom",
+      "notes": [
+        "Moved to 3:00 PM Eastern on Jason's Outlook calendar."
+      ],
+      "sourceSummary": "Outlook calendar: Road to 2029 call, updated 2026-06-18",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
       "id": "meeting-2026-06-12-archbishop-nelson-birthday",
       "status": "Confirmed",
       "title": "Archbishop Nelson's Birthday Dinner",
