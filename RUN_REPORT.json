@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-18T13:52:24.005Z",
-  "today": "2026-06-18",
-  "scanEnd": "2027-06-18",
+  "generatedAt": "2026-06-23T19:37:02.492Z",
+  "today": "2026-06-23",
+  "scanEnd": "2027-06-23",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 0,
   "tripCount": 8,
-  "importantMeetingCount": 7,
+  "importantMeetingCount": 6,
   "nextTrip": {
     "city": "Boston, MA",
     "start": "2026-06-26",
@@ -14,11 +14,6 @@
     "purpose": "Boston Pilgrimage"
   },
   "importantMeetings": [
-    {
-      "title": "Road to 2029 Call",
-      "start": "2026-06-18T19:00:00.000Z",
-      "location": "Zoom"
-    },
     {
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",
@@ -50,27 +45,8 @@
       "location": "Baltimore, MD"
     }
   ],
-  "reviewRequired": true,
-  "reviewFlags": [
-    {
-      "slug": "2026-07-03-philadelphia-pa",
-      "city": "Philadelphia, PA",
-      "start": "2026-07-03",
-      "endExclusive": "2026-07-07",
-      "purpose": "Out-of-town block (purpose not noted on calendar)",
-      "flags": [
-        "missing-purpose"
-      ],
-      "sources": [
-        {
-          "summary": "Manual seed: Philadelphia July travel",
-          "location": "Philadelphia, PA",
-          "start": "2026-07-03",
-          "endExclusive": "2026-07-07"
-        }
-      ]
-    }
-  ],
+  "reviewRequired": false,
+  "reviewFlags": [],
   "generatedFiles": [
     "index.html",
     "melissa-travel.ics"

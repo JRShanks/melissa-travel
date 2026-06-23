@@ -10,21 +10,8 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:melissa-important-f4a4b533367b@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260618T150000
-DTEND;TZID=America/Indiana/Indianapolis:20260618T153000
-SUMMARY:Jason: Road to 2029 Call
-DESCRIPTION:Road to 2029 Call\n\nStatus: Confirmed\nMoved to 3:00 PM Easter
- n on Jason's Outlook calendar.\n\nView live: https://jstravelschedule.netli
- fy.app
-LOCATION:Zoom
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-important-d4a9fe029a5f@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -36,7 +23,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -49,7 +36,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -63,7 +50,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -77,7 +64,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -91,7 +78,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -105,7 +92,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-0fcad97cca9e@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20260626
 DTEND;VALUE=DATE:20260629
 SUMMARY:Jason: Boston\, MA
@@ -123,20 +110,25 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
-DTSTART;VALUE=DATE:20260703
+DTSTAMP:20260623T193702Z
+DTSTART;VALUE=DATE:20260702
 DTEND;VALUE=DATE:20260707
 SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:Out-of-town block (purpose not noted on calendar)\n\nStatus: He
- ld\nSpans the July 4th holiday.\n\nView live: https://jstravelschedule.netl
- ify.app
+DESCRIPTION:NEP Bishops & Media - Philadelphia\n\nStatus: Booked\nHotel: So
+ nesta Philadelphia Rittenhouse Square\, event/block NEP Bishops & Media - P
+ hiladelphia. Confirmation QQAX2KIP for Jason Shanks.\nStay: arrive Thu Jul
+  2\, depart Mon Jul 6. Room type: Deluxe - Two Queens\; 1 room\, 2 guests.
+  Rate shown in confirmation: $229/night\; grand total $1\,065.86.\nCancella
+ tion: cancel by 4:00 PM local hotel time the day before arrival to avoid on
+ e night room/tax penalty.\nSpans the July 4th holiday.\n\nView live: https:
+ //jstravelschedule.netlify.app
 LOCATION:Philadelphia\, PA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -149,7 +141,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260905
 SUMMARY:Jason: St. Louis\, MO
@@ -162,7 +154,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -175,7 +167,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -194,7 +186,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD
@@ -210,7 +202,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260618T135224Z
+DTSTAMP:20260623T193702Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL

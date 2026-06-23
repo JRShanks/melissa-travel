@@ -69,16 +69,20 @@
     },
     {
       "id": "travel-2026-07-03-philadelphia-pa",
-      "status": "Held",
-      "start": "2026-07-03",
+      "status": "Booked",
+      "start": "2026-07-02",
       "endExclusive": "2026-07-07",
       "city": "Philadelphia, PA",
-      "purpose": "Out-of-town block (purpose not noted on calendar)",
+      "purpose": "NEP Bishops & Media - Philadelphia",
       "notes": [
+        "Hotel: Sonesta Philadelphia Rittenhouse Square, event/block NEP Bishops & Media - Philadelphia. Confirmation QQAX2KIP for Jason Shanks.",
+        "Stay: arrive Thu Jul 2, depart Mon Jul 6. Room type: Deluxe - Two Queens; 1 room, 2 guests. Rate shown in confirmation: $229/night; grand total $1,065.86.",
+        "Cancellation: cancel by 4:00 PM local hotel time the day before arrival to avoid one night room/tax penalty.",
         "Spans the July 4th holiday."
       ],
       "sources": [
-        "Manual seed: Philadelphia July travel"
+        "Manual seed: Philadelphia July travel",
+        "Outlook: Sonesta Philadelphia Rittenhouse Square confirmation forwarded by Sarah Houde, 2026-04-23"
       ],
       "visibility": {
         "workCalendar": true,
