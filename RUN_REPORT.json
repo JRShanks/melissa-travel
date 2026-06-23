@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-23T19:37:02.492Z",
+  "generatedAt": "2026-06-23T22:02:00.761Z",
   "today": "2026-06-23",
   "scanEnd": "2027-06-23",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 0,
   "tripCount": 8,
-  "importantMeetingCount": 6,
+  "importantMeetingCount": 20,
   "nextTrip": {
     "city": "Boston, MA",
     "start": "2026-06-26",
@@ -14,6 +14,76 @@
     "purpose": "Boston Pilgrimage"
   },
   "importantMeetings": [
+    {
+      "title": "NEP Philadelphia: Dinner at Cathedral Basilica",
+      "start": "2026-07-02T21:30:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Young Adult Holy Hour",
+      "start": "2026-07-02T23:00:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Christ in the City Training",
+      "start": "2026-07-03T12:30:00.000Z",
+      "location": "Cathedral Basilica, Neumann Room, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Day of Service with Christ in the City",
+      "start": "2026-07-03T13:15:00.000Z",
+      "location": "Downtown Philadelphia / Cathedral Basilica area"
+    },
+    {
+      "title": "NEP Philadelphia: Sung Mass + Boxed Lunch",
+      "start": "2026-07-03T16:05:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "Optional: Philly Pops Concert + Food Trucks",
+      "start": "2026-07-03T21:00:00.000Z",
+      "location": "Independence National Historical Park, 599 Market Street, Philadelphia, PA 19106"
+    },
+    {
+      "title": "NEP Philadelphia: Sung Mass + Street Fair Lunch",
+      "start": "2026-07-04T16:05:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Family Rosary Across America",
+      "start": "2026-07-04T20:30:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "Optional: July 4 Concert + Fireworks Finale",
+      "start": "2026-07-04T21:00:00.000Z",
+      "location": "Benjamin Franklin Parkway, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Vigil Mass + Dinner",
+      "start": "2026-07-04T21:15:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Relevant Radio Staff & Pilgrim Dinner",
+      "start": "2026-07-04T23:00:00.000Z",
+      "location": "Philadelphia, PA - location TBD"
+    },
+    {
+      "title": "NEP Philadelphia: Pope Leo Video Address + Solemn Mass",
+      "start": "2026-07-05T14:50:00.000Z",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Eucharistic Procession",
+      "start": "2026-07-05T16:30:00.000Z",
+      "location": "Cathedral Basilica to National Shrine of St. John Neumann, Philadelphia, PA"
+    },
+    {
+      "title": "NEP Philadelphia: Fellowship Reception + Press Conference",
+      "start": "2026-07-05T17:30:00.000Z",
+      "location": "St. Peter the Apostle Church / National Shrine of St. John Neumann, Philadelphia, PA"
+    },
     {
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",

@@ -78,11 +78,30 @@
         "Hotel: Sonesta Philadelphia Rittenhouse Square, event/block NEP Bishops & Media - Philadelphia. Confirmation QQAX2KIP for Jason Shanks.",
         "Stay: arrive Thu Jul 2, depart Mon Jul 6. Room type: Deluxe - Two Queens; 1 room, 2 guests. Rate shown in confirmation: $229/night; grand total $1,065.86.",
         "Cancellation: cancel by 4:00 PM local hotel time the day before arrival to avoid one night room/tax penalty.",
+        "NEC staff lodging listed for Jason Shanks, Ephrem Shanks, Sarah Houde, Maria Benes, and Haley Rossi at Sonesta Rittenhouse Square, 1800 Market Street, less than a mile from the Cathedral Basilica.",
+        "Thu Jul 2: Pilgrim team expected to arrive 3:00-4:00 PM; Father Gill should receive ETA once team is on the road. Jason and Ephrem's PHL arrival time / AA flight number still TBD.",
+        "Thu Jul 2: Sarah arrives PHL 4:14 PM on DL 5706; Maria arrives PHL 6:00 PM, Southwest flight number TBD. Sarah will Uber to hotel and meet team at Cathedral Basilica for dinner.",
+        "Thu Jul 2: 5:30 PM dinner at Cathedral Basilica, then 7:00 PM Young Adult Holy Hour. Overnight adoration follows with local adorers filling spots.",
+        "Fri Jul 3: Christ in the City service day. 8:30 AM training at Cathedral Basilica Neumann Room; 9:15 AM-noon walk through city center to visit with homeless; concludes with 12:05 PM Sung Mass and boxed lunches.",
+        "Fri Jul 3 civic options: 11:00 AM Pope Leo Liberty Medal video address at Independence Mall; noon-4:00 PM Salute to Independence parade; 5:00 PM food trucks/block party and 7:00-9:00 PM Philly Pops Concert at Independence National Historical Park.",
+        "Sat Jul 4: Mary Carmen's birthday. Cabrini film showings at Cathedral Basilica at 10:00 AM, 1:00 PM, and 3:30 PM, though pilgrims already saw the film in Charlotte.",
+        "Sat Jul 4: Cathedral day includes 12:05 PM Sung Mass, street-fair lunch, 4:30 PM Family Rosary Across America, 5:15 PM Vigil Mass, dinner after Mass, and 7:00 PM NEC Staff & Pilgrim Dinner with Relevant Radio. Location still TBD.",
+        "Sat Jul 4 follow-up: confirm when RR is arriving / setting up equipment; Jason asked if Father Rocky can attend dinner; invite Archbishop Perez and Bishop Pohlmeier once time/location are known.",
+        "Sat Jul 4 civic options: Historic Germantown all day; FIFA Fan Festival noon-4:00 PM at Lemon Hill; World Cup game 5:00 PM at Lincoln Financial Field; Benjamin Franklin Parkway concert/fireworks 5:00 PM-midnight, fireworks at 11:45 PM.",
+        "Sun Jul 5: Cathedral revised Mass schedule is 7:30 AM, 9:00 AM, 11:00 AM, 1:00 PM Spanish/Chapel. Confessions at 8:30 AM and 12:30 PM Spanish/Chapel.",
+        "Sun Jul 5: team arrival time and reserved parking locations still TBD for NEP van, Rachel's car, and Sarah's parents' car.",
+        "Sun Jul 5: 10:50 AM? Pope Leo video address before 11:00 AM Solemn Mass; exact time awaiting EWTN confirmation. Perpetual Pilgrims bring prayer intentions to altar during offertory.",
+        "Sun Jul 5: Heavy snacks in Drexel Hall after Mass for pilgrims/staff to pack before procession; no time for lunch before procession.",
+        "Sun Jul 5: 12:30 PM Eucharistic Procession from Cathedral Basilica to National Shrine of St. John Neumann at St. Peter the Apostle Church; route approx. 2 miles, concluding with Benediction. NEC banner carried by archdiocesan seminarians Joshua Brooks and Ryan Scavnicky.",
+        "Sun Jul 5: 1:30-4:30 PM concluding fellowship reception at St. Peter the Apostle / Shrine of St. John Neumann, with 2:00 PM press conference during reception. Reception has light appetizers only, likely not enough for dinner.",
+        "Sun Jul 5 follow-up: decide whether NEC should arrange team dinner; Maria Benes offered to look into a reservation.",
+        "Mon Jul 6: no public events. Perpetual Pilgrim team departs for post-NEP retreat at IHM Spirituality Center, 210 IHM Drive, Malvern, PA 19355; departure time TBD.",
         "Spans the July 4th holiday."
       ],
       "sources": [
         "Manual seed: Philadelphia July travel",
-        "Outlook: Sonesta Philadelphia Rittenhouse Square confirmation forwarded by Sarah Houde, 2026-04-23"
+        "Outlook: Sonesta Philadelphia Rittenhouse Square confirmation forwarded by Sarah Houde, 2026-04-23",
+        "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23"
       ],
       "visibility": {
         "workCalendar": true,
@@ -313,6 +332,242 @@
         "Metal detectors and bag inspection on entry; reception in lobby, dinner on overlook, dessert reception outdoors on terrace."
       ],
       "sourceSummary": "Telegram from Jason: Becket Fund 2026 Canterbury Medal Gala itinerary PDF, 2026-06-08",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-02-nep-philadelphia-dinner",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Dinner at Cathedral Basilica",
+      "startRaw": "2026-07-02T17:30:00-04:00",
+      "endRaw": "2026-07-02T18:30:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "Catered dinner at Cathedral Basilica.",
+        "Reserved parking expected for van/trailer each day; Sarah's parents and Rachel need reserved parking Sunday."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-02-nep-young-adult-holy-hour",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Young Adult Holy Hour",
+      "startRaw": "2026-07-02T19:00:00-04:00",
+      "endRaw": "2026-07-02T20:00:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "Overnight adoration follows with local adorers filling spots."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-03-nep-christ-in-the-city-training",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Christ in the City Training",
+      "startRaw": "2026-07-03T08:30:00-04:00",
+      "endRaw": "2026-07-03T09:15:00-04:00",
+      "location": "Cathedral Basilica, Neumann Room, Philadelphia, PA",
+      "notes": [
+        "Entrance on backside of the Basilica."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-03-nep-day-of-service",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Day of Service with Christ in the City",
+      "startRaw": "2026-07-03T09:15:00-04:00",
+      "endRaw": "2026-07-03T12:00:00-04:00",
+      "location": "Downtown Philadelphia / Cathedral Basilica area",
+      "notes": [
+        "Walk through city center to visit with the homeless; service concludes with 12:05 PM sung Mass at Cathedral Basilica."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-03-nep-sung-mass-lunch",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Sung Mass + Boxed Lunch",
+      "startRaw": "2026-07-03T12:05:00-04:00",
+      "endRaw": "2026-07-03T13:30:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "Christ in the City missionaries join for Mass.",
+        "Grab-and-go boxed lunches after Mass; Drexel Hall available as green room in the afternoon."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-03-optional-philly-pops",
+      "status": "Optional",
+      "title": "Optional: Philly Pops Concert + Food Trucks",
+      "startRaw": "2026-07-03T17:00:00-04:00",
+      "endRaw": "2026-07-03T21:00:00-04:00",
+      "location": "Independence National Historical Park, 599 Market Street, Philadelphia, PA 19106",
+      "notes": [
+        "Food trucks/block party begin 5:00 PM; Philly Pops Concert with Idina Menzel is 7:00-9:00 PM.",
+        "Bring chairs/blankets for lawn if attending."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-04-nep-sung-mass-street-fair-lunch",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Sung Mass + Street Fair Lunch",
+      "startRaw": "2026-07-04T12:05:00-04:00",
+      "endRaw": "2026-07-04T14:00:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "Archdiocese giving a cash donation for team to purchase food at the street fair outside the Cathedral.",
+        "Mary Carmen's birthday."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-04-nep-family-rosary",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Family Rosary Across America",
+      "startRaw": "2026-07-04T16:30:00-04:00",
+      "endRaw": "2026-07-04T17:00:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "Livestreamed from Cathedral Basilica."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-04-nep-vigil-mass-dinner",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Vigil Mass + Dinner",
+      "startRaw": "2026-07-04T17:15:00-04:00",
+      "endRaw": "2026-07-04T19:00:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "Dinner after Mass at Cathedral Basilica.",
+        "Jason asked if Father Rocky can attend."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-04-nep-relevant-radio-dinner",
+      "status": "Tentative",
+      "title": "NEP Philadelphia: Relevant Radio Staff & Pilgrim Dinner",
+      "startRaw": "2026-07-04T19:00:00-04:00",
+      "endRaw": "2026-07-04T20:30:00-04:00",
+      "location": "Philadelphia, PA - location TBD",
+      "notes": [
+        "Estimated 25-30 people total.",
+        "Invite Archbishop Perez and Bishop Pohlmeier once time/location are known.",
+        "Mary Carmen's birthday."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-04-optional-fireworks-finale",
+      "status": "Optional",
+      "title": "Optional: July 4 Concert + Fireworks Finale",
+      "startRaw": "2026-07-04T17:00:00-04:00",
+      "endRaw": "2026-07-05T00:00:00-04:00",
+      "location": "Benjamin Franklin Parkway, Philadelphia, PA",
+      "notes": [
+        "Doors open 3:00 PM; concert starts 5:00 PM; fireworks start 11:45 PM.",
+        "Conflicts with NEP evening events unless attending later portion only."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-05-nep-pope-video-solemn-mass",
+      "status": "Tentative",
+      "title": "NEP Philadelphia: Pope Leo Video Address + Solemn Mass",
+      "startRaw": "2026-07-05T10:50:00-04:00",
+      "endRaw": "2026-07-05T12:15:00-04:00",
+      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+      "notes": [
+        "10:50 AM Pope Leo video address timing still needs EWTN confirmation.",
+        "11:00 AM Solemn Mass; Perpetual Pilgrims bring prayer intentions to altar during offertory."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-05-nep-eucharistic-procession",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Eucharistic Procession",
+      "startRaw": "2026-07-05T12:30:00-04:00",
+      "endRaw": "2026-07-05T13:30:00-04:00",
+      "location": "Cathedral Basilica to National Shrine of St. John Neumann, Philadelphia, PA",
+      "notes": [
+        "Route approximately 2 miles and concludes with Benediction.",
+        "Archdiocese provides liturgical items and local speaker system.",
+        "NEC banner carried by archdiocesan seminarians Joshua Brooks and Ryan Scavnicky."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-05-nep-fellowship-reception-press",
+      "status": "Confirmed",
+      "title": "NEP Philadelphia: Fellowship Reception + Press Conference",
+      "startRaw": "2026-07-05T13:30:00-04:00",
+      "endRaw": "2026-07-05T16:30:00-04:00",
+      "location": "St. Peter the Apostle Church / National Shrine of St. John Neumann, Philadelphia, PA",
+      "notes": [
+        "Press conference at 2:00 PM during reception.",
+        "Reception has light appetizers only; Sunday team dinner may need to be arranged."
+      ],
+      "sourceSummary": "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
       "visibility": {
         "workCalendar": true,
         "travelFeed": true
