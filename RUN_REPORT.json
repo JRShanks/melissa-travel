@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-23T22:02:00.761Z",
-  "today": "2026-06-23",
-  "scanEnd": "2027-06-23",
+  "generatedAt": "2026-06-24T14:47:29.448Z",
+  "today": "2026-06-24",
+  "scanEnd": "2027-06-24",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 0,
-  "tripCount": 8,
+  "tripCount": 9,
   "importantMeetingCount": 20,
   "nextTrip": {
     "city": "Boston, MA",

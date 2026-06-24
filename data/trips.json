@@ -127,6 +127,25 @@
       }
     },
     {
+      "id": "travel-2026-08-19-chicago-il",
+      "status": "Confirmed",
+      "start": "2026-08-19",
+      "endExclusive": "2026-08-22",
+      "city": "Chicago, IL",
+      "purpose": "5 Stones in Chicago",
+      "notes": [
+        "Jason asked Clive to add this on 2026-06-24: go to 5 Stones in Chicago the evening of Aug 19 and leave the evening of Aug 21.",
+        "Calendar blocks use 6:00 PM Aug 19 through 8:00 PM Aug 21 until exact travel times are known."
+      ],
+      "sources": [
+        "Telegram from Jason: add 5 Stones in Chicago Aug 19 evening through Aug 21 evening, 2026-06-24"
+      ],
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
       "id": "travel-2026-08-31-st-louis-mo",
       "status": "Confirmed",
       "start": "2026-08-31",
