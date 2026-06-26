@@ -71,7 +71,7 @@
       "id": "travel-2026-07-03-philadelphia-pa",
       "status": "Booked",
       "start": "2026-07-02",
-      "endExclusive": "2026-07-07",
+      "endExclusive": "2026-07-08",
       "city": "Philadelphia, PA",
       "purpose": "NEP Bishops & Media - Philadelphia",
       "notes": [
@@ -95,13 +95,16 @@
         "Sun Jul 5: 12:30 PM Eucharistic Procession from Cathedral Basilica to National Shrine of St. John Neumann at St. Peter the Apostle Church; route approx. 2 miles, concluding with Benediction. NEC banner carried by archdiocesan seminarians Joshua Brooks and Ryan Scavnicky.",
         "Sun Jul 5: 1:30-4:30 PM concluding fellowship reception at St. Peter the Apostle / Shrine of St. John Neumann, with 2:00 PM press conference during reception. Reception has light appetizers only, likely not enough for dinner.",
         "Sun Jul 5 follow-up: decide whether NEC should arrange team dinner; Maria Benes offered to look into a reservation.",
-        "Mon Jul 6: no public events. Perpetual Pilgrim team departs for post-NEP retreat at IHM Spirituality Center, 210 IHM Drive, Malvern, PA 19355; departure time TBD.",
+        "Mon Jul 6: Perpetual Pilgrim team departs for post-NEP retreat at IHM Spirituality Center, 210 IHM Drive, Malvern, PA 19355; departure time TBD.",
+        "Mon Jul 6: 6:45 PM meet Tim Flanagan in the lobby at Four Seasons Hotel Philadelphia, One N 19th Street. Tim is flying up from Orlando with ETA 5:15 PM and will advise if delayed. Dinner with Drew Peloubet, Board Chair, and Bill Orosz, former Board Chair; Martha Ortiz, Vice Chair, may join.",
+        "Tue Jul 7: 9:15 AM meet Tim Flanagan in the Four Seasons lobby. Conference room available until 2:00 PM; Jason can leave whenever best for his flight. Tim will send a separate text with Dan's information.",
         "Spans the July 4th holiday."
       ],
       "sources": [
         "Manual seed: Philadelphia July travel",
         "Outlook: Sonesta Philadelphia Rittenhouse Square confirmation forwarded by Sarah Houde, 2026-04-23",
-        "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23"
+        "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
+        "Telegram from Jason: Tim Flanagan Four Seasons dinner and meeting details, 2026-06-26"
       ],
       "visibility": {
         "workCalendar": true,
