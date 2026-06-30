@@ -77,6 +77,8 @@
       "notes": [
         "Hotel: Sonesta Philadelphia Rittenhouse Square, event/block NEP Bishops & Media - Philadelphia. Confirmation QQAX2KIP for Jason Shanks.",
         "Stay: arrive Thu Jul 2, depart Mon Jul 6. Room type: Deluxe - Two Queens; 1 room, 2 guests. Rate shown in confirmation: $229/night; grand total $1,065.86.",
+        "American Airlines reservation GGJXVR: outbound Sat Jul 4 AA 6208 FWA-ORD 5:23-6:35 AM, then AA 2115 ORD-PHL 7:37-9:48 AM.",
+        "American Airlines reservation GGJXVR: return Tue Jul 7 AA 3030 PHL-CLT 4:55-6:58 PM, then AA 5961 CLT-FWA 8:33-10:34 PM.",
         "Cancellation: cancel by 4:00 PM local hotel time the day before arrival to avoid one night room/tax penalty.",
         "NEC staff lodging listed for Jason Shanks, Ephrem Shanks, Sarah Houde, Maria Benes, and Haley Rossi at Sonesta Rittenhouse Square, 1800 Market Street, less than a mile from the Cathedral Basilica.",
         "Thu Jul 2: Pilgrim team expected to arrive 3:00-4:00 PM; Father Gill should receive ETA once team is on the road. Jason and Ephrem's PHL arrival time / AA flight number still TBD.",
@@ -103,6 +105,7 @@
       "sources": [
         "Manual seed: Philadelphia July travel",
         "Outlook: Sonesta Philadelphia Rittenhouse Square confirmation forwarded by Sarah Houde, 2026-04-23",
+        "Apple Calendar Siri Suggestions: American Airlines reservation GGJXVR, checked 2026-06-29",
         "Telegram PDF from Jason: Philadelphia Master Schedule for NEP Weekend, 2026-06-23",
         "Telegram from Jason: Tim Flanagan Four Seasons dinner and meeting details, 2026-06-26"
       ],
@@ -270,6 +273,74 @@
     }
   ],
   "meetings": [
+    {
+      "id": "meeting-2026-07-04-aa-6208-fwa-ord",
+      "status": "Confirmed",
+      "title": "Flight: AA 6208 FWA to ORD",
+      "startRaw": "2026-07-04T05:23:00-04:00",
+      "endRaw": "2026-07-04T06:35:00-04:00",
+      "location": "Fort Wayne International Airport, 3801 W Ferguson Rd, Fort Wayne, IN 46809",
+      "notes": [
+        "American Airlines reservation GGJXVR.",
+        "Jason Shanks, Economy."
+      ],
+      "sourceSummary": "Apple Calendar Siri Suggestions: American Airlines reservation GGJXVR",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-04-aa-2115-ord-phl",
+      "status": "Confirmed",
+      "title": "Flight: AA 2115 ORD to PHL",
+      "startRaw": "2026-07-04T07:37:00-04:00",
+      "endRaw": "2026-07-04T09:48:00-04:00",
+      "location": "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666",
+      "notes": [
+        "American Airlines reservation GGJXVR.",
+        "Jason Shanks, Economy."
+      ],
+      "sourceSummary": "Apple Calendar Siri Suggestions: American Airlines reservation GGJXVR",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-07-aa-3030-phl-clt",
+      "status": "Confirmed",
+      "title": "Flight: AA 3030 PHL to CLT",
+      "startRaw": "2026-07-07T16:55:00-04:00",
+      "endRaw": "2026-07-07T18:58:00-04:00",
+      "location": "Philadelphia International Airport, 8500 Essington Ave, Philadelphia, PA 19153",
+      "notes": [
+        "American Airlines reservation GGJXVR.",
+        "Jason Shanks, Economy."
+      ],
+      "sourceSummary": "Apple Calendar Siri Suggestions: American Airlines reservation GGJXVR",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-07-07-aa-5961-clt-fwa",
+      "status": "Confirmed",
+      "title": "Flight: AA 5961 CLT to FWA",
+      "startRaw": "2026-07-07T20:33:00-04:00",
+      "endRaw": "2026-07-07T22:34:00-04:00",
+      "location": "Charlotte Douglas International Airport, 5501 Josh Birmingham Pkwy, Charlotte, NC 28208",
+      "notes": [
+        "American Airlines reservation GGJXVR.",
+        "Jason Shanks, Economy."
+      ],
+      "sourceSummary": "Apple Calendar Siri Suggestions: American Airlines reservation GGJXVR",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
     {
       "id": "meeting-2026-06-18-road-to-2029",
       "status": "Confirmed",
