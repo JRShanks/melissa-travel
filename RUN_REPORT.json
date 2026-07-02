@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-30T00:52:20.884Z",
-  "today": "2026-06-29",
-  "scanEnd": "2027-06-29",
+  "generatedAt": "2026-07-02T14:14:40.028Z",
+  "today": "2026-07-02",
+  "scanEnd": "2027-07-02",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
-  "eventCount": 0,
-  "tripCount": 9,
-  "importantMeetingCount": 24,
+  "eventCount": 612,
+  "tripCount": 10,
+  "importantMeetingCount": 27,
   "nextTrip": {
-    "city": "Boston, MA",
-    "start": "2026-06-26",
-    "endExclusive": "2026-06-29",
-    "purpose": "Boston Pilgrimage"
+    "city": "Philadelphia, PA",
+    "start": "2026-07-02",
+    "endExclusive": "2026-07-08",
+    "purpose": "NEP Bishops & Media - Philadelphia / Out-of-town block (purpose not noted on calendar) / NEP Philadelphia: Vigil Mass + Dinner / Optional: July 4 Concert + Fireworks Finale / NEP Philadelphia: Pope Leo Video Address + Solemn Mass / NEP Philadelphia: Eucharistic Procession / NEP Philadelphia: Fellowship Reception + Press Conference / Dinner: Tim Flanagan, Drew Peloubet, Bill Orosz / Meeting: Tim Flanagan / Conference Room"
   },
   "importantMeetings": [
     {
@@ -110,13 +110,28 @@
       "location": "Zoom"
     },
     {
+      "title": "NEC Board & Member Dinner",
+      "start": "2026-11-16T22:30:00.000Z",
+      "location": "Baltimore Marriott Waterfront"
+    },
+    {
       "title": "Baltimore Board Meeting",
       "start": "2026-11-17T00:00:00.000Z",
       "location": "Baltimore, MD"
     },
     {
+      "title": "NEC Board Meeting - Q1 2027 (Hold)",
+      "start": "2027-02-09T18:00:00.000Z",
+      "location": "Virtual"
+    },
+    {
       "title": "NEC Board Meeting - Q1 2027",
       "start": "2027-02-09T18:00:00.000Z",
+      "location": "Virtual"
+    },
+    {
+      "title": "NEC Board Meeting - Q2 2027 (Hold)",
+      "start": "2027-05-11T17:00:00.000Z",
       "location": "Virtual"
     },
     {
@@ -135,8 +150,143 @@
       "location": "Baltimore, MD"
     }
   ],
-  "reviewRequired": false,
-  "reviewFlags": [],
+  "reviewRequired": true,
+  "reviewFlags": [
+    {
+      "slug": "2026-07-02-philadelphia-pa",
+      "city": "Philadelphia, PA",
+      "start": "2026-07-02",
+      "endExclusive": "2026-07-08",
+      "purpose": "NEP Bishops & Media - Philadelphia / Out-of-town block (purpose not noted on calendar) / NEP Philadelphia: Vigil Mass + Dinner / Optional: July 4 Concert + Fireworks Finale / NEP Philadelphia: Pope Leo Video Address + Solemn Mass / NEP Philadelphia: Eucharistic Procession / NEP Philadelphia: Fellowship Reception + Press Conference / Dinner: Tim Flanagan, Drew Peloubet, Bill Orosz / Meeting: Tim Flanagan / Conference Room",
+      "flags": [
+        "missing-purpose",
+        "merged-purpose-review"
+      ],
+      "sources": [
+        {
+          "summary": "Manual seed: Philadelphia July travel",
+          "location": "Philadelphia, PA",
+          "start": "2026-07-02",
+          "endExclusive": "2026-07-08"
+        },
+        {
+          "summary": "Jason in Philadelphia NEC",
+          "location": "Philadelphia, PA",
+          "start": "2026-07-03",
+          "endExclusive": "2026-07-07"
+        },
+        {
+          "summary": "NEP Philadelphia: Vigil Mass + Dinner",
+          "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+          "start": "2026-07-04",
+          "endExclusive": "2026-07-05"
+        },
+        {
+          "summary": "Optional: July 4 Concert + Fireworks Finale",
+          "location": "Benjamin Franklin Parkway, Philadelphia, PA",
+          "start": "2026-07-04",
+          "endExclusive": "2026-07-06"
+        },
+        {
+          "summary": "NEP Philadelphia: Pope Leo Video Address + Solemn Mass",
+          "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
+          "start": "2026-07-05",
+          "endExclusive": "2026-07-06"
+        },
+        {
+          "summary": "NEP Philadelphia: Eucharistic Procession",
+          "location": "Cathedral Basilica to National Shrine of St. John Neumann, Philadelphia, PA",
+          "start": "2026-07-05",
+          "endExclusive": "2026-07-06"
+        },
+        {
+          "summary": "NEP Philadelphia: Fellowship Reception + Press Conference",
+          "location": "St. Peter the Apostle Church / National Shrine of St. John Neumann, Philadelphia, PA",
+          "start": "2026-07-05",
+          "endExclusive": "2026-07-06"
+        },
+        {
+          "summary": "Dinner: Tim Flanagan, Drew Peloubet, Bill Orosz",
+          "location": "Four Seasons Hotel Philadelphia, One N 19th Street, Philadelphia, PA",
+          "start": "2026-07-06",
+          "endExclusive": "2026-07-08"
+        },
+        {
+          "summary": "Meeting: Tim Flanagan / Conference Room",
+          "location": "Four Seasons Hotel Philadelphia, One N 19th Street, Philadelphia, PA",
+          "start": "2026-07-07",
+          "endExclusive": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "slug": "2026-08-31-st-louis-mo",
+      "city": "St. Louis, MO",
+      "start": "2026-08-31",
+      "endExclusive": "2026-09-07",
+      "purpose": "NEC staff strategy meetings at the Augustine Institute / Jubilee 2033",
+      "flags": [
+        "merged-purpose-review",
+        "merged-overlapping-blocks"
+      ],
+      "sources": [
+        {
+          "summary": "Drive: Fort Wayne to St. Louis (Staff Strategy Meetings) NEC",
+          "location": "",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-01"
+        },
+        {
+          "summary": "St. Louis - Staff Strategy Meetings NEC",
+          "location": "Augustine Institute, St. Louis, MO",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-04"
+        },
+        {
+          "summary": "Jason In St. Louis",
+          "location": "",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-05"
+        },
+        {
+          "summary": "Manual seed: St. Louis staff strategy meetings",
+          "location": "St. Louis, MO",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-05"
+        },
+        {
+          "summary": "Jubilee 2033 NEC",
+          "location": "Augustine Institute, St. Louis, MO",
+          "start": "2026-09-03",
+          "endExclusive": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "slug": "2026-10-03-dallas-tx",
+      "city": "Dallas, TX",
+      "start": "2026-10-03",
+      "endExclusive": "2026-10-05",
+      "purpose": "Speaking in Dallas / Speaking engagement",
+      "flags": [
+        "merged-purpose-review"
+      ],
+      "sources": [
+        {
+          "summary": "Apple Calendar: Speaking in Dallas",
+          "location": "Dallas, TX",
+          "start": "2026-10-03",
+          "endExclusive": "2026-10-04"
+        },
+        {
+          "summary": "Parish Leadership Conference 2026 - Dallas Speaker",
+          "location": "Bishop Lynch High School, Dallas, TX",
+          "start": "2026-10-03",
+          "endExclusive": "2026-10-05"
+        }
+      ]
+    }
+  ],
   "generatedFiles": [
     "index.html",
     "melissa-travel.ics"
