@@ -178,14 +178,16 @@
       "id": "travel-2026-08-31-st-louis-mo",
       "status": "Confirmed",
       "start": "2026-08-31",
-      "endExclusive": "2026-09-05",
+      "endExclusive": "2026-09-04",
       "city": "St. Louis, MO",
-      "purpose": "NEC staff strategy meetings at the Augustine Institute",
+      "purpose": "NEC Strategy Days at Augustine Institute Center",
       "notes": [
-        "Aug 31: Driving Fort Wayne to St. Louis (Staff Strategy Meetings) NEC."
+        "NEC Strategy Days at Augustine Institute Center, St. Louis, Aug 31-Sep 3, 2026.",
+        "Aug 31: Driving Fort Wayne to St. Louis."
       ],
       "sources": [
-        "Manual seed: St. Louis staff strategy meetings"
+        "Manual seed: St. Louis staff strategy meetings",
+        "Telegram from Jason: mark Aug 31-Sep 3 as NEC Strategy Days at Augustine Institute Center St. Louis, 2026-07-09"
       ],
       "visibility": {
         "workCalendar": true,

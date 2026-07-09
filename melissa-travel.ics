@@ -10,261 +10,8 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:melissa-important-8d186dbd3559@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260702T173000
-DTEND;TZID=America/Indiana/Indianapolis:20260702T183000
-SUMMARY:Jason: NEP Philadelphia: Dinner at Cathedral Basilica
-DESCRIPTION:NEP Philadelphia: Dinner at Cathedral Basilica\n\nStatus: Confi
- rmed\nCatered dinner at Cathedral Basilica.\nReserved parking expected for
-  van/trailer each day\; Sarah's parents and Rachel need reserved parking Su
- nday.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-f09f2aa67604@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260702T190000
-DTEND;TZID=America/Indiana/Indianapolis:20260702T200000
-SUMMARY:Jason: NEP Philadelphia: Young Adult Holy Hour
-DESCRIPTION:NEP Philadelphia: Young Adult Holy Hour\n\nStatus: Confirmed\nO
- vernight adoration follows with local adorers filling spots.\n\nView live:
-  https://jstravelschedule.netlify.app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-636036162b2c@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260703T083000
-DTEND;TZID=America/Indiana/Indianapolis:20260703T091500
-SUMMARY:Jason: NEP Philadelphia: Christ in the City Training
-DESCRIPTION:NEP Philadelphia: Christ in the City Training\n\nStatus: Confir
- med\nEntrance on backside of the Basilica.\n\nView live: https://jstravelsc
- hedule.netlify.app
-LOCATION:Cathedral Basilica\, Neumann Room\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-22cdb35cfa96@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260703T091500
-DTEND;TZID=America/Indiana/Indianapolis:20260703T120000
-SUMMARY:Jason: NEP Philadelphia: Day of Service with Christ in the City
-DESCRIPTION:NEP Philadelphia: Day of Service with Christ in the City\n\nSta
- tus: Confirmed\nWalk through city center to visit with the homeless\; servi
- ce concludes with 12:05 PM sung Mass at Cathedral Basilica.\n\nView live: h
- ttps://jstravelschedule.netlify.app
-LOCATION:Downtown Philadelphia / Cathedral Basilica area
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-afe0a63f7ae2@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260703T120500
-DTEND;TZID=America/Indiana/Indianapolis:20260703T133000
-SUMMARY:Jason: NEP Philadelphia: Sung Mass + Boxed Lunch
-DESCRIPTION:NEP Philadelphia: Sung Mass + Boxed Lunch\n\nStatus: Confirmed\
- nChrist in the City missionaries join for Mass.\nGrab-and-go boxed lunches
-  after Mass\; Drexel Hall available as green room in the afternoon.\n\nView
-  live: https://jstravelschedule.netlify.app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-1180825b1345@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260703T170000
-DTEND;TZID=America/Indiana/Indianapolis:20260703T210000
-SUMMARY:Jason: Optional: Philly Pops Concert + Food Trucks
-DESCRIPTION:Optional: Philly Pops Concert + Food Trucks\n\nStatus: Optional
- \nFood trucks/block party begin 5:00 PM\; Philly Pops Concert with Idina Me
- nzel is 7:00-9:00 PM.\nBring chairs/blankets for lawn if attending.\n\nView
-  live: https://jstravelschedule.netlify.app
-LOCATION:Independence National Historical Park\, 599 Market Street\, Philad
- elphia\, PA 19106
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-040171ed2eab@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T052300
-DTEND;TZID=America/Indiana/Indianapolis:20260704T063500
-SUMMARY:Jason: Flight: AA 6208 FWA to ORD
-DESCRIPTION:Flight: AA 6208 FWA to ORD\n\nStatus: Confirmed\nAmerican Airli
- nes reservation GGJXVR.\nJason Shanks\, Economy.\n\nView live: https://jstr
- avelschedule.netlify.app
-LOCATION:Fort Wayne International Airport\, 3801 W Ferguson Rd\, Fort Wayne
- \, IN 46809
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-5276ad18a17e@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T073700
-DTEND;TZID=America/Indiana/Indianapolis:20260704T094800
-SUMMARY:Jason: Flight: AA 2115 ORD to PHL
-DESCRIPTION:Flight: AA 2115 ORD to PHL\n\nStatus: Confirmed\nAmerican Airli
- nes reservation GGJXVR.\nJason Shanks\, Economy.\n\nView live: https://jstr
- avelschedule.netlify.app
-LOCATION:O'Hare International Airport\, 10000 W O'Hare Ave\, Chicago\, IL 6
- 0666
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-845f22723c94@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T120500
-DTEND;TZID=America/Indiana/Indianapolis:20260704T140000
-SUMMARY:Jason: NEP Philadelphia: Sung Mass + Street Fair Lunch
-DESCRIPTION:NEP Philadelphia: Sung Mass + Street Fair Lunch\n\nStatus: Conf
- irmed\nArchdiocese giving a cash donation for team to purchase food at the
-  street fair outside the Cathedral.\nMary Carmen's birthday.\n\nView live:
-  https://jstravelschedule.netlify.app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-75efc43b7b0b@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T163000
-DTEND;TZID=America/Indiana/Indianapolis:20260704T170000
-SUMMARY:Jason: NEP Philadelphia: Family Rosary Across America
-DESCRIPTION:NEP Philadelphia: Family Rosary Across America\n\nStatus: Confi
- rmed\nLivestreamed from Cathedral Basilica.\n\nView live: https://jstravels
- chedule.netlify.app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-41612af10ca0@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T170000
-DTEND;TZID=America/Indiana/Indianapolis:20260705T000000
-SUMMARY:Jason: Optional: July 4 Concert + Fireworks Finale
-DESCRIPTION:Optional: July 4 Concert + Fireworks Finale\n\nStatus: Optional
- \nDoors open 3:00 PM\; concert starts 5:00 PM\; fireworks start 11:45 PM.\n
- Conflicts with NEP evening events unless attending later portion only.\n\nV
- iew live: https://jstravelschedule.netlify.app
-LOCATION:Benjamin Franklin Parkway\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-fc8e82c12e80@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T171500
-DTEND;TZID=America/Indiana/Indianapolis:20260704T190000
-SUMMARY:Jason: NEP Philadelphia: Vigil Mass + Dinner
-DESCRIPTION:NEP Philadelphia: Vigil Mass + Dinner\n\nStatus: Confirmed\nDin
- ner after Mass at Cathedral Basilica.\nJason asked if Father Rocky can atte
- nd.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-78210712f23e@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260704T190000
-DTEND;TZID=America/Indiana/Indianapolis:20260704T203000
-SUMMARY:Jason: NEP Philadelphia: Relevant Radio Staff & Pilgrim Dinner
-DESCRIPTION:NEP Philadelphia: Relevant Radio Staff & Pilgrim Dinner\n\nStat
- us: Tentative\nEstimated 25-30 people total.\nInvite Archbishop Perez and B
- ishop Pohlmeier once time/location are known.\nMary Carmen's birthday.\n\nV
- iew live: https://jstravelschedule.netlify.app
-LOCATION:Philadelphia\, PA - location TBD
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-ff6fd980c50e@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260705T105000
-DTEND;TZID=America/Indiana/Indianapolis:20260705T121500
-SUMMARY:Jason: NEP Philadelphia: Pope Leo Video Address + Solemn Mass
-DESCRIPTION:NEP Philadelphia: Pope Leo Video Address + Solemn Mass\n\nStatu
- s: Tentative\n10:50 AM Pope Leo video address timing still needs EWTN confi
- rmation.\n11:00 AM Solemn Mass\; Perpetual Pilgrims bring prayer intentions
-  to altar during offertory.\n\nView live: https://jstravelschedule.netlify.
- app
-LOCATION:Cathedral Basilica of Saints Peter and Paul\, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-81372679e85d@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260705T123000
-DTEND;TZID=America/Indiana/Indianapolis:20260705T133000
-SUMMARY:Jason: NEP Philadelphia: Eucharistic Procession
-DESCRIPTION:NEP Philadelphia: Eucharistic Procession\n\nStatus: Confirmed\n
- Route approximately 2 miles and concludes with Benediction.\nArchdiocese pr
- ovides liturgical items and local speaker system.\nNEC banner carried by ar
- chdiocesan seminarians Joshua Brooks and Ryan Scavnicky.\n\nView live: http
- s://jstravelschedule.netlify.app
-LOCATION:Cathedral Basilica to National Shrine of St. John Neumann\, Philad
- elphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-6dfcd31a8904@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260705T133000
-DTEND;TZID=America/Indiana/Indianapolis:20260705T163000
-SUMMARY:Jason: NEP Philadelphia: Fellowship Reception + Press Conference
-DESCRIPTION:NEP Philadelphia: Fellowship Reception + Press Conference\n\nSt
- atus: Confirmed\nPress conference at 2:00 PM during reception.\nReception h
- as light appetizers only\; Sunday team dinner may need to be arranged.\n\nV
- iew live: https://jstravelschedule.netlify.app
-LOCATION:St. Peter the Apostle Church / National Shrine of St. John Neumann
- \, Philadelphia\, PA
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-7f780d6ea31a@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260707T165500
-DTEND;TZID=America/Indiana/Indianapolis:20260707T185800
-SUMMARY:Jason: Flight: AA 3030 PHL to CLT
-DESCRIPTION:Flight: AA 3030 PHL to CLT\n\nStatus: Confirmed\nAmerican Airli
- nes reservation GGJXVR.\nJason Shanks\, Economy.\n\nView live: https://jstr
- avelschedule.netlify.app
-LOCATION:Philadelphia International Airport\, 8500 Essington Ave\, Philadel
- phia\, PA 19153
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-important-6dd365bc4592@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;TZID=America/Indiana/Indianapolis:20260707T203300
-DTEND;TZID=America/Indiana/Indianapolis:20260707T223400
-SUMMARY:Jason: Flight: AA 5961 CLT to FWA
-DESCRIPTION:Flight: AA 5961 CLT to FWA\n\nStatus: Confirmed\nAmerican Airli
- nes reservation GGJXVR.\nJason Shanks\, Economy.\n\nView live: https://jstr
- avelschedule.netlify.app
-LOCATION:Charlotte Douglas International Airport\, 5501 Josh Birmingham Pkw
- y\, Charlotte\, NC 28208
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -276,7 +23,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1d78594a3427@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
 SUMMARY:Jason: NEC Board & Member Dinner
@@ -288,7 +35,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -301,7 +48,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-c123a10b607d@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027 (Hold)
@@ -313,7 +60,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -327,7 +74,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-bb919759427b@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027 (Hold)
@@ -339,7 +86,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -353,7 +100,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -367,7 +114,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -380,87 +127,8 @@ TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-e470a00c379e@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
-DTSTART;VALUE=DATE:20260702
-DTEND;VALUE=DATE:20260708
-SUMMARY:Jason: Philadelphia\, PA
-DESCRIPTION:NEP Bishops & Media - Philadelphia / Out-of-town block (purpose
-  not noted on calendar) / NEP Philadelphia: Vigil Mass + Dinner / Optional:
-  July 4 Concert + Fireworks Finale / NEP Philadelphia: Pope Leo Video Addre
- ss + Solemn Mass / NEP Philadelphia: Eucharistic Procession / NEP Philadelp
- hia: Fellowship Reception + Press Conference / Dinner: Tim Flanagan\, Drew
-  Peloubet\, Bill Orosz / Meeting: Tim Flanagan / Conference Room\n\nStatus:
-  Booked\nHotel: Sonesta Philadelphia Rittenhouse Square\, event/block NEP B
- ishops & Media - Philadelphia. Confirmation QQAX2KIP for Jason Shanks.\nSta
- y: arrive Thu Jul 2\, depart Mon Jul 6. Room type: Deluxe - Two Queens\; 1
-  room\, 2 guests. Rate shown in confirmation: $229/night\; grand total $1\,
- 065.86.\nAmerican Airlines reservation GGJXVR: outbound Sat Jul 4 AA 6208 F
- WA-ORD 5:23-6:35 AM\, then AA 2115 ORD-PHL 7:37-9:48 AM.\nAmerican Airlines
-  reservation GGJXVR: return Tue Jul 7 AA 3030 PHL-CLT 4:55-6:58 PM\, then A
- A 5961 CLT-FWA 8:33-10:34 PM.\nCancellation: cancel by 4:00 PM local hotel
-  time the day before arrival to avoid one night room/tax penalty.\nNEC staf
- f lodging listed for Jason Shanks\, Ephrem Shanks\, Sarah Houde\, Maria Ben
- es\, and Haley Rossi at Sonesta Rittenhouse Square\, 1800 Market Street\, l
- ess than a mile from the Cathedral Basilica.\nThu Jul 2: Pilgrim team expec
- ted to arrive 3:00-4:00 PM\; Father Gill should receive ETA once team is on
-  the road. Jason and Ephrem's PHL arrival time / AA flight number still TBD
- .\nThu Jul 2: Sarah arrives PHL 4:14 PM on DL 5706\; Maria arrives PHL 6:00
-  PM\, Southwest flight number TBD. Sarah will Uber to hotel and meet team a
- t Cathedral Basilica for dinner.\nThu Jul 2: 5:30 PM dinner at Cathedral Ba
- silica\, then 7:00 PM Young Adult Holy Hour. Overnight adoration follows wi
- th local adorers filling spots.\nFri Jul 3: Christ in the City service day.
-  8:30 AM training at Cathedral Basilica Neumann Room\; 9:15 AM-noon walk th
- rough city center to visit with homeless\; concludes with 12:05 PM Sung Mas
- s and boxed lunches.\nFri Jul 3 civic options: 11:00 AM Pope Leo Liberty Me
- dal video address at Independence Mall\; noon-4:00 PM Salute to Independenc
- e parade\; 5:00 PM food trucks/block party and 7:00-9:00 PM Philly Pops Con
- cert at Independence National Historical Park.\nSat Jul 4: Mary Carmen's bi
- rthday. Cabrini film showings at Cathedral Basilica at 10:00 AM\, 1:00 PM\,
-  and 3:30 PM\, though pilgrims already saw the film in Charlotte.\nSat Jul
-  4: Cathedral day includes 12:05 PM Sung Mass\, street-fair lunch\, 4:30 PM
-  Family Rosary Across America\, 5:15 PM Vigil Mass\, dinner after Mass\, an
- d 7:00 PM NEC Staff & Pilgrim Dinner with Relevant Radio. Location still TB
- D.\nSat Jul 4 follow-up: confirm when RR is arriving / setting up equipment
- \; Jason asked if Father Rocky can attend dinner\; invite Archbishop Perez
-  and Bishop Pohlmeier once time/location are known.\nSat Jul 4 civic option
- s: Historic Germantown all day\; FIFA Fan Festival noon-4:00 PM at Lemon Hi
- ll\; World Cup game 5:00 PM at Lincoln Financial Field\; Benjamin Franklin
-  Parkway concert/fireworks 5:00 PM-midnight\, fireworks at 11:45 PM.\nSun J
- ul 5: Cathedral revised Mass schedule is 7:30 AM\, 9:00 AM\, 11:00 AM\, 1:0
- 0 PM Spanish/Chapel. Confessions at 8:30 AM and 12:30 PM Spanish/Chapel.\nS
- un Jul 5: team arrival time and reserved parking locations still TBD for NE
- P van\, Rachel's car\, and Sarah's parents' car.\nSun Jul 5: 10:50 AM? Pope
-  Leo video address before 11:00 AM Solemn Mass\; exact time awaiting EWTN c
- onfirmation. Perpetual Pilgrims bring prayer intentions to altar during off
- ertory.\nSun Jul 5: Heavy snacks in Drexel Hall after Mass for pilgrims/sta
- ff to pack before procession\; no time for lunch before procession.\nSun Ju
- l 5: 12:30 PM Eucharistic Procession from Cathedral Basilica to National Sh
- rine of St. John Neumann at St. Peter the Apostle Church\; route approx. 2
-  miles\, concluding with Benediction. NEC banner carried by archdiocesan se
- minarians Joshua Brooks and Ryan Scavnicky.\nSun Jul 5: 1:30-4:30 PM conclu
- ding fellowship reception at St. Peter the Apostle / Shrine of St. John Neu
- mann\, with 2:00 PM press conference during reception. Reception has light
-  appetizers only\, likely not enough for dinner.\nSun Jul 5 follow-up: deci
- de whether NEC should arrange team dinner\; Maria Benes offered to look int
- o a reservation.\nMon Jul 6: Perpetual Pilgrim team departs for post-NEP re
- treat at IHM Spirituality Center\, 210 IHM Drive\, Malvern\, PA 19355\; dep
- arture time TBD.\nMon Jul 6: 6:45 PM meet Tim Flanagan in the lobby at Four
-  Seasons Hotel Philadelphia\, One N 19th Street. Tim is flying up from Orla
- ndo with ETA 5:15 PM and will advise if delayed. Dinner with Drew Peloubet\
- , Board Chair\, and Bill Orosz\, former Board Chair\; Martha Ortiz\, Vice C
- hair\, may join.\nTue Jul 7: 9:15 AM meet Tim Flanagan in the Four Seasons
-  lobby. Conference room available until 2:00 PM\; Jason can leave whenever
-  best for his flight. Tim will send a separate text with Dan's information.
- \nSpans the July 4th holiday.\n\nView live: https://jstravelschedule.netlif
- y.app
-LOCATION:Philadelphia\, PA
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -473,7 +141,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-bff4f4c82bb6@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20260802
 DTEND;VALUE=DATE:20260809
 SUMMARY:Jason: Scandia\, MN
@@ -493,7 +161,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-859c01349400@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260822
 SUMMARY:Jason: Chicago\, IL
@@ -508,22 +176,23 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260907
 SUMMARY:Jason: St. Louis\, MO
-DESCRIPTION:NEC staff strategy meetings at the Augustine Institute / Jubile
- e 2033\n\nStatus: Confirmed\nAug 31: Driving Fort Wayne to St. Louis (Staff
-  Strategy Meetings) NEC.\nMerged overlapping St. Louis blocks from Staff St
- rategy Meetings and Jubilee 2033.\n\nView live: https://jstravelschedule.ne
- tlify.app
+DESCRIPTION:NEC staff strategy meetings at the Augustine Institute / NEC St
+ rategy Days at Augustine Institute Center / NEC staff strategy meetings at
+  the Augustine Institute / Jubilee 2033\n\nStatus: Confirmed\nAug 31: Drivi
+ ng Fort Wayne to St. Louis (Staff Strategy Meetings) NEC.\nMerged overlappi
+ ng St. Louis blocks from Staff Strategy Meetings and Jubilee 2033.\n\nView
+  live: https://jstravelschedule.netlify.app
 LOCATION:St. Louis\, MO
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-eee405ee66b0@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 SUMMARY:Jason: Raleigh\, NC
@@ -536,7 +205,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
 SUMMARY:Jason: Dallas\, TX
@@ -549,7 +218,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -564,7 +233,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD
@@ -578,7 +247,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260702T141440Z
+DTSTAMP:20260709T125731Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL

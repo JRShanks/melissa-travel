@@ -1,109 +1,19 @@
 {
-  "generatedAt": "2026-07-02T14:14:40.028Z",
-  "today": "2026-07-02",
-  "scanEnd": "2027-07-02",
+  "generatedAt": "2026-07-09T12:57:31.824Z",
+  "today": "2026-07-09",
+  "scanEnd": "2027-07-09",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 612,
-  "tripCount": 10,
-  "importantMeetingCount": 27,
+  "tripCount": 9,
+  "importantMeetingCount": 9,
   "nextTrip": {
-    "city": "Philadelphia, PA",
-    "start": "2026-07-02",
-    "endExclusive": "2026-07-08",
-    "purpose": "NEP Bishops & Media - Philadelphia / Out-of-town block (purpose not noted on calendar) / NEP Philadelphia: Vigil Mass + Dinner / Optional: July 4 Concert + Fireworks Finale / NEP Philadelphia: Pope Leo Video Address + Solemn Mass / NEP Philadelphia: Eucharistic Procession / NEP Philadelphia: Fellowship Reception + Press Conference / Dinner: Tim Flanagan, Drew Peloubet, Bill Orosz / Meeting: Tim Flanagan / Conference Room"
+    "city": "Napa, CA",
+    "start": "2026-07-22",
+    "endExclusive": "2026-07-27",
+    "purpose": "15th Annual Napa Institute Summer Conference"
   },
   "importantMeetings": [
-    {
-      "title": "NEP Philadelphia: Dinner at Cathedral Basilica",
-      "start": "2026-07-02T21:30:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Young Adult Holy Hour",
-      "start": "2026-07-02T23:00:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Christ in the City Training",
-      "start": "2026-07-03T12:30:00.000Z",
-      "location": "Cathedral Basilica, Neumann Room, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Day of Service with Christ in the City",
-      "start": "2026-07-03T13:15:00.000Z",
-      "location": "Downtown Philadelphia / Cathedral Basilica area"
-    },
-    {
-      "title": "NEP Philadelphia: Sung Mass + Boxed Lunch",
-      "start": "2026-07-03T16:05:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "Optional: Philly Pops Concert + Food Trucks",
-      "start": "2026-07-03T21:00:00.000Z",
-      "location": "Independence National Historical Park, 599 Market Street, Philadelphia, PA 19106"
-    },
-    {
-      "title": "Flight: AA 6208 FWA to ORD",
-      "start": "2026-07-04T09:23:00.000Z",
-      "location": "Fort Wayne International Airport, 3801 W Ferguson Rd, Fort Wayne, IN 46809"
-    },
-    {
-      "title": "Flight: AA 2115 ORD to PHL",
-      "start": "2026-07-04T11:37:00.000Z",
-      "location": "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666"
-    },
-    {
-      "title": "NEP Philadelphia: Sung Mass + Street Fair Lunch",
-      "start": "2026-07-04T16:05:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Family Rosary Across America",
-      "start": "2026-07-04T20:30:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "Optional: July 4 Concert + Fireworks Finale",
-      "start": "2026-07-04T21:00:00.000Z",
-      "location": "Benjamin Franklin Parkway, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Vigil Mass + Dinner",
-      "start": "2026-07-04T21:15:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Relevant Radio Staff & Pilgrim Dinner",
-      "start": "2026-07-04T23:00:00.000Z",
-      "location": "Philadelphia, PA - location TBD"
-    },
-    {
-      "title": "NEP Philadelphia: Pope Leo Video Address + Solemn Mass",
-      "start": "2026-07-05T14:50:00.000Z",
-      "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Eucharistic Procession",
-      "start": "2026-07-05T16:30:00.000Z",
-      "location": "Cathedral Basilica to National Shrine of St. John Neumann, Philadelphia, PA"
-    },
-    {
-      "title": "NEP Philadelphia: Fellowship Reception + Press Conference",
-      "start": "2026-07-05T17:30:00.000Z",
-      "location": "St. Peter the Apostle Church / National Shrine of St. John Neumann, Philadelphia, PA"
-    },
-    {
-      "title": "Flight: AA 3030 PHL to CLT",
-      "start": "2026-07-07T20:55:00.000Z",
-      "location": "Philadelphia International Airport, 8500 Essington Ave, Philadelphia, PA 19153"
-    },
-    {
-      "title": "Flight: AA 5961 CLT to FWA",
-      "start": "2026-07-08T00:33:00.000Z",
-      "location": "Charlotte Douglas International Airport, 5501 Josh Birmingham Pkwy, Charlotte, NC 28208"
-    },
     {
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",
@@ -153,78 +63,11 @@
   "reviewRequired": true,
   "reviewFlags": [
     {
-      "slug": "2026-07-02-philadelphia-pa",
-      "city": "Philadelphia, PA",
-      "start": "2026-07-02",
-      "endExclusive": "2026-07-08",
-      "purpose": "NEP Bishops & Media - Philadelphia / Out-of-town block (purpose not noted on calendar) / NEP Philadelphia: Vigil Mass + Dinner / Optional: July 4 Concert + Fireworks Finale / NEP Philadelphia: Pope Leo Video Address + Solemn Mass / NEP Philadelphia: Eucharistic Procession / NEP Philadelphia: Fellowship Reception + Press Conference / Dinner: Tim Flanagan, Drew Peloubet, Bill Orosz / Meeting: Tim Flanagan / Conference Room",
-      "flags": [
-        "missing-purpose",
-        "merged-purpose-review"
-      ],
-      "sources": [
-        {
-          "summary": "Manual seed: Philadelphia July travel",
-          "location": "Philadelphia, PA",
-          "start": "2026-07-02",
-          "endExclusive": "2026-07-08"
-        },
-        {
-          "summary": "Jason in Philadelphia NEC",
-          "location": "Philadelphia, PA",
-          "start": "2026-07-03",
-          "endExclusive": "2026-07-07"
-        },
-        {
-          "summary": "NEP Philadelphia: Vigil Mass + Dinner",
-          "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
-          "start": "2026-07-04",
-          "endExclusive": "2026-07-05"
-        },
-        {
-          "summary": "Optional: July 4 Concert + Fireworks Finale",
-          "location": "Benjamin Franklin Parkway, Philadelphia, PA",
-          "start": "2026-07-04",
-          "endExclusive": "2026-07-06"
-        },
-        {
-          "summary": "NEP Philadelphia: Pope Leo Video Address + Solemn Mass",
-          "location": "Cathedral Basilica of Saints Peter and Paul, Philadelphia, PA",
-          "start": "2026-07-05",
-          "endExclusive": "2026-07-06"
-        },
-        {
-          "summary": "NEP Philadelphia: Eucharistic Procession",
-          "location": "Cathedral Basilica to National Shrine of St. John Neumann, Philadelphia, PA",
-          "start": "2026-07-05",
-          "endExclusive": "2026-07-06"
-        },
-        {
-          "summary": "NEP Philadelphia: Fellowship Reception + Press Conference",
-          "location": "St. Peter the Apostle Church / National Shrine of St. John Neumann, Philadelphia, PA",
-          "start": "2026-07-05",
-          "endExclusive": "2026-07-06"
-        },
-        {
-          "summary": "Dinner: Tim Flanagan, Drew Peloubet, Bill Orosz",
-          "location": "Four Seasons Hotel Philadelphia, One N 19th Street, Philadelphia, PA",
-          "start": "2026-07-06",
-          "endExclusive": "2026-07-08"
-        },
-        {
-          "summary": "Meeting: Tim Flanagan / Conference Room",
-          "location": "Four Seasons Hotel Philadelphia, One N 19th Street, Philadelphia, PA",
-          "start": "2026-07-07",
-          "endExclusive": "2026-07-08"
-        }
-      ]
-    },
-    {
       "slug": "2026-08-31-st-louis-mo",
       "city": "St. Louis, MO",
       "start": "2026-08-31",
       "endExclusive": "2026-09-07",
-      "purpose": "NEC staff strategy meetings at the Augustine Institute / Jubilee 2033",
+      "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days at Augustine Institute Center / NEC staff strategy meetings at the Augustine Institute / Jubilee 2033",
       "flags": [
         "merged-purpose-review",
         "merged-overlapping-blocks"
@@ -237,20 +80,20 @@
           "endExclusive": "2026-09-01"
         },
         {
-          "summary": "St. Louis - Staff Strategy Meetings NEC",
-          "location": "Augustine Institute, St. Louis, MO",
+          "summary": "NEC Strategy Days at Augustine Institute Center, St. Louis",
+          "location": "Augustine Institute Center, St. Louis, MO",
+          "start": "2026-08-31",
+          "endExclusive": "2026-09-04"
+        },
+        {
+          "summary": "Manual seed: St. Louis staff strategy meetings",
+          "location": "St. Louis, MO",
           "start": "2026-08-31",
           "endExclusive": "2026-09-04"
         },
         {
           "summary": "Jason In St. Louis",
           "location": "",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-05"
-        },
-        {
-          "summary": "Manual seed: St. Louis staff strategy meetings",
-          "location": "St. Louis, MO",
           "start": "2026-08-31",
           "endExclusive": "2026-09-05"
         },
