@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-09T12:57:31.824Z",
+  "generatedAt": "2026-07-09T13:05:54.756Z",
   "today": "2026-07-09",
   "scanEnd": "2027-07-09",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
-  "eventCount": 612,
+  "eventCount": 609,
   "tripCount": 9,
   "importantMeetingCount": 9,
   "nextTrip": {
@@ -62,49 +62,6 @@
   ],
   "reviewRequired": true,
   "reviewFlags": [
-    {
-      "slug": "2026-08-31-st-louis-mo",
-      "city": "St. Louis, MO",
-      "start": "2026-08-31",
-      "endExclusive": "2026-09-07",
-      "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days at Augustine Institute Center / NEC staff strategy meetings at the Augustine Institute / Jubilee 2033",
-      "flags": [
-        "merged-purpose-review",
-        "merged-overlapping-blocks"
-      ],
-      "sources": [
-        {
-          "summary": "Drive: Fort Wayne to St. Louis (Staff Strategy Meetings) NEC",
-          "location": "",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-01"
-        },
-        {
-          "summary": "NEC Strategy Days at Augustine Institute Center, St. Louis",
-          "location": "Augustine Institute Center, St. Louis, MO",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-04"
-        },
-        {
-          "summary": "Manual seed: St. Louis staff strategy meetings",
-          "location": "St. Louis, MO",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-04"
-        },
-        {
-          "summary": "Jason In St. Louis",
-          "location": "",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-05"
-        },
-        {
-          "summary": "Jubilee 2033 NEC",
-          "location": "Augustine Institute, St. Louis, MO",
-          "start": "2026-09-03",
-          "endExclusive": "2026-09-07"
-        }
-      ]
-    },
     {
       "slug": "2026-10-03-dallas-tx",
       "city": "Dallas, TX",

@@ -171,6 +171,7 @@ function purposeFor(e, city) {
   if (/Philadelphia/i.test(city) && /Jason in Philadelphia/i.test(s)) return 'Out-of-town block (purpose not noted on calendar)';
   if (/Napa/i.test(city)) return '15th Annual Napa Institute Summer Conference';
   if (/St\. Louis/i.test(city) && /Jubilee 2033/i.test(s+d)) return 'Jubilee 2033';
+  if (/St\. Louis/i.test(city) && /Strategy Days/i.test(s+d)) return 'NEC Strategy Days at Augustine Institute Center';
   if (/St\. Louis/i.test(city)) return 'NEC staff strategy meetings at the Augustine Institute';
   if (/Art and Arch/i.test(s)) return 'Catholic Institute for Art and Architecture Conference';
   if (/Raleigh/i.test(city)) return 'Speaking at Legatus Raleigh ("Strength in Surrender: Humility In The Eucharist")';
