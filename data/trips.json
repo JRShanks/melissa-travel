@@ -239,16 +239,18 @@
       "status": "Held",
       "start": "2026-11-15",
       "endExclusive": "2026-11-20",
-      "city": "Baltimore, MD",
-      "purpose": "Baltimore follow-on after Guadalupe pilgrimage and board meeting",
+      "city": "Baltimore, MD / Arlington, VA",
+      "purpose": "Baltimore follow-on after Guadalupe pilgrimage, NEC board meeting, and Catholic Funders' Collaborative Arlington gathering",
       "notes": [
         "After Guadalupe pilgrimage; likely travel from Mexico City / Guadalupe to Baltimore Sunday, Nov 15.",
         "In Baltimore Sunday through Thursday.",
         "Board meeting Monday night.",
+        "Catholic Funders' Collaborative fall gathering is held Tuesday, Nov 17 through lunch Wednesday, Nov 18 in Arlington, VA. Arlington is workable from Baltimore by train/car, but it overlaps the Baltimore hold and the current old/placeholder BWI return flight timing on Wednesday.",
         "Flights need fresh search/selection; old AA reservation QLLCPF was rescinded for travel credit and should not be treated as active."
       ],
       "sources": [
-        "Manual seed: Baltimore after Guadalupe"
+        "Manual seed: Baltimore after Guadalupe",
+        "Outlook: Catholic Funders' Collaborative Follow-up and Save-the-Date thread, Jul 17-18, 2026; calendar hold added by Clive, 2026-07-20"
       ],
       "visibility": {
         "workCalendar": true,
@@ -716,6 +718,25 @@
         "Exact time/details pending; Jason noted Monday night."
       ],
       "sourceSummary": "Manual seed: Baltimore board meeting",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-11-17-catholic-funders-arlington",
+      "status": "Held",
+      "title": "Catholic Funders' Collaborative Fall Gathering",
+      "startRaw": "2026-11-17T09:00:00-05:00",
+      "endRaw": "2026-11-18T13:00:00-05:00",
+      "location": "Arlington, VA",
+      "notes": [
+        "Hold from Catholic Funders' Collaborative follow-up email.",
+        "Full day Tuesday, Nov 17; concludes with lunch Wednesday, Nov 18.",
+        "Principals dinner evening Tuesday, Nov 17.",
+        "Check against Baltimore/USCCB/NEC Board commitments before booking final travel."
+      ],
+      "sourceSummary": "Outlook email: Catholic Funders' Collaborative Follow-up and Save-the-Date, Jul 17-18, 2026; Outlook calendar hold added by Clive, 2026-07-20",
       "visibility": {
         "workCalendar": true,
         "travelFeed": true

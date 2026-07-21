@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-09T13:05:54.756Z",
-  "today": "2026-07-09",
-  "scanEnd": "2027-07-09",
+  "generatedAt": "2026-07-21T00:41:39.598Z",
+  "today": "2026-07-20",
+  "scanEnd": "2027-07-20",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 609,
-  "tripCount": 9,
-  "importantMeetingCount": 9,
+  "tripCount": 10,
+  "importantMeetingCount": 10,
   "nextTrip": {
     "city": "Napa, CA",
     "start": "2026-07-22",
@@ -28,6 +28,11 @@
       "title": "Baltimore Board Meeting",
       "start": "2026-11-17T00:00:00.000Z",
       "location": "Baltimore, MD"
+    },
+    {
+      "title": "Catholic Funders' Collaborative Fall Gathering",
+      "start": "2026-11-17T14:00:00.000Z",
+      "location": "Arlington, VA"
     },
     {
       "title": "NEC Board Meeting - Q1 2027 (Hold)",
