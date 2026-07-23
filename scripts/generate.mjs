@@ -39,6 +39,12 @@ function stripHtml(s='') { return String(s).replace(/<br\s*\/?>/gi, '\n').replac
 function slugify(s) { return s.toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,80); }
 function sha(s) { return crypto.createHash('sha1').update(s).digest('hex').slice(0,12); }
 function uniq(a) { return [...new Set(a.filter(Boolean))]; }
+function mergePurpose(a, b) {
+  const purposes = uniq([a, b]);
+  if (purposes.length <= 1) return purposes[0] || '';
+  const specific = purposes.filter(p => !/^(Speaking engagement|Travel|Out-of-town block \(purpose not noted on calendar\))$/i.test(p));
+  return (specific.length ? specific : purposes).join(' / ');
+}
 function titleCaseState(city) { return city.replace(/\bFlorida\b/i,'FL').replace(/\bCalifornia\b/i,'CA').replace(/\bMissouri\b/i,'MO').replace(/\bNorth Carolina\b/i,'NC').replace(/\bTexas\b/i,'TX').replace(/\bPennsylvania\b/i,'PA').replace(/\bWashington\b/i,'WA').replace(/\bMaryland\b/i,'MD'); }
 function pad(n) { return String(n).padStart(2,'0'); }
 function localDateTimeParts(value) {
@@ -126,6 +132,10 @@ function eventDates(e) {
   const start = parseYmd(startRaw.slice(0,10));
   let endExclusive = parseYmd(endRaw.slice(0,10));
   if (e.source === 'outlook' && e.allDay) return { start, endExclusive };
+  if (e.source === 'outlook' && e.start?.dateTime && e.end?.dateTime) {
+    const durationMs = new Date(e.end.dateTime) - new Date(e.start.dateTime);
+    if (durationMs > 0 && durationMs % 86400000 === 0) return { start, endExclusive };
+  }
   // For this hand-maintained calendar, all-day travel blocks have historically been
   // entered/read as inclusive end dates. Timed events are widened to all-day envelopes.
   endExclusive = addDays(endExclusive, 1);
@@ -251,7 +261,9 @@ function buildTrips(events) {
     if (!prior) { trips.push({...c}); continue; }
     if (c.start < prior.start) prior.start = c.start;
     if (c.endExclusive > prior.endExclusive) prior.endExclusive = c.endExclusive;
-    prior.purpose = uniq([prior.purpose, c.purpose]).join(' / ');
+    prior.purpose = mergePurpose(prior.purpose, c.purpose);
+    prior.notes = uniq([...(prior.notes || []), ...(c.notes || [])]);
+    if (c.status === 'Booked' || (!prior.status && c.status)) prior.status = c.status;
     prior.sources.push(...c.sources);
     prior.sourceEvents.push(...c.sourceEvents);
   }

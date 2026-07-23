@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -23,7 +23,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1d78594a3427@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
 SUMMARY:Jason: NEC Board & Member Dinner
@@ -35,7 +35,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -48,7 +48,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-581f74c59c33@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261117T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261118T130000
 SUMMARY:Jason: Catholic Funders' Collaborative Fall Gathering
@@ -64,7 +64,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-c123a10b607d@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027 (Hold)
@@ -76,7 +76,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -90,7 +90,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-bb919759427b@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027 (Hold)
@@ -102,7 +102,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -116,7 +116,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -130,7 +130,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -144,7 +144,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -157,7 +157,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-bff4f4c82bb6@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20260802
 DTEND;VALUE=DATE:20260809
 SUMMARY:Jason: Scandia\, MN
@@ -180,7 +180,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-859c01349400@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260822
 SUMMARY:Jason: Chicago\, IL
@@ -195,19 +195,21 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260904
 SUMMARY:Jason: St. Louis\, MO
 DESCRIPTION:NEC Strategy Days at Augustine Institute Center\n\nStatus: Conf
- irmed\n\n\nView live: https://jstravelschedule.netlify.app
+ irmed\nNEC Strategy Days at Augustine Institute Center\, St. Louis\, Aug 31
+ -Sep 3\, 2026.\nAug 31: Driving Fort Wayne to St. Louis.\n\nView live: http
+ s://jstravelschedule.netlify.app
 LOCATION:St. Louis\, MO
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-eee405ee66b0@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 SUMMARY:Jason: Raleigh\, NC
@@ -220,35 +222,52 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
-DESCRIPTION:Speaking in Dallas / Speaking engagement\n\nStatus: Likely\nDet
- ails pending\; surfaced from Apple Calendar family event.\n\nView live: htt
- ps://jstravelschedule.netlify.app
+DESCRIPTION:Diocese of Dallas Parish Leadership Conference 2026\n\nStatus:
+  Booked\nDiocese of Dallas Parish Leadership Conference 2026 at Bishop Lync
+ h High School\, Dallas\, TX.\nTheme: Missionary Discipleship: Called\, Chos
+ en\, Sent Forth.\nJason schedule: 10:45-11:30 AM CT English keynote in McGo
+ nigle Theatre\; 1:00-1:45 PM CT breakout in Teal room\; 2:00-2:15 PM CT pod
+ cast recording\; 3:00-3:45 PM CT Session 4 panel as moderator in Theater\;
+  4:00-4:15 PM CT closing prayer.\nAmerican Airlines confirmation is on file
+  with Clive\; do not publish booking/payment details publicly.\nBooked same
+ -day outbound Sat Oct 3: AA3987 FWA-DFW 6:00 AM ET-7:38 AM CT\, seat 13A\,
+  operated by Envoy Air as American Eagle.\nBooked same-day return Sat Oct 3
+ : AA3658 DFW-FWA 7:55 PM CT-11:26 PM ET\, seat 13F\, operated by Envoy Air
+  as American Eagle.\nSame-day itinerary avoids a hotel stay\; Dallas should
+  handle or reimburse airfare and reasonable ground transportation.\n\nView
+  live: https://jstravelschedule.netlify.app
 LOCATION:Dallas\, TX
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
-DESCRIPTION:Pilgrimage\n\nStatus: Confirmed\nNov 11: FWA -> DFW 7:00 AM–9
- :56 AM\; DFW -> MEX 1:29 PM–4:15 PM. Nov 15: MEX -> DFW 7:00 AM–9:54 AM
- \; DFW -> BWI 11:29 AM–2:30 PM.\nFly into Mexico City for Guadalupe pilgr
- image on Nov 11\; onward travel to Baltimore on Nov 15 still needs fresh fl
- ight selection.\n\nView live: https://jstravelschedule.netlify.app
+DESCRIPTION:Pilgrimage\n\nStatus: Held\nDates held for Guadalupe pilgrimage
+ \; prior AA reservation QLLCPF was rescinded for travel credit and should n
+ ot be treated as active.\nSelected working outbound\, not yet treated as bo
+ oked until confirmation is found: American via Charlotte on Wednesday\, Nov
+ . 11\, FWA-CLT-MEX\, arriving Mexico City at 12:45 PM.\nFresh onward flight
+  selection still needed for Mexico City / Guadalupe to Baltimore.\nNov 11:
+  FWA -> DFW 7:00 AM–9:56 AM\; DFW -> MEX 1:29 PM–4:15 PM. Nov 15: MEX -
+ > DFW 7:00 AM–9:54 AM\; DFW -> BWI 11:29 AM–2:30 PM.\nFly into Mexico C
+ ity for Guadalupe pilgrimage on Nov 11\; onward travel to Baltimore on Nov
+  15 still needs fresh flight selection.\n\nView live: https://jstravelsched
+ ule.netlify.app
 LOCATION:Guadalupe\, Mexico
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261119
 SUMMARY:Jason: Baltimore\, MD
@@ -262,7 +281,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD / Arlington\, VA
@@ -288,7 +307,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL
@@ -303,7 +322,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-c90156c622c3@jstravelschedule.netlify.app
-DTSTAMP:20260723T203323Z
+DTSTAMP:20260723T211748Z
 DTSTART;VALUE=DATE:20271115
 DTEND;VALUE=DATE:20271116
 SUMMARY:Jason: Baltimore\, MD

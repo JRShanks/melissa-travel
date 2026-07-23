@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T20:33:23.200Z",
+  "generatedAt": "2026-07-23T21:17:48.956Z",
   "today": "2026-07-23",
   "scanEnd": "2028-01-23",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
@@ -67,30 +67,6 @@
   ],
   "reviewRequired": true,
   "reviewFlags": [
-    {
-      "slug": "2026-10-03-dallas-tx",
-      "city": "Dallas, TX",
-      "start": "2026-10-03",
-      "endExclusive": "2026-10-05",
-      "purpose": "Speaking in Dallas / Speaking engagement",
-      "flags": [
-        "merged-purpose-review"
-      ],
-      "sources": [
-        {
-          "summary": "Apple Calendar: Speaking in Dallas",
-          "location": "Dallas, TX",
-          "start": "2026-10-03",
-          "endExclusive": "2026-10-04"
-        },
-        {
-          "summary": "Parish Leadership Conference 2026 - Dallas Speaker",
-          "location": "Bishop Lynch High School, Dallas, TX",
-          "start": "2026-10-03",
-          "endExclusive": "2026-10-05"
-        }
-      ]
-    },
     {
       "slug": "2027-11-15-baltimore-md",
       "city": "Baltimore, MD",
