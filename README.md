@@ -2,7 +2,7 @@
 
 Jason's travel assistant dashboard and family-visibility workflow.
 
-The live HTML page is the quick itinerary view Jason can use while planning or traveling. It should show upcoming work travel, significant evening obligations, major meetings, and Clive Notes such as flight, hotel, agenda, and "details pending" context.
+The live HTML page is the quick itinerary view Jason can use while planning or traveling. It should show upcoming work travel, significant at-home work obligations, major meetings, and Clive Notes such as flight, hotel, agenda, and "details pending" context. Travel movements belong inside the relevant trip record rather than the Important meetings section.
 
 Calendar visibility flows through the published feed:
 

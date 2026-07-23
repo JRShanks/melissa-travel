@@ -318,7 +318,7 @@
       "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
       "visibility": {
         "workCalendar": false,
-        "travelFeed": true
+        "travelFeed": false
       }
     },
     {
@@ -335,7 +335,7 @@
       "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
       "visibility": {
         "workCalendar": false,
-        "travelFeed": true
+        "travelFeed": false
       }
     },
     {
@@ -352,7 +352,7 @@
       "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
       "visibility": {
         "workCalendar": false,
-        "travelFeed": true
+        "travelFeed": false
       }
     },
     {
@@ -369,7 +369,7 @@
       "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
       "visibility": {
         "workCalendar": false,
-        "travelFeed": true
+        "travelFeed": false
       }
     },
     {

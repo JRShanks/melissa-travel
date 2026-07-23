@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-23T20:25:36.961Z",
+  "generatedAt": "2026-07-23T20:33:23.200Z",
   "today": "2026-07-23",
   "scanEnd": "2028-01-23",
   "sourceCalendar": "Injected calendar export (/Users/clive/.openclaw/workspace/repos/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 609,
   "tripCount": 11,
-  "importantMeetingCount": 14,
+  "importantMeetingCount": 10,
   "nextTrip": {
     "city": "Napa, CA",
     "start": "2026-07-22",
@@ -14,26 +14,6 @@
     "purpose": "15th Annual Napa Institute Summer Conference"
   },
   "importantMeetings": [
-    {
-      "title": "Flight: AA 6232 FWA to ORD",
-      "start": "2026-08-02T15:10:00.000Z",
-      "location": "Fort Wayne International Airport, 3801 W Ferguson Rd, Fort Wayne, IN 46809"
-    },
-    {
-      "title": "Flight: AA 4000 ORD to MSP",
-      "start": "2026-08-02T18:45:00.000Z",
-      "location": "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666"
-    },
-    {
-      "title": "Flight: AA 3507 MSP to ORD",
-      "start": "2026-08-08T15:35:00.000Z",
-      "location": "Minneapolis-Saint Paul International Airport, 4300 Glumack Dr, St Paul, MN 55111"
-    },
-    {
-      "title": "Flight: AA 6295 ORD to FWA",
-      "start": "2026-08-08T20:55:00.000Z",
-      "location": "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666"
-    },
     {
       "title": "NEC Board of Directors Meeting",
       "start": "2026-08-18T18:00:00.000Z",

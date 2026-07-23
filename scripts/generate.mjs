@@ -304,6 +304,10 @@ function meetingLocation(e) {
   return loc || '';
 }
 
+function isTravelMovementMeeting(m) {
+  return /^(Flight|Drive):/i.test(m.title || '');
+}
+
 function buildImportantMeetings(events) {
   const candidates = events.filter(isImportantMeetingCandidate).map(e => {
     const { startRaw, endRaw, startDay } = eventDateTimes(e);
@@ -319,7 +323,7 @@ function buildImportantMeetings(events) {
     };
   }).filter(m => m.endRaw && new Date(m.endRaw) >= today);
 
-  candidates.push(...TRIP_STORE.meetings.filter(m => m.visibility?.travelFeed !== false).map(m => ({
+  candidates.push(...TRIP_STORE.meetings.filter(m => m.visibility?.travelFeed !== false && !isTravelMovementMeeting(m)).map(m => ({
     ...m,
     startDay: parseYmd(localYmd(m.startRaw)),
     slug: `${localYmd(m.startRaw)}-${slugify(m.title)}`,
