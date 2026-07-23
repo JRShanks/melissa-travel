@@ -39,7 +39,7 @@ Calendar injection format:
 }
 ```
 
-The default injection path is `data/outlook-calendar-events.json`, and the file is ignored by git. Clive/OpenClaw should fetch Jason's primary Outlook calendar and/or Apple Calendar events for the next 12 months, write normalized event objects into `events`, and then run `npm run review`.
+The default injection path is `data/outlook-calendar-events.json`, and the file is ignored by git. Clive/OpenClaw should fetch Jason's primary Outlook calendar and/or Apple Calendar events for the next 18 months, write normalized event objects into `events`, and then run `npm run review`.
 
 Structured trip records live in `data/trips.json`. That file is the first place Clive should update when Jason gives a likely trip, date hold, flight, hotel, agenda, board meeting, or itinerary correction.
 

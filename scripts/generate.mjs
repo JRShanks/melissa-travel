@@ -12,7 +12,8 @@ const todayArg = process.argv.find(a => a.startsWith('--today='))?.split('=')[1]
 const reviewOnly = process.argv.includes('--review-only');
 const allowReviewFlags = process.argv.includes('--allow-review-flags');
 const today = parseYmd(todayArg || new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date()));
-const scanEnd = addDays(today, 365);
+const PUBLISH_WINDOW_MONTHS = 18;
+const scanEnd = addMonths(today, PUBLISH_WINDOW_MONTHS);
 const TRIP_STORE = loadTripStore();
 const EXCLUDED_TRIPS = [
   {
@@ -27,6 +28,7 @@ function parseYmd(s) { const [y,m,d] = s.split('-').map(Number); return new Date
 function ymd(d) { return d.toISOString().slice(0,10); }
 function compactDate(d) { return ymd(d).replaceAll('-',''); }
 function addDays(d, n) { const x = new Date(d); x.setUTCDate(x.getUTCDate()+n); return x; }
+function addMonths(d, n) { const x = new Date(d); x.setUTCMonth(x.getUTCMonth()+n); return x; }
 function daysBetween(a,b) { return Math.round((parseYmd(ymd(b)) - parseYmd(ymd(a))) / 86400000); }
 function html(s='') { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function renderNotes(notes, label = '') {
@@ -497,7 +499,7 @@ ${style}
   <div class="wrap">
     <header class="page">
       <h1>Jason's Travel Schedule</h1>
-      <div class="sub">Travel assistant dashboard • next 12 months</div>
+      <div class="sub">Travel assistant dashboard • next 18 months</div>
     </header>
 
     ${hero}
