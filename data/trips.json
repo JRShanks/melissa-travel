@@ -134,7 +134,7 @@
     },
     {
       "id": "travel-2026-08-02-scandia-mn",
-      "status": "Confirmed",
+      "status": "Booked",
       "start": "2026-08-02",
       "endExclusive": "2026-08-09",
       "city": "Scandia, MN",
@@ -144,11 +144,14 @@
         "Typical arrival is between 6:00-7:00 PM Sunday. Orientation is at 7:15 PM Sunday, then silence begins.",
         "Silence breaks Friday evening with dinner and sharing of graces with the other retreat guests.",
         "Technically free to leave after dinner around 7:00 PM Friday, but most stay the night and leave first thing Saturday. Nothing is scheduled Saturday morning.",
-        "Flight planning target: MSP, unless retreat location changes."
+        "American Airlines confirmation is on file with Clive; do not publish booking/payment details publicly.",
+        "Booked outbound Sun Aug 2: AA6232 FWA-ORD 11:10 AM ET-11:31 AM CT, then AA4000 ORD-MSP 1:45 PM-3:30 PM CT.",
+        "Booked return Sat Aug 8: AA3507 MSP-ORD 10:35 AM-12:18 PM CT, then AA6295 ORD-FWA 3:55 PM CT-6:08 PM ET."
       ],
       "sources": [
         "Telegram from Jason: August retreat timing and Bethany link, 2026-07-02",
-        "Website: Bethany Center for Prayer & Renewal physical address, checked 2026-07-02"
+        "Website: Bethany Center for Prayer & Renewal physical address, checked 2026-07-02",
+        "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23"
       ],
       "visibility": {
         "workCalendar": true,
@@ -301,6 +304,74 @@
     }
   ],
   "meetings": [
+    {
+      "id": "meeting-2026-08-02-aa-6232-fwa-ord",
+      "status": "Confirmed",
+      "title": "Flight: AA 6232 FWA to ORD",
+      "startRaw": "2026-08-02T11:10:00-04:00",
+      "endRaw": "2026-08-02T12:31:00-04:00",
+      "location": "Fort Wayne International Airport, 3801 W Ferguson Rd, Fort Wayne, IN 46809",
+      "notes": [
+        "American Airlines confirmation on file with Clive.",
+        "Operated by SkyWest Airlines as American Eagle. Arrives Chicago O'Hare at 11:31 AM Central."
+      ],
+      "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-08-02-aa-4000-ord-msp",
+      "status": "Confirmed",
+      "title": "Flight: AA 4000 ORD to MSP",
+      "startRaw": "2026-08-02T14:45:00-04:00",
+      "endRaw": "2026-08-02T16:30:00-04:00",
+      "location": "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666",
+      "notes": [
+        "American Airlines confirmation on file with Clive.",
+        "Operated by Envoy Air as American Eagle. Departs Chicago O'Hare at 1:45 PM Central and arrives Minneapolis at 3:30 PM Central."
+      ],
+      "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-08-08-aa-3507-msp-ord",
+      "status": "Confirmed",
+      "title": "Flight: AA 3507 MSP to ORD",
+      "startRaw": "2026-08-08T11:35:00-04:00",
+      "endRaw": "2026-08-08T13:18:00-04:00",
+      "location": "Minneapolis-Saint Paul International Airport, 4300 Glumack Dr, St Paul, MN 55111",
+      "notes": [
+        "American Airlines confirmation on file with Clive.",
+        "Operated by Envoy Air as American Eagle. Departs Minneapolis at 10:35 AM Central and arrives Chicago O'Hare at 12:18 PM Central."
+      ],
+      "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-08-08-aa-6295-ord-fwa",
+      "status": "Confirmed",
+      "title": "Flight: AA 6295 ORD to FWA",
+      "startRaw": "2026-08-08T16:55:00-04:00",
+      "endRaw": "2026-08-08T18:08:00-04:00",
+      "location": "O'Hare International Airport, 10000 W O'Hare Ave, Chicago, IL 60666",
+      "notes": [
+        "American Airlines confirmation on file with Clive.",
+        "Operated by SkyWest Airlines as American Eagle. Departs Chicago O'Hare at 3:55 PM Central and arrives Fort Wayne at 6:08 PM Eastern."
+      ],
+      "sourceSummary": "Apple Mail: American Airlines trip confirmation FWA-MSP, 2026-07-23",
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
     {
       "id": "meeting-2026-07-04-aa-6208-fwa-ord",
       "status": "Confirmed",

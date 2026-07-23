@@ -10,8 +10,68 @@ X-WR-TIMEZONE:America/Indiana/Indianapolis
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
+UID:melissa-important-28e6da630ca5@jstravelschedule.netlify.app
+DTSTAMP:20260723T200418Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260802T111000
+DTEND;TZID=America/Indiana/Indianapolis:20260802T123100
+SUMMARY:Jason: Flight: AA 6232 FWA to ORD
+DESCRIPTION:Flight: AA 6232 FWA to ORD\n\nStatus: Confirmed\nAmerican Airli
+ nes confirmation on file with Clive.\nOperated by SkyWest Airlines as Ameri
+ can Eagle. Arrives Chicago O'Hare at 11:31 AM Central.\n\nView live: https:
+ //jstravelschedule.netlify.app
+LOCATION:Fort Wayne International Airport\, 3801 W Ferguson Rd\, Fort Wayne
+ \, IN 46809
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-important-76a02fdf3681@jstravelschedule.netlify.app
+DTSTAMP:20260723T200418Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260802T144500
+DTEND;TZID=America/Indiana/Indianapolis:20260802T163000
+SUMMARY:Jason: Flight: AA 4000 ORD to MSP
+DESCRIPTION:Flight: AA 4000 ORD to MSP\n\nStatus: Confirmed\nAmerican Airli
+ nes confirmation on file with Clive.\nOperated by Envoy Air as American Eag
+ le. Departs Chicago O'Hare at 1:45 PM Central and arrives Minneapolis at 3:
+ 30 PM Central.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:O'Hare International Airport\, 10000 W O'Hare Ave\, Chicago\, IL 6
+ 0666
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-important-adfff89b60b9@jstravelschedule.netlify.app
+DTSTAMP:20260723T200418Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260808T113500
+DTEND;TZID=America/Indiana/Indianapolis:20260808T131800
+SUMMARY:Jason: Flight: AA 3507 MSP to ORD
+DESCRIPTION:Flight: AA 3507 MSP to ORD\n\nStatus: Confirmed\nAmerican Airli
+ nes confirmation on file with Clive.\nOperated by Envoy Air as American Eag
+ le. Departs Minneapolis at 10:35 AM Central and arrives Chicago O'Hare at 1
+ 2:18 PM Central.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:Minneapolis-Saint Paul International Airport\, 4300 Glumack Dr\, S
+ t Paul\, MN 55111
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:melissa-important-5f5cf58ff919@jstravelschedule.netlify.app
+DTSTAMP:20260723T200418Z
+DTSTART;TZID=America/Indiana/Indianapolis:20260808T165500
+DTEND;TZID=America/Indiana/Indianapolis:20260808T180800
+SUMMARY:Jason: Flight: AA 6295 ORD to FWA
+DESCRIPTION:Flight: AA 6295 ORD to FWA\n\nStatus: Confirmed\nAmerican Airli
+ nes confirmation on file with Clive.\nOperated by SkyWest Airlines as Ameri
+ can Eagle. Departs Chicago O'Hare at 3:55 PM Central and arrives Fort Wayne
+  at 6:08 PM Eastern.\n\nView live: https://jstravelschedule.netlify.app
+LOCATION:O'Hare International Airport\, 10000 W O'Hare Ave\, Chicago\, IL 6
+ 0666
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -23,7 +83,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1d78594a3427@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
 SUMMARY:Jason: NEC Board & Member Dinner
@@ -35,7 +95,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
 SUMMARY:Jason: Baltimore Board Meeting
@@ -48,7 +108,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-581f74c59c33@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261117T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261118T130000
 SUMMARY:Jason: Catholic Funders' Collaborative Fall Gathering
@@ -64,7 +124,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-c123a10b607d@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027 (Hold)
@@ -76,7 +136,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -90,7 +150,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-bb919759427b@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027 (Hold)
@@ -102,7 +162,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -116,7 +176,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -130,7 +190,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -144,7 +204,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-fe06afb76662@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20260722
 DTEND;VALUE=DATE:20260727
 SUMMARY:Jason: Napa\, CA
@@ -157,27 +217,30 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-bff4f4c82bb6@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20260802
 DTEND;VALUE=DATE:20260809
 SUMMARY:Jason: Scandia\, MN
 DESCRIPTION:Spiritual retreat at Bethany Center for Prayer & Renewal\n\nSta
- tus: Confirmed\nBethany Center for Prayer & Renewal\, 23393 Nolan Ave N\, S
- candia\, MN 55073. Website: https://bethanyretreats.org/.\nTypical arrival
-  is between 6:00-7:00 PM Sunday. Orientation is at 7:15 PM Sunday\, then si
- lence begins.\nSilence breaks Friday evening with dinner and sharing of gra
- ces with the other retreat guests.\nTechnically free to leave after dinner
-  around 7:00 PM Friday\, but most stay the night and leave first thing Satu
- rday. Nothing is scheduled Saturday morning.\nFlight planning target: MSP\,
-  unless retreat location changes.\n\nView live: https://jstravelschedule.ne
- tlify.app
+ tus: Booked\nBethany Center for Prayer & Renewal\, 23393 Nolan Ave N\, Scan
+ dia\, MN 55073. Website: https://bethanyretreats.org/.\nTypical arrival is
+  between 6:00-7:00 PM Sunday. Orientation is at 7:15 PM Sunday\, then silen
+ ce begins.\nSilence breaks Friday evening with dinner and sharing of graces
+  with the other retreat guests.\nTechnically free to leave after dinner aro
+ und 7:00 PM Friday\, but most stay the night and leave first thing Saturday
+ . Nothing is scheduled Saturday morning.\nAmerican Airlines confirmation is
+  on file with Clive\; do not publish booking/payment details publicly.\nBoo
+ ked outbound Sun Aug 2: AA6232 FWA-ORD 11:10 AM ET-11:31 AM CT\, then AA400
+ 0 ORD-MSP 1:45 PM-3:30 PM CT.\nBooked return Sat Aug 8: AA3507 MSP-ORD 10:3
+ 5 AM-12:18 PM CT\, then AA6295 ORD-FWA 3:55 PM CT-6:08 PM ET.\n\nView live:
+  https://jstravelschedule.netlify.app
 LOCATION:Scandia\, MN
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-859c01349400@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20260819
 DTEND;VALUE=DATE:20260822
 SUMMARY:Jason: Chicago\, IL
@@ -192,7 +255,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260904
 SUMMARY:Jason: St. Louis\, MO
@@ -204,7 +267,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-eee405ee66b0@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 SUMMARY:Jason: Raleigh\, NC
@@ -217,7 +280,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261005
 SUMMARY:Jason: Dallas\, TX
@@ -230,7 +293,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -245,7 +308,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261119
 SUMMARY:Jason: Baltimore\, MD
@@ -259,7 +322,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD / Arlington\, VA
@@ -285,7 +348,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260721T004528Z
+DTSTAMP:20260723T200418Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL
