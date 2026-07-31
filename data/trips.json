@@ -185,16 +185,18 @@
       "id": "travel-2026-08-31-st-louis-mo",
       "status": "Confirmed",
       "start": "2026-08-31",
-      "endExclusive": "2026-09-04",
+      "endExclusive": "2026-09-07",
       "city": "St. Louis, MO",
-      "purpose": "NEC Strategy Days at Augustine Institute Center",
+      "purpose": "NEC Strategy Days and Jubilee 2033 at Augustine Institute Center",
       "notes": [
         "NEC Strategy Days at Augustine Institute Center, St. Louis, Aug 31-Sep 3, 2026.",
-        "Aug 31: Driving Fort Wayne to St. Louis."
+        "Aug 31: Driving Fort Wayne to St. Louis.",
+        "Outlook also shows Jubilee 2033 at Augustine Institute headquarters Sept 3-6, with Thursday Sept 3 check-in and opening dinner/reception, running through Sunday Sept 6."
       ],
       "sources": [
         "Manual seed: St. Louis staff strategy meetings",
-        "Telegram from Jason: mark Aug 31-Sep 3 as NEC Strategy Days at Augustine Institute Center St. Louis, 2026-07-09"
+        "Telegram from Jason: mark Aug 31-Sep 3 as NEC Strategy Days at Augustine Institute Center St. Louis, 2026-07-09",
+        "Outlook calendar export: Jubilee 2033 NEC at Augustine Institute, Sept 3-6, 2026"
       ],
       "visibility": {
         "workCalendar": true,
@@ -811,6 +813,25 @@
       "location": "Zoom",
       "notes": [],
       "sourceSummary": "Manual seed: NEC Board of Directors Meeting",
+      "visibility": {
+        "workCalendar": true,
+        "travelFeed": true
+      }
+    },
+    {
+      "id": "meeting-2026-10-13-indy-evangelization-summit",
+      "status": "Held",
+      "title": "Evangelization Summit and Indianapolis NEC Gathering",
+      "startRaw": "2026-10-13T09:00:00-04:00",
+      "endRaw": "2026-10-15T21:00:00-04:00",
+      "location": "Marian University / Indianapolis, IN",
+      "notes": [
+        "Local Indianapolis work commitment; include for family visibility, but do not count as overnight away-from-home travel unless lodging is added.",
+        "Prior Outlook context showed the Evangelization Summit / Evangelization Gathering at Marian University Oct. 13-15, ending around 2:00 PM ET on Oct. 15.",
+        "Prior Outlook context also showed Indianapolis Gathering and Announcement Mass and Dinner on Thursday, Oct. 15, 2026, 2:00-9:00 PM ET.",
+        "Mass location was still awaiting Archdiocese confirmation in the last saved context."
+      ],
+      "sourceSummary": "Memory/Outlook context: Archdiocese of Indianapolis / Evangelization Summit and Oct. 15 Indianapolis Gathering",
       "visibility": {
         "workCalendar": true,
         "travelFeed": true
