@@ -187,18 +187,18 @@
       "id": "travel-2026-08-31-st-louis-mo",
       "status": "Confirmed",
       "start": "2026-08-31",
-      "endExclusive": "2026-09-07",
+      "endExclusive": "2026-09-04",
       "city": "St. Louis, MO",
-      "purpose": "NEC Strategy Days and Jubilee 2033 at Augustine Institute Center",
+      "purpose": "NEC Strategy Days at Augustine Institute Center",
       "notes": [
         "NEC Strategy Days at Augustine Institute Center, St. Louis, Aug 31-Sep 3, 2026.",
         "Aug 31: Driving Fort Wayne to St. Louis.",
-        "Outlook also shows Jubilee 2033 at Augustine Institute headquarters Sept 3-6, with Thursday Sept 3 check-in and opening dinner/reception, running through Sunday Sept 6."
+        "Jason clarified on 2026-08-12 that this trip should end Thursday, Sep 3, and should not include the Jubilee 2033 weekend."
       ],
       "sources": [
         "Manual seed: St. Louis staff strategy meetings",
         "Telegram from Jason: mark Aug 31-Sep 3 as NEC Strategy Days at Augustine Institute Center St. Louis, 2026-07-09",
-        "Outlook calendar export: Jubilee 2033 NEC at Augustine Institute, Sept 3-6, 2026"
+        "Telegram from Jason: St. Louis should end Thursday and not run through Sunday, 2026-08-12"
       ],
       "visibility": {
         "workCalendar": true,

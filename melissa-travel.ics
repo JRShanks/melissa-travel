@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -23,7 +23,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-0f90462c7ec3@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261013T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261015T210000
 SUMMARY:Jason: Evangelization Summit and Indianapolis NEC Gathering
@@ -42,7 +42,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1d78594a3427@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
 SUMMARY:Jason: NEC Board & Member Dinner
@@ -54,7 +54,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-581f74c59c33@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261117T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261118T130000
 SUMMARY:Jason: Catholic Funders' Collaborative Fall Gathering
@@ -70,7 +70,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-c123a10b607d@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027 (Hold)
@@ -82,7 +82,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -96,7 +96,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-bb919759427b@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027 (Hold)
@@ -108,7 +108,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -122,7 +122,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -136,7 +136,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -150,26 +150,24 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20260831
-DTEND;VALUE=DATE:20260907
+DTEND;VALUE=DATE:20260904
 SUMMARY:Jason: St. Louis\, MO
 DESCRIPTION:NEC staff strategy meetings at the Augustine Institute / NEC St
- rategy Days and Jubilee 2033 at Augustine Institute Center / Jubilee 2033\n
- \nStatus: Confirmed\nNEC Strategy Days at Augustine Institute Center\, St.
-  Louis\, Aug 31-Sep 3\, 2026.\nAug 31: Driving Fort Wayne to St. Louis.\nOu
- tlook also shows Jubilee 2033 at Augustine Institute headquarters Sept 3-6\
- , with Thursday Sept 3 check-in and opening dinner/reception\, running thro
- ugh Sunday Sept 6.\nAug 31: Driving Fort Wayne to St. Louis (Staff Strategy
-  Meetings) NEC.\nMerged overlapping St. Louis blocks from Staff Strategy Me
- etings and Jubilee 2033.\n\nView live: https://jstravelschedule.netlify.app
+ rategy Days at Augustine Institute Center\n\nStatus: Confirmed\nNEC Strateg
+ y Days at Augustine Institute Center\, St. Louis\, Aug 31-Sep 3\, 2026.\nAu
+ g 31: Driving Fort Wayne to St. Louis.\nJason clarified on 2026-08-12 that
+  this trip should end Thursday\, Sep 3\, and should not include the Jubilee
+  2033 weekend.\nAug 31: Driving Fort Wayne to St. Louis (Staff Strategy Mee
+ tings) NEC.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:St. Louis\, MO
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-eee405ee66b0@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 SUMMARY:Jason: Raleigh\, NC
@@ -203,7 +201,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -227,7 +225,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -246,7 +244,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD / Arlington\, VA
@@ -270,7 +268,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL
@@ -285,7 +283,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-c90156c622c3@jstravelschedule.netlify.app
-DTSTAMP:20260812T152044Z
+DTSTAMP:20260812T160757Z
 DTSTART;VALUE=DATE:20271115
 DTEND;VALUE=DATE:20271116
 SUMMARY:Jason: Baltimore\, MD

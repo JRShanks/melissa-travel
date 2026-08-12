@@ -52,6 +52,18 @@ const EXCLUDED_TRIPS = [
     match: /\bNEC Board\s*&\s*Member Dinner\b/i,
     reason: 'This belongs in Important Meetings, not as a duplicate travel card.',
   },
+  {
+    start: '2026-08-31',
+    city: 'St. Louis, MO',
+    match: /\bJason In St\. Louis\b/i,
+    reason: 'Redundant generic hold; Strategy Days is the authoritative St. Louis travel block.',
+  },
+  {
+    start: '2026-09-03',
+    city: 'St. Louis, MO',
+    match: /\bJubilee 2033\b/i,
+    reason: 'Jason clarified on August 12, 2026 that the St. Louis trip ends Thursday and does not run through the Jubilee 2033 weekend.',
+  },
 ];
 
 function parseYmd(s) { const [y,m,d] = s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); }

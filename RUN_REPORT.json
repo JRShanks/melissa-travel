@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T15:20:44.865Z",
+  "generatedAt": "2026-08-12T16:07:57.674Z",
   "today": "2026-08-12",
   "scanEnd": "2028-02-12",
   "sourceCalendar": "Injected calendar export (/Users/clive/Desktop/melissa-travel/data/outlook-calendar-events.json)",
@@ -10,8 +10,8 @@
   "nextTrip": {
     "city": "St. Louis, MO",
     "start": "2026-08-31",
-    "endExclusive": "2026-09-07",
-    "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days and Jubilee 2033 at Augustine Institute Center / Jubilee 2033"
+    "endExclusive": "2026-09-04",
+    "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days at Augustine Institute Center"
   },
   "importantMeetings": [
     {
@@ -71,11 +71,10 @@
       "slug": "2026-08-31-st-louis-mo",
       "city": "St. Louis, MO",
       "start": "2026-08-31",
-      "endExclusive": "2026-09-07",
-      "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days and Jubilee 2033 at Augustine Institute Center / Jubilee 2033",
+      "endExclusive": "2026-09-04",
+      "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days at Augustine Institute Center",
       "flags": [
-        "merged-purpose-review",
-        "merged-overlapping-blocks"
+        "merged-purpose-review"
       ],
       "sources": [
         {
@@ -91,22 +90,10 @@
           "endExclusive": "2026-09-04"
         },
         {
-          "summary": "Jason In St. Louis",
-          "location": "",
-          "start": "2026-08-31",
-          "endExclusive": "2026-09-05"
-        },
-        {
           "summary": "Manual seed: St. Louis staff strategy meetings",
           "location": "St. Louis, MO",
           "start": "2026-08-31",
-          "endExclusive": "2026-09-07"
-        },
-        {
-          "summary": "Jubilee 2033 NEC",
-          "location": "Augustine Institute, St. Louis, MO",
-          "start": "2026-09-03",
-          "endExclusive": "2026-09-07"
+          "endExclusive": "2026-09-04"
         }
       ]
     },
