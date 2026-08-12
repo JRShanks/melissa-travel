@@ -22,6 +22,36 @@ const EXCLUDED_TRIPS = [
     match: /\bCorpus Chrsti Arlington Event\b/i,
     reason: 'Jason confirmed he is not going to Arlington on June 7, 2026.',
   },
+  {
+    start: '2026-08-19',
+    city: 'Chicago, IL',
+    match: /\b5 Stones in Chicago\b/i,
+    reason: 'Jason confirmed on August 12, 2026 that he is no longer physically going to Chicago.',
+  },
+  {
+    start: '2026-11-11',
+    city: 'Guadalupe, Mexico',
+    match: /\bQLLCPF\b|Flight: AA (5464|2350)\b/i,
+    reason: 'Prior AA reservation QLLCPF was rescinded for travel credit and should not be treated as active.',
+  },
+  {
+    start: '2026-11-15',
+    city: 'Baltimore, MD',
+    match: /\bQLLCPF\b|Flight: AA (1066|2314|5665|5642)\b/i,
+    reason: 'Prior AA reservation QLLCPF was rescinded for travel credit and should not be treated as active.',
+  },
+  {
+    start: '2026-11-18',
+    city: 'Baltimore, MD',
+    match: /\bQLLCPF\b|Flight: AA (3679|5642)\b/i,
+    reason: 'Prior AA reservation QLLCPF was rescinded for travel credit and should not be treated as active.',
+  },
+  {
+    start: '2026-11-16',
+    city: 'Baltimore, MD',
+    match: /\bNEC Board\s*&\s*Member Dinner\b/i,
+    reason: 'This belongs in Important Meetings, not as a duplicate travel card.',
+  },
 ];
 
 function parseYmd(s) { const [y,m,d] = s.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); }
@@ -217,6 +247,7 @@ function flightNote(events, trip) {
   for (const e of events) {
     const s = e.summary || '';
     if (!/^Flight:/i.test(s) && !/^Drive:/i.test(s)) continue;
+    if (/\bQLLCPF\b/i.test(stripHtml(e.description || ''))) continue;
     const {startRaw, endRaw} = eventDateTimes(e);
     const start = parseYmd(localYmd(startRaw));
     if (start < addDays(trip.start, -1) || start > addDays(trip.endExclusive, 1)) continue;

@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:melissa-important-9d98a545a9be@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20260818T140000
 DTEND;TZID=America/Indiana/Indianapolis:20260818T153000
 SUMMARY:Jason: NEC Board of Directors Meeting
@@ -23,7 +23,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-0f90462c7ec3@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261013T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261015T210000
 SUMMARY:Jason: Evangelization Summit and Indianapolis NEC Gathering
@@ -42,7 +42,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1d78594a3427@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
 SUMMARY:Jason: NEC Board & Member Dinner
@@ -53,21 +53,8 @@ TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-important-39cdac19ae6f@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
-DTSTART;TZID=America/Indiana/Indianapolis:20261116T190000
-DTEND;TZID=America/Indiana/Indianapolis:20261116T210000
-SUMMARY:Jason: Baltimore Board Meeting
-DESCRIPTION:Baltimore Board Meeting\n\nStatus: Tentative\nExact time/detail
- s pending\; Jason noted Monday night.\n\nView live: https://jstravelschedul
- e.netlify.app
-LOCATION:Baltimore\, MD
-TRANSP:OPAQUE
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-important-581f74c59c33@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261117T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261118T130000
 SUMMARY:Jason: Catholic Funders' Collaborative Fall Gathering
@@ -83,7 +70,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-c123a10b607d@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027 (Hold)
@@ -95,7 +82,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -109,7 +96,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-bb919759427b@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027 (Hold)
@@ -121,7 +108,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -135,7 +122,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -149,7 +136,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -162,50 +149,8 @@ TRANSP:OPAQUE
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-UID:melissa-travel-bff4f4c82bb6@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
-DTSTART;VALUE=DATE:20260802
-DTEND;VALUE=DATE:20260809
-SUMMARY:Jason: Scandia\, MN
-DESCRIPTION:Spiritual retreat at Bethany Center for Prayer & Renewal\n\nSta
- tus: Booked\nBethany Center for Prayer & Renewal\, 23393 Nolan Ave N\, Scan
- dia\, MN 55073. Website: https://bethanyretreats.org/.\nTypical arrival is
-  between 6:00-7:00 PM Sunday. Orientation is at 7:15 PM Sunday\, then silen
- ce begins.\nSilence breaks Friday evening with dinner and sharing of graces
-  with the other retreat guests.\nTechnically free to leave after dinner aro
- und 7:00 PM Friday\, but most stay the night and leave first thing Saturday
- . Nothing is scheduled Saturday morning.\nAmerican Airlines confirmation is
-  on file with Clive\; do not publish booking/payment details publicly.\nBoo
- ked outbound Sun Aug 2: AA6232 FWA-ORD 11:10 AM ET-11:31 AM CT\, then AA400
- 0 ORD-MSP 1:45 PM-3:30 PM CT.\nArrival transportation: Fr Brian will pick J
- ason up from MSP. Theresa said Uber to Bethany would be hard because it is
-  far away.\nBooked return Sat Aug 8: AA3507 MSP-ORD 10:35 AM-12:18 PM CT\,
-  then AA6295 ORD-FWA 3:55 PM CT-6:08 PM ET.\nReturn transportation: Fr Bria
- n will make sure Jason has transportation back to MSP for the flight home.\
- nPacking: no need to pack linens or towels\; they will be ready on arrival.
- \n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Scandia\, MN
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-859c01349400@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
-DTSTART;VALUE=DATE:20260819
-DTEND;VALUE=DATE:20260822
-SUMMARY:Jason: Chicago\, IL
-DESCRIPTION:5 Stones in Chicago\n\nStatus: Confirmed\nJason asked Clive to
-  add this on 2026-06-24: go to 5 Stones in Chicago the evening of Aug 19 an
- d leave the evening of Aug 21.\nCalendar blocks use 6:00 PM Aug 19 through
-  8:00 PM Aug 21 until exact travel times are known.\n\nView live: https://j
- stravelschedule.netlify.app
-LOCATION:Chicago\, IL
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 UID:melissa-travel-a6f4893fa7ea@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20260831
 DTEND;VALUE=DATE:20260907
 SUMMARY:Jason: St. Louis\, MO
@@ -224,7 +169,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-eee405ee66b0@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 SUMMARY:Jason: Raleigh\, NC
@@ -258,7 +203,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -282,7 +227,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -291,33 +236,17 @@ DESCRIPTION:Pilgrimage\n\nStatus: Held\nDates held for Guadalupe pilgrimage
  ot be treated as active.\nSelected working outbound\, not yet treated as bo
  oked until confirmation is found: American via Charlotte on Wednesday\, Nov
  . 11\, FWA-CLT-MEX\, arriving Mexico City at 12:45 PM.\nFresh onward flight
-  selection still needed for Mexico City / Guadalupe to Baltimore.\nNov 11:
-  FWA -> DFW 7:00 AM–9:56 AM\; DFW -> MEX 1:29 PM–4:15 PM. Nov 15: MEX -
- > DFW 7:00 AM–9:54 AM\; DFW -> BWI 11:29 AM–2:30 PM.\nFly into Mexico C
- ity for Guadalupe pilgrimage on Nov 11\; onward travel to Baltimore on Nov
-  15 still needs fresh flight selection.\n\nView live: https://jstravelsched
- ule.netlify.app
+  selection still needed for Mexico City / Guadalupe to Baltimore.\nFly into
+  Mexico City for Guadalupe pilgrimage on Nov 11\; onward travel to Baltimor
+ e on Nov 15 still needs fresh flight selection.\n\nView live: https://jstra
+ velschedule.netlify.app
 LOCATION:Guadalupe\, Mexico
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
-DTSTART;VALUE=DATE:20261115
-DTEND;VALUE=DATE:20261119
-SUMMARY:Jason: Baltimore\, MD
-DESCRIPTION:Baltimore follow-on after Guadalupe pilgrimage and board meetin
- g\n\nStatus: Confirmed\nNov 15: MEX -> DFW 7:00 AM–9:54 AM\; DFW -> BWI 1
- 1:29 AM–2:30 PM. Nov 18: BWI -> ORD 11:52 AM–2:09 PM\; ORD -> FWA 4:21
-  PM–5:27 PM.\n\nView live: https://jstravelschedule.netlify.app
-LOCATION:Baltimore\, MD
-TRANSP:TRANSPARENT
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
-UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD / Arlington\, VA
@@ -334,16 +263,14 @@ DESCRIPTION:Possible Baltimore follow-on after Guadalupe pilgrimage\, NEC b
  ar\, but it overlaps the Baltimore hold and the current old/placeholder BWI
   return flight timing on Wednesday.\nFlights need fresh search/selection\;
   old AA reservation QLLCPF was rescinded for travel credit and should not b
- e treated as active.\nNov 15: MEX -> DFW 7:00 AM–9:54 AM\; DFW -> BWI 11:
- 29 AM–2:30 PM. Nov 18: BWI -> ORD 11:52 AM–2:09 PM\; ORD -> FWA 4:21 PM
- –5:27 PM.\n\nView live: https://jstravelschedule.netlify.app
+ e treated as active.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Baltimore\, MD / Arlington\, VA
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL
@@ -358,7 +285,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-c90156c622c3@jstravelschedule.netlify.app
-DTSTAMP:20260731T182004Z
+DTSTAMP:20260812T152044Z
 DTSTART;VALUE=DATE:20271115
 DTEND;VALUE=DATE:20271116
 SUMMARY:Jason: Baltimore\, MD
