@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-12T16:07:57.674Z",
+  "generatedAt": "2026-08-19T16:56:54.176Z",
   "today": "2026-08-12",
   "scanEnd": "2028-02-12",
   "sourceCalendar": "Injected calendar export (/Users/clive/Desktop/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 619,
-  "tripCount": 7,
+  "tripCount": 8,
   "importantMeetingCount": 10,
   "nextTrip": {
     "city": "St. Louis, MO",

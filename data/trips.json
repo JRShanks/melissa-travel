@@ -329,6 +329,27 @@
       }
     },
     {
+      "id": "travel-2027-09-14-birmingham-al",
+      "status": "Confirmed",
+      "start": "2027-09-14",
+      "endExclusive": "2027-09-15",
+      "city": "Birmingham, AL",
+      "purpose": "Speaking at Legatus Birmingham",
+      "notes": [
+        "Speaking engagement confirmed for Tuesday, September 14, 2027.",
+        "Legatus chapter presentations are normally held in the evening; exact venue, event time, and travel details are pending.",
+        "Lynley Hines will send the speaker agreement."
+      ],
+      "sources": [
+        "Outlook: Legatus Chapter speaker request thread with Lynley Hines, confirmed 2026-08-19",
+        "Telegram from Jason: add Legatus Birmingham to Family and Jason's Travel, 2026-08-19"
+      ],
+      "visibility": {
+        "workCalendar": false,
+        "travelFeed": true
+      }
+    },
+    {
       "id": "travel-2027-11-15-baltimore-md",
       "status": "Held",
       "start": "2027-11-15",
