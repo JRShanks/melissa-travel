@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-19T16:56:54.176Z",
-  "today": "2026-08-12",
-  "scanEnd": "2028-02-12",
+  "generatedAt": "2026-08-21T16:36:48.934Z",
+  "today": "2026-08-21",
+  "scanEnd": "2028-02-21",
   "sourceCalendar": "Injected calendar export (/Users/clive/Desktop/melissa-travel/data/outlook-calendar-events.json)",
   "calendarVisibilityTarget": "Subscribed Apple Calendar: Jason's Travel (https://jstravelschedule.netlify.app/melissa-travel.ics)",
   "eventCount": 619,
   "tripCount": 8,
-  "importantMeetingCount": 10,
+  "importantMeetingCount": 9,
   "nextTrip": {
     "city": "St. Louis, MO",
     "start": "2026-08-31",
@@ -14,11 +14,6 @@
     "purpose": "NEC staff strategy meetings at the Augustine Institute / NEC Strategy Days at Augustine Institute Center"
   },
   "importantMeetings": [
-    {
-      "title": "NEC Board of Directors Meeting",
-      "start": "2026-08-18T18:00:00.000Z",
-      "location": "Zoom"
-    },
     {
       "title": "Evangelization Summit and Indianapolis NEC Gathering",
       "start": "2026-10-13T13:00:00.000Z",
