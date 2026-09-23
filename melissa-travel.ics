@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:melissa-important-0f90462c7ec3@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261013T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261015T210000
 SUMMARY:Jason: Evangelization Summit and Indianapolis NEC Gathering
@@ -30,7 +30,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1d78594a3427@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261116T173000
 DTEND;TZID=America/Indiana/Indianapolis:20261116T200000
 SUMMARY:Jason: NEC Board & Member Dinner
@@ -42,7 +42,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-581f74c59c33@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20261117T090000
 DTEND;TZID=America/Indiana/Indianapolis:20261118T130000
 SUMMARY:Jason: Catholic Funders' Collaborative Fall Gathering
@@ -58,7 +58,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-c123a10b607d@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027 (Hold)
@@ -70,7 +70,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-4704b9a0d9f1@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270209T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270209T143000
 SUMMARY:Jason: NEC Board Meeting - Q1 2027
@@ -84,7 +84,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-bb919759427b@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027 (Hold)
@@ -96,7 +96,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-a59991efeca8@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270511T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270511T143000
 SUMMARY:Jason: NEC Board Meeting - Q2 2027
@@ -110,7 +110,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-1e5114fb633e@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20270817T130000
 DTEND;TZID=America/Indiana/Indianapolis:20270817T143000
 SUMMARY:Jason: NEC Board Meeting - Q3 2027
@@ -124,7 +124,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-important-7be8d154a6e3@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;TZID=America/Indiana/Indianapolis:20271115T180000
 DTEND;TZID=America/Indiana/Indianapolis:20271115T210000
 SUMMARY:Jason: NEC Board / Member In-Person Dinner
@@ -138,7 +138,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-eee405ee66b0@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260926
 SUMMARY:Jason: Raleigh\, NC
@@ -148,38 +148,35 @@ DESCRIPTION:Speaking at Legatus Raleigh ("Strength in Surrender: Humility I
  us Raleigh ("Strength in Surrender: Humility In The Eucharist")\n\nStatus:
   Confirmed\nTravel block for Jason's Raleigh speaking engagement on Sep 24\
  , 2026.\nScreenshot from Jason shows the trip held Wednesday Sep 23 through
-  Friday Sep 25\, 2026.\nRaleigh Legatus contact says Jason will stay at Hya
- tt Place Raleigh-Durham Airport\, 200 Airgate Dr\, Morrisville\, NC 27560.\
- nAmerican Airlines outbound Wed Sep 23: AA 5989\, FWA 4:37 PM-CLT 6:34 PM\,
-  then AA 3178\, CLT 8:00 PM-RDU 8:57 PM. Reservation details are on file wi
- th Clive.\nReturn Fri Sep 25 on AA 2688\, RDU 12:06 PM-CLT 1:15 PM\, then A
- A 5989\, CLT 2:16 PM-FWA 4:06 PM.\nThu Sep 24: Jason has an extended meetin
- g with Michelle Sutton from 11:30 AM-3:30 PM Eastern after his 10:00-11:00
-  AM NEC call and before the Legatus program.\nHotel update pending: Jason a
- sked Leticia whether he may arrange his own hotel and be reimbursed for one
-  night because he is arriving early for other meetings.\nHotel ground trans
- portation: Hyatt Place Raleigh-Durham Airport offers a complimentary shuttl
- e to and from RDU\; use this for the Friday morning return to the airport i
- f needed.\nEvent locations: Mass at St. Joseph Catholic Church\, 2811 Poole
-  Rd\, Raleigh\, NC 27610\; dinner at 400 Donald Ross Dr\, Raleigh\, NC 2761
- 0.\nGround plan update: Sue Ann confirmed they go right by RDU on the way t
- o Raleigh and will pick Jason up at the airport for the meeting.\nLocal eve
- nt transportation: hosts said they will provide transportation from Mass to
-  the dinner venue. Uber remains the recommended/reimbursable fallback for a
- ny remaining local legs\, including transportation back to the hotel if not
-  otherwise arranged.\nArrival timing updated: Jason now arrives at RDU at 8
- :57 PM on Wed Sep 23\, 2026\, giving him Thursday daytime for meetings befo
- re the evening Legatus program.\nLeticia will respond separately about rece
- ipts and any other details.\nSue Ann's phone number is saved privately with
-  Clive\; do not publish it in the public travel feed.\n\nView live: https:/
- /jstravelschedule.netlify.app
+  Friday Sep 25\, 2026.\nHotel confirmed: Tru by Hilton Raleigh Durham Airpo
+ rt\, 350 Airgate Dr\, Morrisville\, NC 27560\, check-in Wed Sep 23 at 3:00
+  PM and check-out Fri Sep 25 at 11:00 AM. Reservation details are on file w
+ ith Clive.\nAmerican Airlines outbound Wed Sep 23: AA 5989\, FWA 4:37 PM-CL
+ T 6:34 PM\, then AA 3178\, CLT 8:00 PM-RDU 8:57 PM. Reservation details are
+  on file with Clive.\nReturn Fri Sep 25 on AA 2688\, RDU 12:06 PM-CLT 1:15
+  PM\, then AA 5989\, CLT 2:16 PM-FWA 4:06 PM.\nThu Sep 24: Michelle Sutton
+  picks Jason up at the Tru by Hilton at 11:30 AM. Lunch is 12:00-1:15 PM at
+  Herons\, The Umstead Hotel and Spa\, 100 Woodland Pond Dr\, Cary\, followe
+ d by a working session through 3:30 PM.\nHotel ground transportation: Tru b
+ y Hilton Raleigh Durham Airport offers a complimentary shuttle to and from
+  RDU\; use it for the Friday morning return to the airport if needed.\nEven
+ t locations: Mass at St. Joseph Catholic Church\, 2811 Poole Rd\, Raleigh\,
+  NC 27610\; dinner at Raleigh Country Club\, 400 Donald Ross Dr\, Raleigh\,
+  NC 27610.\nLocal event transportation: hosts said they will provide transp
+ ortation from Mass to the dinner venue. Uber remains the recommended/reimbu
+ rsable fallback for any remaining local legs\, including transportation bac
+ k to the hotel if not otherwise arranged.\nArrival timing updated: Jason no
+ w arrives at RDU at 8:57 PM on Wed Sep 23\, 2026\, giving him Thursday dayt
+ ime for meetings before the evening Legatus program.\nSue Ann's phone numbe
+ r is saved privately with Clive\; do not publish it in the public travel fe
+ ed.\n\nView live: https://jstravelschedule.netlify.app
 LOCATION:Raleigh\, NC
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-30f4199c4abd@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261004
 SUMMARY:Jason: Dallas\, TX
@@ -194,19 +191,24 @@ DESCRIPTION:Diocese of Dallas Parish Leadership Conference 2026\n\nStatus:
  utbound Fri Oct 2: AA4242 FWA-DFW 12:27 PM ET-1:59 PM CT\, seat 14C\, opera
  ted by Envoy Air as American Eagle.\nBooked same-day return Sat Oct 3: AA36
  58 DFW-FWA 7:55 PM CT-11:26 PM ET\, seat 13F\, operated by Envoy Air as Ame
- rican Eagle.\nFriday Oct 2: speaker dinner at 6:00 PM CT at Bishop Lynch Hi
- gh School\; hotel shuttle is scheduled to leave at 5:30 PM CT.\nHotel: Hamp
- ton Inn & Suites Dallas East for Friday night\, Oct 2. Dallas is arranging
-  the room\; confirmation details are pending.\nDallas should handle or reim
- burse airfare and reasonable ground transportation.\n\nView live: https://j
- stravelschedule.netlify.app
+ rican Eagle.\nFriday Oct 2: meet in the Hampton Inn & Suites Dallas East lo
+ bby at 5:30 PM CT for host-provided transportation to the 6:00 PM speaker d
+ inner at Bishop Lynch High School\; return transportation to the hotel is a
+ lso provided.\nSaturday Oct 3: meet in the hotel lobby at 7:00 AM CT for ho
+ st-provided transportation to Bishop Lynch High School.\nAfter the conferen
+ ce Saturday\, arrange transportation from Bishop Lynch High School to DFW a
+ nd submit the expense to the Diocese of Dallas for reimbursement.\nHotel: H
+ ampton Inn & Suites Dallas East for Friday night\, Oct 2. Dallas is arrangi
+ ng the room\; confirmation details are pending.\nDallas should handle or re
+ imburse airfare and reasonable ground transportation.\n\nView live: https:/
+ /jstravelschedule.netlify.app
 LOCATION:Dallas\, TX
 TRANSP:TRANSPARENT
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-310ebcf2a100@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261116
 SUMMARY:Jason: Guadalupe\, Mexico
@@ -225,7 +227,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-afca98794133@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261120
 SUMMARY:Jason: Baltimore\, MD / Arlington\, VA
@@ -249,7 +251,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-6fe2766b2665@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20270204
 DTEND;VALUE=DATE:20270207
 SUMMARY:Jason: Charlotte Harbor\, FL
@@ -264,7 +266,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-be52947d40be@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20270914
 DTEND;VALUE=DATE:20270915
 SUMMARY:Jason: Birmingham\, AL
@@ -279,7 +281,7 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 UID:melissa-travel-c90156c622c3@jstravelschedule.netlify.app
-DTSTAMP:20260922T213515Z
+DTSTAMP:20260923T135852Z
 DTSTART;VALUE=DATE:20271115
 DTEND;VALUE=DATE:20271116
 SUMMARY:Jason: Baltimore\, MD
